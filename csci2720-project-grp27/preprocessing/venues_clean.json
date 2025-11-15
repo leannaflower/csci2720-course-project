@@ -1,0 +1,62 @@
+[ 
+  {
+    "id": "100",
+    "name": "Tai Po Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "101",
+    "name": "Ping Shan Tin Shui Wai Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "102",
+    "name": "To Kwa Wan Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "103",
+    "name": "Tseung Kwan O Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "104",
+    "name": "Tsim Sha Tsui Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "105",
+    "name": "Tsing Yi Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "106",
+    "name": "Tsuen Wan Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "108",
+    "name": "Tuen Mun Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "111",
+    "name": "Yau Ma Tei Public Library",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": "1117413",
+    "name": "Hong Kong Coliseum (Arena)",
+    "latitude": null,
+    "longitude": null
+  }
+]

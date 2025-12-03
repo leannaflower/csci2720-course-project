@@ -19,6 +19,9 @@ app.use("/api/venues", venueRoutes);
 import { errorHandler } from "./middleware/errorMiddleware.js";
 app.use(errorHandler);
 
+import { requestLogger } from "./middleware/loggerMiddleware.js";
+app.use(requestLogger);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

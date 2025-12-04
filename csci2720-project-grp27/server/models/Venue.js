@@ -1,13 +1,24 @@
-// example model for Venue:
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const venueSchema = new mongoose.Schema({
-    id: String,
-    name: String,
-    latitude: Number,
-    longitude: Number
+  id: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  latitude: {
+    type: Number,
+    default: null,
+  },
+  longitude: {
+    type: Number,
+    default: null,
+  },
 });
 
-export default mongoose.model("Venue", venueSchema);
-
-// then in the Venue controller, we can do: const venues = await Venue.find();
+const Venue = mongoose.model('Venue', venueSchema);
+export default Venue;

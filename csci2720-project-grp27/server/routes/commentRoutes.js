@@ -1,6 +1,11 @@
-import express from "express";
-const router = express.Router();
+const { Router } = require("express");
+const commentController = require("../controllers/commentController");
+const { authenticate, authorize } = require("../middleware/authMiddleware");
 
-// TODO: Implement in Task 6
+const router = Router();
 
-export default router;
+router.get("/:venueId", authenticate, authorize("user", "admin"), commentController.listComments);
+router.post("/:venueId", authenticate, authorize("user", "admin"), commentController.createComment);
+router.delete("/:commentId", authenticate, authorize("admin"), commentController.deleteComment);
+
+module.exports = router;

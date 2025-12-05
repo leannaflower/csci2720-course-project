@@ -1,6 +1,10 @@
-import express from "express";
-const router = express.Router();
+const { Router } = require("express");
+const eventController = require("../controllers/eventController");
+const { authenticate, authorize } = require("../middleware/authMiddleware");
 
-// TODO: Implement in Task 6
+const router = Router();
 
-export default router;
+router.get("/", authenticate, authorize("user", "admin"), eventController.listEvents);
+router.get("/:eventId", authenticate, authorize("user", "admin"), eventController.getEventById);
+
+module.exports = router;

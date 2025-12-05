@@ -1,12 +1,24 @@
-import Venue from "../models/Venue.js";
-import Event from "../models/Event.js";
+const Venue = require("../models/Venue");
+const Event = require("../models/Event");
 
-export async function createVenue(req, res) {
+exports.getDashboard = async (_req, res) => {
+  const venueCount = await Venue.countDocuments();
+  const eventCount = await Event.countDocuments();
+  res.json({ venueCount, eventCount });
+};
+
+exports.createVenue = async (req, res) => {
   const venue = await Venue.create(req.body);
-  return res.status(201).json(venue);
-}
+  res.status(201).json(venue);
+};
 
-export async function deleteEvent(req, res) {
-  await Event.deleteOne({ eventId: req.params.eventId });
-  return res.status(204).send();
-}
+exports.updateVenue = async (req, res) => {
+  const venue = await Venue.findOneAndUpdate({ venueId: req.params.venueId }, req.body, { new: true });
+  if (!venue) return res.status(404).json({ error: "Venue not found" });
+  res.json(venue);
+};
+
+exports.deleteVenue = async (req, res) => {
+  await Venue.deleteOne({ venueId: req.params.venueId });
+  res.status(204).send();
+};

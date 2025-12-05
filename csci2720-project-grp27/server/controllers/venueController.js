@@ -1,15 +1,14 @@
-import Venue from "../models/Venue.js";
-import Event from "../models/Event.js";
+const Venue = require("../models/Venue");
+const Event = require("../models/Event");
 
-export async function listVenues(_req, res) {
+exports.listVenues = async (_req, res) => {
   const venues = await Venue.find().sort({ name: 1 });
-  return res.json(venues);
-}
+  res.json(venues);
+};
 
-export async function getVenue(req, res) {
+exports.getVenueById = async (req, res) => {
   const venue = await Venue.findOne({ venueId: req.params.venueId });
   if (!venue) return res.status(404).json({ error: "Venue not found" });
-
   const events = await Event.find({ venueId: venue.venueId }).sort({ date: 1 });
-  return res.json({ venue, events });
-}
+  res.json({ venue, events });
+};

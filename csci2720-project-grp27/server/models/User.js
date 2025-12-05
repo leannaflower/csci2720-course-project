@@ -1,13 +1,18 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, Document } from "mongoose";
 
-const userSchema = new Schema(
+export interface IUser extends Document {
+  username: string;
+  passwordHash: string;
+  role: "user" | "admin";
+}
+
+const UserSchema = new Schema<IUser>(
   {
     username: { type: String, required: true, unique: true, lowercase: true, trim: true },
-    password: { type: String, required: true },
+    passwordHash: { type: String, required: true },
     role: { type: String, enum: ["user", "admin"], default: "user" },
-    favourites: [{ type: Schema.Types.ObjectId, ref: "Venue" }],
   },
   { timestamps: true }
 );
 
-export default model("User", userSchema);
+export default model<IUser>("User", UserSchema);

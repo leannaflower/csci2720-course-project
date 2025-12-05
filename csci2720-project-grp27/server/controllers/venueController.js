@@ -1,9 +1,15 @@
-// this file will contain the logic for what the API should do when venue's route is accessed
+import Venue from "../models/Venue.js";
+import Event from "../models/Event.js";
 
-export const getVenues = async (req, res) => {
-  try {
-    res.json({ message: "Venue API works" });
-  } catch (err) {
-    res.status(500).json({ error: "Server error" });
-  }
-};
+export async function listVenues(_req, res) {
+  const venues = await Venue.find().sort({ name: 1 });
+  return res.json(venues);
+}
+
+export async function getVenue(req, res) {
+  const venue = await Venue.findOne({ venueId: req.params.venueId });
+  if (!venue) return res.status(404).json({ error: "Venue not found" });
+
+  const events = await Event.find({ venueId: venue.venueId }).sort({ date: 1 });
+  return res.json({ venue, events });
+}

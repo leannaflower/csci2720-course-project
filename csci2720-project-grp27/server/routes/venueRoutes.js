@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const venueController = require("../controllers/venueController");
-const { authenticate } = require("../middleware/authenticate");
-const { authorize } = require("../middleware/authorize");
+const { authenticate, authorize } = require("../middleware/authMiddleware");
 
 const router = Router();
 

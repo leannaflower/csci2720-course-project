@@ -1,6 +1,12 @@
-import express from "express";
-const router = express.Router();
+const { Router } = require("express");
+const adminController = require("../controllers/adminController");
+const { authenticate, authorize } = require("../middleware/authMiddleware");
 
-// TODO: Implement in Task 6
+const router = Router();
 
-export default router;
+router.get("/dashboard", authenticate, authorize("admin"), adminController.getDashboard);
+router.post("/venues", authenticate, authorize("admin"), adminController.createVenue);
+router.patch("/venues/:venueId", authenticate, authorize("admin"), adminController.updateVenue);
+router.delete("/venues/:venueId", authenticate, authorize("admin"), adminController.deleteVenue);
+
+module.exports = router;

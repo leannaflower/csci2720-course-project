@@ -1,7 +1,7 @@
-const Venue = require("../models/Venue");
-const Event = require("../models/Event");
+import Venue from "../models/Venue.js";
+import Event from "../models/Event.js";
 
-exports.listVenues = async (_req, res) => {
+export const listVenues = async (_req, res) => {
   try {
     const venues = await Venue.find().sort({ name: 1 });
     return res.json(venues);
@@ -11,7 +11,7 @@ exports.listVenues = async (_req, res) => {
   }
 };
 
-exports.getVenueById = async (req, res) => {
+export const getVenueById = async (req, res) => {
   try {
     const venue = await Venue.findOne({ venueId: req.params.venueId });
     if (!venue) {

@@ -1,6 +1,6 @@
-const { Router } = require("express");
-const commentController = require("../controllers/commentController");
-const { authenticate, authorize } = require("../middleware/authMiddleware");
+import { Router } from "express";
+import * as commentController from "../controllers/commentController.js";
+import { authenticate, authorize } from "../middleware/authMiddleware.js";
 
 const router = Router();
 
@@ -8,4 +8,4 @@ router.get("/:venueId", authenticate, authorize("user", "admin"), commentControl
 router.post("/:venueId", authenticate, authorize("user", "admin"), commentController.createComment);
 router.delete("/:commentId", authenticate, authorize("admin"), commentController.deleteComment);
 
-module.exports = router;
+export default router;

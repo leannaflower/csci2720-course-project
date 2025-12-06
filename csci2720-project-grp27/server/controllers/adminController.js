@@ -1,11 +1,11 @@
-const Venue = require("../models/Venue");
-const Event = require("../models/Event");
+import Venue from "../models/Venue.js";
+import Event from "../models/Event.js";
 
-exports.getDashboard = async (_req, res) => {
+export const getDashboard = async (_req, res) => {
   try {
     const [venueCount, eventCount] = await Promise.all([
       Venue.countDocuments(),
-      Event.countDocuments(),
+      Event.countDocuments()
     ]);
     return res.json({ venueCount, eventCount });
   } catch (error) {
@@ -14,7 +14,7 @@ exports.getDashboard = async (_req, res) => {
   }
 };
 
-exports.createVenue = async (req, res) => {
+export const createVenue = async (req, res) => {
   try {
     const venue = await Venue.create(req.body);
     return res.status(201).json(venue);
@@ -24,12 +24,12 @@ exports.createVenue = async (req, res) => {
   }
 };
 
-exports.updateVenue = async (req, res) => {
+export const updateVenue = async (req, res) => {
   try {
     const venue = await Venue.findOneAndUpdate(
       { venueId: req.params.venueId },
       req.body,
-      { new: true }
+      { new: true, runValidators: true }
     );
     if (!venue) {
       return res.status(404).json({ error: "Venue not found" });
@@ -41,9 +41,12 @@ exports.updateVenue = async (req, res) => {
   }
 };
 
-exports.deleteVenue = async (req, res) => {
+export const deleteVenue = async (req, res) => {
   try {
-    await Venue.deleteOne({ venueId: req.params.venueId });
+    const result = await Venue.deleteOne({ venueId: req.params.venueId });
+    if (!result.deletedCount) {
+      return res.status(404).json({ error: "Venue not found" });
+    }
     return res.status(204).send();
   } catch (error) {
     console.error("deleteVenue error:", error);

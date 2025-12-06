@@ -1,12 +1,12 @@
-const { z } = require("zod");
-const Comment = require("../models/Comment");
-const Venue = require("../models/Venue");
+import { z } from "zod";
+import Comment from "../models/Comment.js";
+import Venue from "../models/Venue.js";
 
 const commentSchema = z.object({
-  text: z.string().min(1, "Comment cannot be empty").max(1000, "Comment too long"),
+  text: z.string().min(1, "Comment cannot be empty").max(1000, "Comment too long")
 });
 
-exports.listComments = async (req, res) => {
+export const listComments = async (req, res) => {
   try {
     const { venueId } = req.params;
     const comments = await Comment.find({ venueId }).sort({ createdAt: -1 });
@@ -17,7 +17,7 @@ exports.listComments = async (req, res) => {
   }
 };
 
-exports.createComment = async (req, res) => {
+export const createComment = async (req, res) => {
   try {
     const { venueId } = req.params;
     const parsed = commentSchema.safeParse(req.body);
@@ -34,7 +34,7 @@ exports.createComment = async (req, res) => {
       venueId,
       userId: req.user.id,
       username: req.user.username,
-      text: parsed.data.text,
+      text: parsed.data.text
     });
 
     return res.status(201).json(comment);
@@ -44,7 +44,7 @@ exports.createComment = async (req, res) => {
   }
 };
 
-exports.deleteComment = async (req, res) => {
+export const deleteComment = async (req, res) => {
   try {
     const { commentId } = req.params;
     const deleted = await Comment.findByIdAndDelete(commentId);

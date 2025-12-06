@@ -1,6 +1,6 @@
-const { Router } = require("express");
-const userController = require("../controllers/userController");
-const { authenticate, authorize } = require("../middleware/authMiddleware");
+import { Router } from "express";
+import * as userController from "../controllers/userController.js";
+import { authenticate, authorize } from "../middleware/authMiddleware.js";
 
 const router = Router();
 
@@ -15,4 +15,4 @@ router.post("/", authenticate, authorize("admin"), userController.createUser);
 router.patch("/:userId", authenticate, authorize("admin"), userController.updateUser);
 router.delete("/:userId", authenticate, authorize("admin"), userController.deleteUser);
 
-module.exports = router;
+export default router;

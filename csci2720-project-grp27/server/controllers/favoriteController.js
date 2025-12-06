@@ -1,12 +1,12 @@
-const { z } = require("zod");
-const Favorite = require("../models/Favorite");
-const Venue = require("../models/Venue");
+import { z } from "zod";
+import Favorite from "../models/Favorite.js";
+import Venue from "../models/Venue.js";
 
 const favoriteSchema = z.object({
-  venueId: z.string().min(1, "venueId is required"),
+  venueId: z.string().min(1, "venueId is required")
 });
 
-exports.listFavorites = async (req, res) => {
+export const listFavorites = async (req, res) => {
   try {
     const favorites = await Favorite.find({ userId: req.user.id }).sort({ createdAt: -1 });
     return res.json(favorites);
@@ -16,7 +16,7 @@ exports.listFavorites = async (req, res) => {
   }
 };
 
-exports.addFavorite = async (req, res) => {
+export const addFavorite = async (req, res) => {
   try {
     const parsed = favoriteSchema.safeParse(req.body);
     if (!parsed.success) {
@@ -43,7 +43,7 @@ exports.addFavorite = async (req, res) => {
   }
 };
 
-exports.removeFavorite = async (req, res) => {
+export const removeFavorite = async (req, res) => {
   try {
     const { favoriteId } = req.params;
 

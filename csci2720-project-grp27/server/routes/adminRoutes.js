@@ -1,6 +1,6 @@
-const { Router } = require("express");
-const adminController = require("../controllers/adminController");
-const { authenticate, authorize } = require("../middleware/authMiddleware");
+import { Router } from "express";
+import * as adminController from "../controllers/adminController.js";
+import { authenticate, authorize } from "../middleware/authMiddleware.js";
 
 const router = Router();
 
@@ -9,4 +9,4 @@ router.post("/venues", authenticate, authorize("admin"), adminController.createV
 router.patch("/venues/:venueId", authenticate, authorize("admin"), adminController.updateVenue);
 router.delete("/venues/:venueId", authenticate, authorize("admin"), adminController.deleteVenue);
 
-module.exports = router;
+export default router;

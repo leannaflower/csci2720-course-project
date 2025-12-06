@@ -1,33 +1,33 @@
-const bcrypt = require("bcrypt");
-const { z } = require("zod");
-const User = require("../models/User");
-const {
+import bcrypt from "bcrypt";
+import { z } from "zod";
+import User from "../models/User.js";
+import {
   signAccessToken,
   signRefreshToken,
-  verifyRefreshToken,
-} = require("../config/tokenService");
+  verifyRefreshToken
+} from "../config/tokenService.js";
 
 const loginSchema = z.object({
   username: z.string().min(3),
-  password: z.string().min(6),
+  password: z.string().min(6)
 });
 
 const refreshCookieOptions = {
   httpOnly: true,
   sameSite: "strict",
   secure: process.env.NODE_ENV === "production",
-  path: "/api/users/refresh",
+  path: "/api/users/refresh"
 };
 
 const sanitizeUser = (user) => ({
   id: user.id,
   username: user.username,
-  role: user.role,
+  role: user.role
 });
 
 const normalizeUsername = (value) => value.trim().toLowerCase();
 
-exports.login = async (req, res) => {
+export const login = async (req, res) => {
   try {
     const parsed = loginSchema.safeParse(req.body);
     if (!parsed.success) {
@@ -60,11 +60,11 @@ exports.login = async (req, res) => {
   }
 };
 
-exports.logout = (_req, res) => {
+export const logout = (_req, res) => {
   res.clearCookie("rtk", { path: "/api/users/refresh" }).status(204).send();
 };
 
-exports.refresh = (req, res) => {
+export const refresh = (req, res) => {
   const token = req.cookies?.rtk;
   if (!token) {
     return res.status(401).json({ error: "Missing refresh token" });
@@ -78,8 +78,8 @@ exports.refresh = (req, res) => {
       user: {
         id: payload.sub,
         username: payload.username,
-        role: payload.role,
-      },
+        role: payload.role
+      }
     });
   } catch (error) {
     console.error("refresh error:", error);
@@ -88,7 +88,7 @@ exports.refresh = (req, res) => {
   }
 };
 
-exports.me = async (req, res) => {
+export const me = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("username role createdAt");
     return res.json(user);
@@ -98,9 +98,7 @@ exports.me = async (req, res) => {
   }
 };
 
-/** ------- admin-only helpers ------- */
-
-exports.listUsers = async (_req, res) => {
+export const listUsers = async (_req, res) => {
   try {
     const users = await User.find().select("username role createdAt");
     return res.json(users);
@@ -110,7 +108,7 @@ exports.listUsers = async (_req, res) => {
   }
 };
 
-exports.createUser = async (req, res) => {
+export const createUser = async (req, res) => {
   try {
     const username = normalizeUsername(req.body.username);
     const { password, role = "user" } = req.body;
@@ -123,7 +121,7 @@ exports.createUser = async (req, res) => {
   }
 };
 
-exports.updateUser = async (req, res) => {
+export const updateUser = async (req, res) => {
   try {
     const updates = {};
     if (req.body.role) updates.role = req.body.role;
@@ -132,7 +130,7 @@ exports.updateUser = async (req, res) => {
     }
 
     const user = await User.findByIdAndUpdate(req.params.userId, updates, {
-      new: true,
+      new: true
     });
     if (!user) {
       return res.status(404).json({ error: "User not found" });
@@ -144,9 +142,12 @@ exports.updateUser = async (req, res) => {
   }
 };
 
-exports.deleteUser = async (req, res) => {
+export const deleteUser = async (req, res) => {
   try {
-    await User.findByIdAndDelete(req.params.userId);
+    const deleted = await User.findByIdAndDelete(req.params.userId);
+    if (!deleted) {
+      return res.status(404).json({ error: "User not found" });
+    }
     return res.status(204).send();
   } catch (error) {
     console.error("deleteUser error:", error);

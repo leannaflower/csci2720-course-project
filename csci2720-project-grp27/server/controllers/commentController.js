@@ -25,7 +25,7 @@ export const createComment = async (req, res) => {
       return res.status(400).json({ error: parsed.error.flatten() });
     }
 
-    const venueExists = await Venue.exists({ venueId });
+    const venueExists = await Venue.exists({ id: venueId });
     if (!venueExists) {
       return res.status(404).json({ error: "Venue not found" });
     }

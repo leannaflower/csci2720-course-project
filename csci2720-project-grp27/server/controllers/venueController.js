@@ -13,7 +13,8 @@ export const listVenues = async (_req, res) => {
 
 export const getVenueById = async (req, res) => {
   try {
-    const venue = await Venue.findOne({ id: req.params.venueId });
+    const { venueId } = req.params;
+    const venue = await Venue.findOne({ id: venueId });
     if (!venue) {
       return res.status(404).json({ error: "Venue not found" });
     }

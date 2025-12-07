@@ -25,7 +25,7 @@ export const addFavorite = async (req, res) => {
 
     const { venueId } = parsed.data;
 
-    const venueExists = await Venue.exists({ venueId });
+    const venueExists = await Venue.exists({ id: venueId });
     if (!venueExists) {
       return res.status(404).json({ error: "Venue not found" });
     }

@@ -13,11 +13,11 @@ export const listVenues = async (_req, res) => {
 
 export const getVenueById = async (req, res) => {
   try {
-    const venue = await Venue.findOne({ venueId: req.params.venueId });
+    const venue = await Venue.findOne({ id: req.params.venueId });
     if (!venue) {
       return res.status(404).json({ error: "Venue not found" });
     }
-    const events = await Event.find({ venueId: venue.venueId }).sort({ date: 1 });
+    const events = await Event.find({ venueid: venue.id }).sort({ date: 1 });
     return res.json({ venue, events });
   } catch (error) {
     console.error("getVenueById error:", error);

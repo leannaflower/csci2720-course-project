@@ -26,8 +26,9 @@ export const createVenue = async (req, res) => {
 
 export const updateVenue = async (req, res) => {
   try {
+    const { venueId } = req.params;
     const venue = await Venue.findOneAndUpdate(
-      { venueId: req.params.venueId },
+      { id: venueId },
       req.body,
       { new: true, runValidators: true }
     );
@@ -43,7 +44,8 @@ export const updateVenue = async (req, res) => {
 
 export const deleteVenue = async (req, res) => {
   try {
-    const result = await Venue.deleteOne({ venueId: req.params.venueId });
+    const { venueId } = req.params;
+    const result = await Venue.deleteOne({ id: venueId });
     if (!result.deletedCount) {
       return res.status(404).json({ error: "Venue not found" });
     }

@@ -1,40 +1,34 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-/* Placeholder pages */
-function Home() {
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>CSCI 2720 Course Project</h1>
-      <p>Welcome to the venue exploration app.</p>
-    </div>
-  );
-}
+import Map from "./Map";
 
-function Map() {
-  return (
-    <div style={{ padding: "20px" }}>
-      <h2>Map Page</h2>
-      <p>Map of venues will be displayed here.</p>
-    </div>
-  );
-}
-
-function App() {
+export default function App() {
   return (
     <Router>
-      {/* Navigation bar */}
-      <nav style={{ padding: "10px", borderBottom: "1px solid #ccc" }}>
-        <Link to="/" style={{ marginRight: "10px" }}>Home</Link>
-        <Link to="/map">Map</Link>
-      </nav>
+      <div style={{ padding: "15px", background: "#eee" }}>
+        <nav style={{ display: "flex", gap: "15px" }}>
+          <Link to="/">Home</Link>
+          <Link to="/map">Map</Link>
+        </nav>
+      </div>
 
-      {/* Page routing */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* Home */}
+        <Route path="/" element={<div style={{ padding: "20px" }}><h2>Home</h2></div>} />
+
+        {/* Map.js */}
         <Route path="/map" element={<Map />} />
+
+        {/* 404 fallback */}
+        <Route
+          path="*"
+          element={
+            <div style={{ padding: "20px" }}>
+              <h2>404 - Page Not Found</h2>
+            </div>
+          }
+        />
       </Routes>
     </Router>
   );
 }
-
-export default App;

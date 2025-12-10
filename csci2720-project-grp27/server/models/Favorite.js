@@ -17,7 +17,8 @@ const favoriteSchema = new Schema(
   { timestamps: true }
 );
 
-favoriteSchema.index({ userId: 'ObjectId', venueId: 1 }, { unique: true });
+favoriteSchema.index({ userId: 1, venueId: 1 }, { unique: true });
 
 const Favorite = model('Favorite', favoriteSchema);
 export default Favorite;
+

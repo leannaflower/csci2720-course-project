@@ -1,16 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Map from "./Map";
+import Navbar from "./Navbar";
 
 export default function App() {
   return (
     <Router>
-      <div style={{ padding: "15px", background: "#eee" }}>
-        <nav style={{ display: "flex", gap: "15px" }}>
-          <Link to="/">Home</Link>
-          <Link to="/map">Map</Link>
-        </nav>
-      </div>
+      <Navbar user="test" />
 
       <Routes>
         {/* Home */}
@@ -32,3 +28,4 @@ export default function App() {
     </Router>
   );
 }
+

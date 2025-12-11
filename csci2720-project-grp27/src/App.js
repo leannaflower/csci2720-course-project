@@ -4,6 +4,11 @@ import Map from "./Map";
 import Navbar from "./Navbar";
 
 export default function App() {
+  const user = {
+      username: "test",
+      role: "admin" // or "user"
+    };
+  
   return (
     <Router>
       <Navbar user="test" />

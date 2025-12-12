@@ -46,7 +46,7 @@ export default function VenueList() {
   const [availableAreas, setAvailableAreas] = useState([]);
 
   useEffect(() => {
-  fetch("http://localhost:5050/api/venues")  // Adjust PORT if necessary, should be same as server/.env
+  fetch("http://localhost:5000/api/venues")  // Adjust PORT if necessary, should be same as server/.env
     .then((res) => res.json())
     .then((data) => {
 

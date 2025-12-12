@@ -21,7 +21,9 @@ export default function VenueList() {
   const [venues, setVenues] = useState([]);
   const [sortField, setSortField] = useState("name");
   const [sortOrder, setSortOrder] = useState("asc");
-  const [maxDistance, setMaxDistance] = useState(50);
+  const [maxDistance, setMaxDistance] = useState(40);
+  const [keyword, setKeyword] = useState("");
+
 
 
   useEffect(() => {
@@ -63,15 +65,25 @@ export default function VenueList() {
     setVenues(sorted);
   };
 
-  const filteredVenues = venues.filter(v =>
-    v.distanceFromCUHK <= maxDistance
-    );
+  const filteredVenues = venues.filter((v) => {
+    const matchesKeyword = v.name.toLowerCase().includes(keyword.toLowerCase());
+    const matchesDistance = v.distanceFromCUHK <= maxDistance;
+
+    return matchesKeyword && matchesDistance;
+  });
 
   return (
   <div className="venue-page">
     <h2 className="title">All Venues</h2>
-
+    
     <div className="filter-panel">
+      <input
+            type="text"
+            placeholder="Search location…"
+            value={keyword}
+            onChange={(e) => setKeyword(e.target.value)}
+            className="filter-search"
+          />
       <label className="filter-label">Distance (km): </label>
       <input
         type="range"

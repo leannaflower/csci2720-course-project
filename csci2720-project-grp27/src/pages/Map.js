@@ -15,7 +15,7 @@ export default function Map() {
   const [venues, setVenues] = useState([]);
   
   useEffect(() => {
-    fetch("http://localhost:5050/api/venues")  // Adjust PORT if necessary, should be same as server/.env
+    fetch("http://localhost:5000/api/venues")  // Adjust PORT if necessary, should be same as server/.env
       .then((res) => res.json())
       .then((data) => setVenues(data))
       .catch((err) => console.error("Failed to fetch venues", err));

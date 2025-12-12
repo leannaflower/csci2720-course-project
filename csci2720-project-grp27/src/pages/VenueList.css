@@ -67,3 +67,23 @@
   color: #555;
   font-size: 14px;
 }
+
+.filter-panel {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.distance-slider {
+  width: 200px;
+}
+
+.filter-label {
+  font-weight: 500;
+}
+
+.filter-value {
+  font-size: 14px;
+  color: #555;
+}

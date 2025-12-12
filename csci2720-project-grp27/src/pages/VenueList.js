@@ -2,6 +2,25 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./VenueList.css";
 
+function getArea(lat, lng) {
+  // Simple geo bounding boxes
+
+  // Hong Kong Island (approx)
+  if (lat >= 22.23 && lat <= 22.33 && lng >= 114.12 && lng <= 114.20) {
+    return "Hong Kong Island";
+  }
+
+  // Kowloon (approx)
+  if (lat >= 22.29 && lat <= 22.34 && lng >= 114.15 && lng <= 114.20) {
+    return "Kowloon";
+  }
+
+  // New Territories (everything north of Kowloon)
+  if (lat > 22.34) {
+    return "New Territories";
+  }
+}
+
 function distanceKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const dLat = (lat2 - lat1) * Math.PI / 180;
@@ -23,8 +42,8 @@ export default function VenueList() {
   const [sortOrder, setSortOrder] = useState("asc");
   const [maxDistance, setMaxDistance] = useState(40);
   const [keyword, setKeyword] = useState("");
-
-
+  const [area, setArea] = useState("All");
+  const [availableAreas, setAvailableAreas] = useState([]);
 
   useEffect(() => {
   fetch("http://localhost:5050/api/venues")  // Adjust PORT if necessary, should be same as server/.env
@@ -33,26 +52,34 @@ export default function VenueList() {
 
       const CUHK = { lat: 22.4163, lng: 114.2100 };
 
-      const withDistances = data.map(v => {
-        if (v.latitude && v.longitude) {
-          v.distanceFromCUHK = distanceKm(
-            CUHK.lat, CUHK.lng,
-            v.latitude, v.longitude
-          );
-        } else {
-          v.distanceFromCUHK = Infinity;
-        }
-        return v;
-      });
+      const withData = data.map((v) => {
+          if (v.latitude && v.longitude) {
+            v.distanceFromCUHK = distanceKm(
+              CUHK.lat,
+              CUHK.lng,
+              v.latitude,
+              v.longitude
+            );
 
-      setVenues(withDistances);
-    })
-    .catch(err => console.error("Failed to fetch venues:", err));
-}, []);
+            // Assign area automatically
+            v.area = getArea(v.latitude, v.longitude);
+          } else {
+            v.distanceFromCUHK = Infinity;
+          }
+          return v;
+        });
 
+        setAvailableAreas(["All", "Kowloon", "Hong Kong Island", "New Territories"]);
+
+        setVenues(withData);
+      })
+      .catch((err) => console.error("Failed to fetch venues:", err));
+  }, []);
 
   const sortVenues = (field) => {
-    const order = field === sortField && sortOrder === "asc" ? "desc" : "asc";
+    const order =
+      field === sortField && sortOrder === "asc" ? "desc" : "asc";
+
     setSortField(field);
     setSortOrder(order);
 
@@ -65,11 +92,19 @@ export default function VenueList() {
     setVenues(sorted);
   };
 
-  const filteredVenues = venues.filter((v) => {
-    const matchesKeyword = v.name.toLowerCase().includes(keyword.toLowerCase());
-    const matchesDistance = v.distanceFromCUHK <= maxDistance;
 
-    return matchesKeyword && matchesDistance;
+  const filteredVenues = venues.filter((v) => {
+    const matchesKeyword = v.name
+      .toLowerCase()
+      .includes(keyword.toLowerCase());
+
+    const matchesDistance =
+      v.distanceFromCUHK <= maxDistance;
+
+    const matchesArea =
+      area === "All" || v.area === area;
+
+    return matchesKeyword && matchesDistance && matchesArea;
   });
 
   return (
@@ -77,6 +112,7 @@ export default function VenueList() {
     <h2 className="title">All Venues</h2>
     
     <div className="filter-panel">
+      {/* Search filter */}
       <input
             type="text"
             placeholder="Search location…"
@@ -84,6 +120,20 @@ export default function VenueList() {
             onChange={(e) => setKeyword(e.target.value)}
             className="filter-search"
           />
+      {/* Area filter */}
+        <label className="filter-label">Area:</label>
+        <select
+          value={area}
+          onChange={(e) => setArea(e.target.value)}
+          className="area-dropdown"
+        >
+          {availableAreas.map((a) => (
+            <option key={a} value={a}>
+              {a}
+            </option>
+          ))}
+        </select>
+        {/* Distance filter */}
       <label className="filter-label">Distance (km): </label>
       <input
         type="range"

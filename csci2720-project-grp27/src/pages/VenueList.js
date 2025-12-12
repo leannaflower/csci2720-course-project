@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./VenueList.css";
 
 function distanceKm(lat1, lon1, lat2, lon2) {
@@ -101,7 +102,11 @@ export default function VenueList() {
         {filteredVenues.map((v) => (
           <tr key={v.id}>
             <td>{v.id}</td>
-            <td>{v.name}</td>
+            <td>
+              <Link className="venue-link" to={`/location/${v.id}`}>
+                {v.name}
+              </Link>
+            </td>
             <td>{v.distanceFromCUHK.toFixed(2)} km</td>
           </tr>
         ))}

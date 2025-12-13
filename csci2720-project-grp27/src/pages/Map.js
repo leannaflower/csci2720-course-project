@@ -4,25 +4,81 @@ import "leaflet/dist/leaflet.css";
 
 import L from "leaflet";
 
-const redPin = new L.Icon({
-  iconUrl: "https://maps.gstatic.com/mapfiles/ms2/micons/red.png",
-  iconSize: [24, 24],
-  iconAnchor: [12, 24],
-});
+// Fix default Leaflet icon issue
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
 
 export default function Map() {
   const [venues, setVenues] = useState([]);
-  
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    fetch("http://localhost:5000/api/venues")  // Adjust PORT if necessary, should be same as server/.env
-      .then((res) => res.json())
-      .then((data) => setVenues(data))
-      .catch((err) => console.error("Failed to fetch venues", err));
+    let cancelled = false;
+
+    const run = async () => {
+      setLoading(true);
+      setError("");
+
+      const token = localStorage.getItem("token");
+      if (!token) {
+        setError("No token found. Please log in again.");
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const url = `http://localhost:5000/api/venues?t=${Date.now()}`;
+
+        const res = await fetch(url, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: "application/json",
+            "Cache-Control": "no-cache",
+          },
+          credentials: "include",
+          cache: "no-store",
+        });
+
+        if (!res.ok) {
+          const msg = await res.text();
+          throw new Error(msg || `Request failed (${res.status})`);
+        }
+
+        const data = await res.json();
+
+        // Backend returns ARRAY
+        const list = Array.isArray(data) ? data : [];
+
+        if (!cancelled) setVenues(list);
+      } catch (e) {
+        console.error(e);
+        if (!cancelled) setError(e.message || "Failed to load venues");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    };
+
+    run();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Default center of Hong Kong
   const hkCenter = [22.3193, 114.1694];
+
+  if (loading) return <div style={{ padding: 20 }}>Loading map…</div>;
+  if (error) return <div style={{ padding: 20 }}>Error: {error}</div>;
 
   return (
     <div style={{ padding: "20px" }}>
@@ -35,22 +91,24 @@ export default function Map() {
         style={{ height: "600px", width: "100%", borderRadius: "8px" }}
       >
         <TileLayer
-    attribution='&copy; OpenStreetMap & Stadia Maps'
-    url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png"
-    />
+          attribution='&copy; OpenStreetMap & Stadia Maps'
+          url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png"
+        />
 
         {venues
-          .filter((v) => v.latitude && v.longitude)
-          .map((venue) => (
+          .filter(v =>
+            Number.isFinite(Number(v.latitude)) &&
+            Number.isFinite(Number(v.longitude))
+          )
+          .map(v => (
             <Marker
-                key={venue.id}
-                position={[venue.latitude, venue.longitude]}
-                icon={redPin}
-                >
+              key={v.id}
+              position={[Number(v.latitude), Number(v.longitude)]}
+            >
               <Popup>
-                <strong>{venue.name}</strong>
+                <strong>{v.name}</strong>
                 <br />
-                <a href={`/location/${venue.id}`}>View details</a>
+                <a href={`/location/${v.id}`}>View details</a>
               </Popup>
             </Marker>
           ))}

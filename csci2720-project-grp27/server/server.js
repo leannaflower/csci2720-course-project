@@ -9,7 +9,7 @@ import connectDB from "./config/db.js";
 import { requestLogger } from "./middleware/loggerMiddleware.js";
 import { errorHandler } from "./middleware/errorMiddleware.js";
 
-// Routes
+// Routes (all with .js extensions)
 import userRoutes from "./routes/userRoutes.js";
 import venueRoutes from "./routes/venueRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
@@ -17,11 +17,12 @@ import commentRoutes from "./routes/commentRoutes.js";
 import favoriteRoutes from "./routes/favoriteRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 
-// ✅ Force dotenv to load server/.env no matter where you run the command from
+// Load environment variables
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.join(__dirname, ".env") });
 
+// Connect to MongoDB
 await connectDB();
 
 const app = express();
@@ -56,7 +57,7 @@ app.get("/api/health", (_req, res) =>
 
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

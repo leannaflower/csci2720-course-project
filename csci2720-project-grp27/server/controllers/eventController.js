@@ -6,14 +6,14 @@ import Venue from "../models/Venue.js";
 export const listEvents = async (req, res) => {
   try {
     const schema = z.object({
-      venueid: z.string().min(1).optional(),
+      venueId: z.string().min(1).optional(),
       q: z.string().min(1).optional(), // search in title
       limit: z.coerce.number().int().min(1).max(100).default(50),
       offset: z.coerce.number().int().min(0).default(0),
-      sort: z.enum(["date", "title", "id"]).default("date"),
+      sort: z.enum(["date", "title", "eventId"]).default("date"),
       order: z.enum(["asc", "desc"]).default("asc"),
       dateFrom: z.string().min(1).optional(),
-      dateTo: z.string().min(1).optional(),
+      dateTo: z.string().min(1).optional()
     });
 
     const parsed = schema.safeParse(req.query);
@@ -21,13 +21,11 @@ export const listEvents = async (req, res) => {
       return res.status(400).json({ error: parsed.error.flatten() });
     }
 
-    const { venueid, q, limit, offset, sort, order, dateFrom, dateTo } =
-      parsed.data;
+    const { venueId, q, limit, offset, sort, order, dateFrom, dateTo } = parsed.data;
 
     const filter = {};
-    if (venueid) filter.venueid = venueid;
+    if (venueId) filter.venueId = venueId;
     if (q) filter.title = { $regex: q, $options: "i" };
-
     if (dateFrom || dateTo) {
       filter.date = {};
       if (dateFrom) filter.date.$gte = dateFrom;
@@ -37,13 +35,13 @@ export const listEvents = async (req, res) => {
     const sortStage =
       sort === "title"
         ? { title: order === "desc" ? -1 : 1 }
-        : sort === "id"
-        ? { id: order === "desc" ? -1 : 1 }
+        : sort === "eventId"
+        ? { eventId: order === "desc" ? -1 : 1 }
         : { date: order === "desc" ? -1 : 1 };
 
     const [items, total] = await Promise.all([
       Event.find(filter).sort(sortStage).skip(offset).limit(limit),
-      Event.countDocuments(filter),
+      Event.countDocuments(filter)
     ]);
 
     return res.json({ items, total, limit, offset });
@@ -57,12 +55,12 @@ export const listEvents = async (req, res) => {
 export const getEventById = async (req, res) => {
   try {
     const { eventId } = req.params;
-    const event = await Event.findOne({ id: eventId });
+    const event = await Event.findOne({ eventId });
     if (!event) {
       return res.status(404).json({ error: "Event not found" });
     }
 
-    const venue = await Venue.findOne({ id: event.venueid });
+    const venue = await Venue.findOne({ venueId: event.venueId });
     return res.json({ event, venue });
   } catch (error) {
     console.error("getEventById error:", error);

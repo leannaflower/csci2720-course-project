@@ -4,10 +4,26 @@ import "./Navbar.css";
 
 export default function Navbar({ user }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
   const menuRef = useRef(null);
   const navigate = useNavigate();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
@@ -28,14 +44,25 @@ export default function Navbar({ user }) {
     <nav className="navbar">
       <div className="nav-left">
         <Link to="/" className="nav-logo">CSCI2720 Project</Link>
-
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/events" className="nav-link">Event List</Link>
         <Link to="/map" className="nav-link">Map</Link>
-		<Link to="/favorites" className="nav-link">Favourite List</Link>
+        <Link to="/favorites" className="nav-link">Favourite List</Link>
       </div>
 
       <div className="nav-right">
+        <div className="theme-toggle-wrapper">
+          <span className="theme-label">Dark mode</span>
+
+          <button
+            className={`theme-switch ${theme === "dark" ? "active" : ""}`}
+            onClick={toggleTheme}
+            aria-label="Toggle dark mode"
+          >
+            <span className="switch-thumb" />
+          </button>
+        </div>
+
         <div className="profile-wrapper" ref={menuRef}>
           <div className="profile-icon" onClick={toggleMenu}>
             {user?.username?.[0]?.toUpperCase() || "A"}

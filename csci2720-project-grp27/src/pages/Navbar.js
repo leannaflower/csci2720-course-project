@@ -32,6 +32,7 @@ export default function Navbar({ user }) {
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/events" className="nav-link">Event List</Link>
         <Link to="/map" className="nav-link">Map</Link>
+		<Link to="/favorites" className="nav-link">Favourite List</Link>
       </div>
 
       <div className="nav-right">

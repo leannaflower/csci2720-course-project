@@ -37,24 +37,23 @@ export default function VenueList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  const [favByVenue, setFavByVenue] = useState({});
+  const [favBusy, setFavBusy] = useState({}); // venueId -> true while toggling
+  const token = localStorage.getItem("token");
+
   useEffect(() => {
     let cancelled = false;
-
     const run = async () => {
       setLoading(true);
       setError("");
-
-      const token = localStorage.getItem("token");
       if (!token) {
         setError("No token found. Please log in again.");
         setLoading(false);
         return;
       }
-
+	  
       try {
-        const url = `http://localhost:5001/api/venues?t=${Date.now()}`;
-
-        const res = await fetch(url, {
+        const vRes = await fetch(`http://localhost:5001/api/venues?t=${Date.now()}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -64,30 +63,23 @@ export default function VenueList() {
           credentials: "include",
           cache: "no-store",
         });
-
-        if (!res.ok) {
-          const msg = await res.text();
-          throw new Error(msg || `Request failed (${res.status})`);
-        }
-
-        const data = await res.json();
+        if (!vRes.ok) throw new Error(await vRes.text());
+		
+        const data = await vRes.json();
         const list = Array.isArray(data) ? data : [];
-
+		
         const CUHK = { lat: 22.4163, lng: 114.21 };
-
         const withData = list.map((v) => {
-          // Make sure lat/lng are real numbers
           const lat = typeof v.latitude === "string" ? Number(v.latitude) : v.latitude;
           const lng = typeof v.longitude === "string" ? Number(v.longitude) : v.longitude;
-
           const hasCoords = Number.isFinite(lat) && Number.isFinite(lng);
-
+          
           let dist = null;
           if (hasCoords) {
             const d = distanceKm(CUHK.lat, CUHK.lng, lat, lng);
-            dist = Number.isFinite(d) ? d : null; // treat NaN as unknown
+            dist = Number.isFinite(d) ? d : null;
           }
-
+          
           return {
             ...v,
             latitude: hasCoords ? lat : null,
@@ -97,8 +89,20 @@ export default function VenueList() {
             eventCount: v.eventCount ?? 0,
           };
         });
-
+        
         if (!cancelled) setVenues(withData);
+        
+        const fRes = await fetch(`http://localhost:5001/api/favorites?t=${Date.now()}`, {
+          headers: { Authorization: `Bearer ${token}`, Accept: "application/json" },
+          credentials: "include",
+        });
+        if (!fRes.ok) throw new Error(await fRes.text());
+        const favs = await fRes.json(); // [{_id, venueId, ...}]
+        if (!cancelled) {
+          const map = {};
+          for (const f of favs) map[f.venueId] = f._id;
+          setFavByVenue(map);
+        }
       } catch (e) {
         console.error(e);
         if (!cancelled) setError(e.message || "Failed to load venues");
@@ -111,7 +115,7 @@ export default function VenueList() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [token]);
 
   const sortVenues = (field) => {
     const order = field === sortField && sortOrder === "asc" ? "desc" : "asc";
@@ -123,12 +127,9 @@ export default function VenueList() {
     const sorted = [...venues].sort((a, b) => {
       const av = a[field];
       const bv = b[field];
-
-      // null/undefined go last
       if (av == null && bv == null) return 0;
       if (av == null) return 1;
       if (bv == null) return -1;
-
       if (typeof av === "string") return dir * av.localeCompare(bv);
       return dir * (av - bv);
     });
@@ -140,14 +141,65 @@ export default function VenueList() {
     return venues.filter((v) => {
       const matchesKeyword = (v.name || "").toLowerCase().includes(keyword.toLowerCase());
       const matchesArea = area === "All" || v.area === area;
-
       const dist = v.distanceFromCUHK;
       const isUnknownDist = dist == null || !Number.isFinite(dist);
       const matchesDistance = isUnknownDist ? includeUnknownDistance : dist <= maxDistance;
-
       return matchesKeyword && matchesArea && matchesDistance;
     });
   }, [venues, keyword, area, includeUnknownDistance, maxDistance]);
+
+  async function toggleFavorite(venueId) {
+    if (!token) {
+      setError("No token found. Please log in again.");
+      return;
+    }
+    if (favBusy[venueId]) return;
+    setFavBusy((s) => ({ ...s, [venueId]: true }));
+
+    const existingFavId = favByVenue[venueId];
+    if (existingFavId) {
+      setFavByVenue((m) => {
+        const copy = { ...m };
+        delete copy[venueId];
+        return copy;
+      });
+      try {
+        const res = await fetch(`http://localhost:5001/api/favorites/${existingFavId}`, {
+          method: "DELETE",
+          headers: { Authorization: `Bearer ${token}` },
+          credentials: "include",
+        });
+        if (!res.ok) throw new Error(await res.text());
+      } catch (e) {
+        setFavByVenue((m) => ({ ...m, [venueId]: existingFavId }));
+        console.error(e);
+        alert("Failed to remove favourite");
+      } finally {
+        setFavBusy((s) => ({ ...s, [venueId]: false }));
+      }
+    } else {
+      try {
+        const res = await fetch(`http://localhost:5001/api/favorites`, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify({ venueId }),
+        });
+        if (!res.ok) throw new Error(await res.text());
+        const created = await res.json();
+        setFavByVenue((m) => ({ ...m, [venueId]: created._id }));
+      } catch (e) {
+        console.error(e);
+        alert("Failed to add favourite");
+      } finally {
+        setFavBusy((s) => ({ ...s, [venueId]: false }));
+      }
+    }
+  }
 
   if (loading) return <div className="venue-page" style={{ padding: 20 }}>Loading venues…</div>;
   if (error) return <div className="venue-page" style={{ padding: 20 }}>Error: {error}</div>;
@@ -189,7 +241,7 @@ export default function VenueList() {
             checked={includeUnknownDistance}
             onChange={(e) => setIncludeUnknownDistance(e.target.checked)}
           />{" "}
-          Include unknown distance
+            Include unknown distance
         </label>
       </div>
 
@@ -200,34 +252,55 @@ export default function VenueList() {
           <thead>
             <tr>
               <th>ID</th>
-
               <th onClick={() => sortVenues("name")} className="sortable">
                 Location {sortField === "name" && (sortOrder === "asc" ? "▲" : "▼")}
               </th>
-
               <th onClick={() => sortVenues("distanceFromCUHK")} className="sortable">
                 Distance (from CUHK) {sortField === "distanceFromCUHK" && (sortOrder === "asc" ? "▲" : "▼")}
               </th>
-
               <th onClick={() => sortVenues("eventCount")} className="sortable">
                 # Events {sortField === "eventCount" && (sortOrder === "asc" ? "▲" : "▼")}
               </th>
+              <th style={{ textAlign: "right", width: 140 }}>Add to Favourite</th>
             </tr>
           </thead>
 
           <tbody>
-            {filteredVenues.map((v) => (
-              <tr key={v.id}>
-                <td>{v.id}</td>
-                <td>
-                  <Link className="venue-link" to={`/location/${v.id}`}>
-                    {v.name}
-                  </Link>
-                </td>
-                <td>{v.distanceFromCUHK == null ? "N/A" : `${v.distanceFromCUHK.toFixed(2)} km`}</td>
-                <td>{v.eventCount}</td>
-              </tr>
-            ))}
+            {filteredVenues.map((v) => {
+              const isFav = !!favByVenue[v.id];
+              const busy = !!favBusy[v.id];
+              return (
+                <tr key={v.id}>
+                  <td>{v.id}</td>
+                  <td>
+                    <Link className="venue-link" to={`/location/${v.id}`}>
+                      {v.name}
+                    </Link>
+                  </td>
+                  <td>{v.distanceFromCUHK == null ? "N/A" : `${v.distanceFromCUHK.toFixed(2)} km`}</td>
+                  <td>{v.eventCount}</td>
+                  <td style={{ textAlign: "right" }}>
+                    <button
+                      onClick={() => toggleFavorite(v.id)}
+                      disabled={busy}
+                      title={isFav ? "Remove from favourites" : "Add to favourites"}
+                      style={{
+                        padding: "6px 10px",
+                        borderRadius: 8,
+                        border: "none",
+                        cursor: busy ? "default" : "pointer",
+                        background: isFav ? "#4763ff" : "#e8e8ff",
+                        color: isFav ? "#fff" : "#2b2f55",
+                        minWidth: 36,
+                        fontWeight: 600,
+                      }}
+                    >
+                      {busy ? "…" : isFav ? "✓" : "+"}
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       )}

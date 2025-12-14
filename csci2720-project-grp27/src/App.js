@@ -6,6 +6,7 @@ import VenueDetail from "./pages/VenueDetail";
 import Map from "./pages/Map";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
+import Favorites from "./pages/Favorites";
 
 export default function App() {
   return (
@@ -38,6 +39,15 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Map />
+            </ProtectedRoute>
+          }
+        />
+		
+		<Route
+          path="/favorites"
+          element={
+            <ProtectedRoute>
+              <Favorites />
             </ProtectedRoute>
           }
         />

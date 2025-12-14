@@ -67,3 +67,43 @@ export const getEventById = async (req, res) => {
     return res.status(500).json({ error: "Failed to load event" });
   }
 };
+
+export const createEvent = async (req, res) => {
+  try {
+    const event = await Event.create(req.body);
+    return res.status(201).json(event);
+  } catch (error) {
+    console.error("createEvent error:", error);
+    return res.status(400).json({ error: error.message });
+  }
+};
+
+export const updateEvent = async (req, res) => {
+  try {
+    const event = await Event.findOneAndUpdate(
+      { eventId: req.params.eventId },
+      req.body,
+      { new: true, runValidators: true }
+    );
+    if (!event) {
+      return res.status(404).json({ error: "Event not found" });
+    }
+    return res.json(event);
+  } catch (error) {
+    console.error("updateEvent error:", error);
+    return res.status(400).json({ error: error.message });
+  }
+};
+
+export const deleteEvent = async (req, res) => {
+  try {
+    const result = await Event.deleteOne({ eventId: req.params.eventId });
+    if (!result.deletedCount) {
+      return res.status(404).json({ error: "Event not found" });
+    }
+    return res.status(204).send();
+  } catch (error) {
+    console.error("deleteEvent error:", error);
+    return res.status(500).json({ error: "Failed to delete event" });
+  }
+};

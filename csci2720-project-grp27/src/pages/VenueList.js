@@ -52,8 +52,7 @@ export default function VenueList() {
       }
 
       try {
-        // cache-bust to avoid 304 + empty body problems
-        const url = `http://localhost:5000/api/venues?t=${Date.now()}`;
+        const url = `http://localhost:5001/api/venues?t=${Date.now()}`;
 
         const res = await fetch(url, {
           method: "GET",

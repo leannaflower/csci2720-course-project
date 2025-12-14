@@ -36,7 +36,7 @@ export default function Map() {
       }
 
       try {
-        const url = `http://localhost:5000/api/venues?t=${Date.now()}`;
+        const url = `http://localhost:5001/api/venues?t=${Date.now()}`;
 
         const res = await fetch(url, {
           method: "GET",

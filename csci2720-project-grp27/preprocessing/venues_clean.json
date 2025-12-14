@@ -1,62 +1,62 @@
-[ 
+[
   {
-    "id": "100",
-    "name": "Tai Po Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "3110031",
+    "name": "North District Town Hall (Auditorium)",
+    "latitude": "22.501639",
+    "longitude": "114.128911"
   },
   {
-    "id": "101",
-    "name": "Ping Shan Tin Shui Wai Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "3110267",
+    "name": "North District Town Hall (Function Room (2))",
+    "latitude": "22.501639",
+    "longitude": "114.128911"
   },
   {
-    "id": "102",
-    "name": "To Kwa Wan Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "3110565",
+    "name": "North District Town Hall (Function Room (1))",
+    "latitude": "22.501639",
+    "longitude": "114.128911"
   },
   {
-    "id": "103",
-    "name": "Tseung Kwan O Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "35511887",
+    "name": "Tai Po Civic Centre (Function Room (1))",
+    "latitude": "22.45175",
+    "longitude": "114.16815"
   },
   {
-    "id": "104",
-    "name": "Tsim Sha Tsui Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "35517396",
+    "name": "Tai Po Civic Centre (Function Room (2))",
+    "latitude": "22.45175",
+    "longitude": "114.16815"
   },
   {
-    "id": "105",
-    "name": "Tsing Yi Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "36310304",
+    "name": "Sha Tin Town Hall (Dance Studio)",
+    "latitude": "22.38136",
+    "longitude": "114.18990"
   },
   {
-    "id": "106",
-    "name": "Tsuen Wan Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "36310566",
+    "name": "Sha Tin Town Hall (Conference Room)",
+    "latitude": "22.38136",
+    "longitude": "114.18990"
   },
   {
-    "id": "108",
-    "name": "Tuen Mun Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "36310593",
+    "name": "Sha Tin Town Hall (Lecture Room (1))",
+    "latitude": "22.38136",
+    "longitude": "114.18990"
   },
   {
-    "id": "111",
-    "name": "Yau Ma Tei Public Library",
-    "latitude": null,
-    "longitude": null
+    "id": "36310594",
+    "name": "Sha Tin Town Hall (Lecture Room (2))",
+    "latitude": "22.38136",
+    "longitude": "114.18990"
   },
   {
-    "id": "1117413",
-    "name": "Hong Kong Coliseum (Arena)",
-    "latitude": null,
-    "longitude": null
+    "id": "36310920",
+    "name": "Sha Tin Town Hall (Plaza)",
+    "latitude": "22.38136",
+    "longitude": "114.18990"
   }
 ]

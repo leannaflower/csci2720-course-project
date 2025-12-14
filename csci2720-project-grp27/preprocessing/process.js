@@ -22,9 +22,12 @@ async function main() {
         eventCount[vid]++;
     });
 
-    const validVenues = venues.filter(v => eventCount[v.$.id] >= 3);
+    const validVenues = venues.filter(v =>
+        eventCount[v.$.id] >= 3 &&
+        v.latitude && String(v.latitude).trim() !== "" &&
+        v.longitude && String(v.longitude).trim() !== ""
+    );
 
-    // Pick only the first 10 (we can refine this later)
     const chosen = validVenues.slice(0, 10);
 
     // map IDs

@@ -28,17 +28,16 @@ export const listEvents = async (req, res) => {
     if (q) filter.title = { $regex: q, $options: "i" };
     if (dateFrom || dateTo) {
       filter.date = {};
-      if (dateFrom) filter.date.$gte = dateFrom;
+      if (dateFrom) filter.date.$gte = dateFrom;i
       if (dateTo) filter.date.$lte = dateTo;
     }
 
-    const direction = order === "desc" ? -1 : 1;
     const sortStage =
       sort === "title"
-        ? { title: direction }
+        ? { title: order === "desc" ? -1 : 1 }
         : sort === "id"
-        ? { id: direction }
-        : { date: direction };
+        ? { id: order === "desc" ? -1 : 1 }
+        : { date: order === "desc" ? -1 : 1 };
 
     const [items, total] = await Promise.all([
       Event.find(filter).sort(sortStage).skip(offset).limit(limit),

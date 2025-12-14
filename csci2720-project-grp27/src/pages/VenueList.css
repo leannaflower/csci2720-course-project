@@ -2,6 +2,9 @@
   padding: 30px;
   max-width: 1100px;
   margin: auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .title {
@@ -13,58 +16,60 @@
 .venue-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background-color: var(--card-bg);
   border-radius: 10px;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
   overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .venue-table th,
 .venue-table td {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .venue-table th {
-  background: #fafafa;
+  background-color: var(--table-header-bg);
   font-weight: 600;
   text-align: left;
 }
 
 .sortable {
   cursor: pointer;
-  transition: 0.2s;
+  transition: color 0.2s ease;
 }
 
 .sortable:hover {
-  color: #4b4bff;
+  color: var(--nav-accent);
 }
 
 .venue-link {
-  color: #333;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 .venue-link:hover {
-  color: #4b4bff;
+  color: var(--nav-accent);
 }
 
 .view-btn {
   padding: 6px 12px;
-  background: #4b4bff;
-  color: white;
+  background-color: var(--nav-accent);
+  color: var(--btn-text);
   border-radius: 6px;
   text-decoration: none;
   font-size: 14px;
+  transition: background-color 0.2s ease;
 }
 
 .view-btn:hover {
-  background: #6e6eff;
+  background-color: var(--nav-accent-hover);
 }
 
 .last-updated {
   margin-top: 20px;
-  color: #555;
+  color: var(--meta-text);
   font-size: 14px;
 }
 
@@ -85,5 +90,5 @@
 
 .filter-value {
   font-size: 14px;
-  color: #555;
+  color: var(--meta-text);
 }

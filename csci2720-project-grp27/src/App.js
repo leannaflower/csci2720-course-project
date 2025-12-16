@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import Navbar from "./pages/Navbar";
 import VenueList from "./pages/VenueList";
@@ -11,12 +12,27 @@ import Favorites from "./pages/Favorites";
 import "./App.css";
 
 export default function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) return;
+
+    fetch("http://localhost:5001/api/users/me", {
+      headers: { Authorization: `Bearer ${token}` },
+      credentials: "include",
+    })
+      .then(res => res.ok ? res.json() : null)
+      .then(data => setUser(data))
+      .catch(() => setUser(null));
+  }, []);
+
   return (
     <Router>
-      <Navbar />
+      <Navbar user={user} setUser={setUser}/>
 
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setUser={setUser}/>} />
 
         <Route
           path="/"

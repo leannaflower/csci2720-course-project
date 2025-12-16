@@ -1,5 +1,5 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { useEffect, useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { useEffect, useMemo, useState } from "react";
 import "leaflet/dist/leaflet.css";
 
 import L from "leaflet";
@@ -15,6 +15,26 @@ L.Icon.Default.mergeOptions({
   iconUrl: markerIcon,
   shadowUrl: markerShadow,
 });
+
+function FitBounds({ venues }) {
+  const map = useMap();
+
+  const points = useMemo(() => {
+    return venues
+      .map(v => [Number(v.latitude), Number(v.longitude)])
+      .filter(([lat, lng]) => Number.isFinite(lat) && Number.isFinite(lng));
+  }, [venues]);
+
+  useEffect(() => {
+    if (points.length === 0) return;
+
+    map.fitBounds(points, {
+      padding: [30, 30],
+    });
+  }, [map, points]);
+
+  return null;
+}
 
 export default function Map() {
   const [venues, setVenues] = useState([]);
@@ -59,6 +79,15 @@ export default function Map() {
         // Backend returns ARRAY
         const list = Array.isArray(data) ? data : [];
 
+        const withCoords = list.filter(v =>
+          Number.isFinite(Number(v.latitude)) && Number.isFinite(Number(v.longitude))
+        );
+
+        console.log("venues total:", list.length);
+        console.log("venues with coords:", withCoords.length);
+        console.table(list.map(v => ({ id: v.id, name: v.name, lat: v.latitude, lng: v.longitude })));
+
+
         if (!cancelled) setVenues(list);
       } catch (e) {
         console.error(e);
@@ -94,6 +123,8 @@ export default function Map() {
           attribution='&copy; OpenStreetMap & Stadia Maps'
           url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png"
         />
+
+        <FitBounds venues={venues} />
 
         {venues
           .filter(v =>

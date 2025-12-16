@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Login({ setUser }) {
   const nav = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -22,7 +22,6 @@ export default function Login() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || `Login failed (${res.status})`);
 
-      // adjust these keys if your backend uses different names
       const token = data.token || data.accessToken || data.jwt;
       if (!token) throw new Error("Login succeeded but no token returned by backend");
 
@@ -30,6 +29,12 @@ export default function Login() {
 
       // optional: store user info if returned
       if (data.user) localStorage.setItem("user", JSON.stringify(data.user));
+      const meRes = await fetch("http://localhost:5001/api/users/me", {
+        headers: { Authorization: `Bearer ${token}` },
+        credentials: "include",
+      });
+      const meData = await meRes.json();
+      setUser(meData);
 
       nav("/");
     } catch (e2) {

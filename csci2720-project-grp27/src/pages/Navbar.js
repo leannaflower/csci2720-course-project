@@ -2,10 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
-export default function Navbar({ user }) {
+export default function Navbar({ user, setUser }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const menuRef = useRef(null);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -28,9 +29,11 @@ export default function Navbar({ user }) {
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
+    setUser(null); // clear user state
     navigate("/login");
   };
 
+  // Close menu when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -40,6 +43,11 @@ export default function Navbar({ user }) {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [user]);
+
 
   return (
     <nav className="navbar">
@@ -54,7 +62,6 @@ export default function Navbar({ user }) {
       <div className="nav-right">
         <div className="theme-toggle-wrapper">
           <span className="theme-label">Dark mode</span>
-
           <button
             className={`theme-switch ${theme === "dark" ? "active" : ""}`}
             onClick={toggleTheme}
@@ -64,27 +71,26 @@ export default function Navbar({ user }) {
           </button>
         </div>
 
-        <div className="profile-wrapper" ref={menuRef}>
-          <div className="profile-icon" onClick={toggleMenu}>
-            {user?.username?.[0]?.toUpperCase() || "A"}
-          </div>
-
-          {menuOpen && (
-            <div className="dropdown-menu">
-              {user?.role === "admin" && (
-                <>
-                  <Link to="/admin/users" className="dropdown-item">User Manager</Link>
-                  <Link to="/admin/events" className="dropdown-item">Event Manager</Link>
-                </>
-              )}
-
-              <Link to="/profile" className="dropdown-item">Profile</Link>
-              <button className="dropdown-item logout" onClick={handleSignOut}>
-                Sign Out
-              </button>
+        {user && (
+          <div className="profile-wrapper" ref={menuRef}>
+            <div className="profile-icon" onClick={toggleMenu}>
+              {user.username[0].toUpperCase()}
             </div>
-          )}
-        </div>
+
+            {menuOpen && (
+              <div className="dropdown-menu">
+                {user.role === "admin" && (
+                  <>
+                    <Link to="/AdminPanel" className="dropdown-item">Admin Panel</Link>
+                  </>
+                )}
+                <button className="dropdown-item logout" onClick={handleSignOut}>
+                  Sign Out
+                </button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );

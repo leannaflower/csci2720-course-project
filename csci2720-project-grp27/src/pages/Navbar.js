@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar({ user }) {
@@ -7,6 +7,7 @@ export default function Navbar({ user }) {
   const [theme, setTheme] = useState("light");
   const menuRef = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -46,7 +47,7 @@ export default function Navbar({ user }) {
         <Link to="/" className="nav-logo">CSCI2720 Project</Link>
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/events" className="nav-link">Event List</Link>
-        <Link to="/map" className="nav-link">Map</Link>
+        <Link to={`/map${location.search}`} className="nav-link">Map</Link>
         <Link to="/favorites" className="nav-link">Favourite List</Link>
       </div>
 

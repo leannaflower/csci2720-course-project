@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import "./VenueList.css";
 
 function getArea(lat, lng) {
@@ -25,14 +25,26 @@ function distanceKm(lat1, lon1, lat2, lon2) {
 
 export default function VenueList() {
   const [venues, setVenues] = useState([]);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const keyword = searchParams.get("keyword") || "";
+  const area = searchParams.get("area") || "All";
+  const maxDistance = Number(searchParams.get("maxDistance") || 40);
+  const includeUnknownDistance = (searchParams.get("includeUnknownDistance") || "true") === "true";
+
+  function updateParam(key, value) {
+    const next = new URLSearchParams(searchParams);
+    const v = String(value);
+    if (v === "" || v === "All") next.delete(key);
+    else next.set(key, v);
+    setSearchParams(next);
+  }
+  
   const [sortField, setSortField] = useState("name");
   const [sortOrder, setSortOrder] = useState("asc");
 
-  const [maxDistance, setMaxDistance] = useState(40);
-  const [keyword, setKeyword] = useState("");
-  const [area, setArea] = useState("All");
   const [availableAreas] = useState(["All", "Kowloon", "Hong Kong Island", "New Territories", "Unknown"]);
-  const [includeUnknownDistance, setIncludeUnknownDistance] = useState(true);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -213,12 +225,12 @@ export default function VenueList() {
           type="text"
           placeholder="Search location…"
           value={keyword}
-          onChange={(e) => setKeyword(e.target.value)}
+          onChange={(e) => updateParam("keyword", e.target.value)}
           className="filter-search"
         />
 
         <label className="filter-label">Area:</label>
-        <select value={area} onChange={(e) => setArea(e.target.value)} className="area-dropdown">
+        <select value={area} onChange={(e) => updateParam("area", e.target.value)} className="area-dropdown">
           {availableAreas.map((a) => (
             <option key={a} value={a}>{a}</option>
           ))}
@@ -230,7 +242,7 @@ export default function VenueList() {
           min="1"
           max="50"
           value={maxDistance}
-          onChange={(e) => setMaxDistance(Number(e.target.value))}
+          onChange={(e) => updateParam("maxDistance", Number(e.target.value))}
           className="distance-slider"
         />
         <span className="filter-value">{maxDistance} km</span>
@@ -239,7 +251,7 @@ export default function VenueList() {
           <input
             type="checkbox"
             checked={includeUnknownDistance}
-            onChange={(e) => setIncludeUnknownDistance(e.target.checked)}
+            onChange={(e) => updateParam("includeUnknownDistance", e.target.checked)}
           />{" "}
             Include unknown distance
         </label>

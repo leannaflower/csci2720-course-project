@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import Favorites from "./pages/Favorites";
 import Register from "./pages/Register";
+import AdminRoute from "./pages/AdminRoute";
+import AdminPanel from "./pages/AdminPanel";
 
 import "./App.css";
 
@@ -30,7 +32,7 @@ export default function App() {
 
   return (
     <Router>
-      <Navbar user={user} setUser={setUser}/>
+      <Navbar user={user} setUser={setUser} />
 
       <Routes>
         <Route path="/login" element={<Login setUser={setUser} />} />
@@ -62,13 +64,22 @@ export default function App() {
             </ProtectedRoute>
           }
         />
-		
-		<Route
+
+        <Route
           path="/favorites"
           element={
             <ProtectedRoute>
               <Favorites />
             </ProtectedRoute>
+          }
+        />
+        
+        <Route
+          path="/AdminPanel"
+          element={
+            <AdminRoute user={user}>
+              <AdminPanel accessToken={localStorage.getItem("token")} />
+            </AdminRoute>
           }
         />
       </Routes>

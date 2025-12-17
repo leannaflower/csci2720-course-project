@@ -28,7 +28,7 @@ export const listEvents = async (req, res) => {
     if (q) filter.title = { $regex: q, $options: "i" };
     if (dateFrom || dateTo) {
       filter.date = {};
-      if (dateFrom) filter.date.$gte = dateFrom;i
+      if (dateFrom) filter.date.$gte = dateFrom;
       if (dateTo) filter.date.$lte = dateTo;
     }
 
@@ -81,13 +81,11 @@ export const createEvent = async (req, res) => {
 export const updateEvent = async (req, res) => {
   try {
     const event = await Event.findOneAndUpdate(
-      { eventId: req.params.eventId },
+      { id: req.params.eventId },
       req.body,
       { new: true, runValidators: true }
     );
-    if (!event) {
-      return res.status(404).json({ error: "Event not found" });
-    }
+    if (!event) return res.status(404).json({ error: "Event not found" });
     return res.json(event);
   } catch (error) {
     console.error("updateEvent error:", error);
@@ -97,7 +95,7 @@ export const updateEvent = async (req, res) => {
 
 export const deleteEvent = async (req, res) => {
   try {
-    const result = await Event.deleteOne({ eventId: req.params.eventId });
+    const result = await Event.deleteOne({ id: req.params.eventId });
     if (!result.deletedCount) {
       return res.status(404).json({ error: "Event not found" });
     }
@@ -107,3 +105,4 @@ export const deleteEvent = async (req, res) => {
     return res.status(500).json({ error: "Failed to delete event" });
   }
 };
+

@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import "./AdminPanel.css";
 
-/**
- * Utility to keep fetch calls concise.
- */
+const API_BASE = "http://localhost:5001";
+
 const authHeaders = (token) => ({
   "Content-Type": "application/json",
-  Authorization: `Bearer ${token}`
+  Authorization: `Bearer ${token}`,
+  Accept: "application/json",
 });
 
 export default function AdminPanel({ accessToken }) {
@@ -19,47 +19,58 @@ export default function AdminPanel({ accessToken }) {
     venueid: "",
     date: "",
     description: "",
-    presenter: ""
+    presenter: "",
   });
   const [editingEventId, setEditingEventId] = useState(null);
 
   const [userForm, setUserForm] = useState({
     username: "",
     password: "",
-    role: "user"
+    role: "user",
   });
   const [editingUserId, setEditingUserId] = useState(null);
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  /* ------------------------------------------------------------------
-   * bootstrap data
-   * ----------------------------------------------------------------*/
+  async function fetchEventsList() {
+    const res = await fetch(`${API_BASE}/api/events`, {
+      headers: authHeaders(accessToken),
+      credentials: "include",
+    });
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    return data.items ?? [];
+  }
+
+  async function fetchUsersList() {
+    const res = await fetch(`${API_BASE}/api/users`, {
+      headers: authHeaders(accessToken),
+      credentials: "include",
+    });
+    if (!res.ok) throw new Error(await res.text());
+    return await res.json();
+  }
+
   useEffect(() => {
     if (!accessToken) return;
 
     let cancelled = false;
     setLoading(true);
+    setMessage("");
 
-    const fetchEvents = fetch("/api/events", {
-      headers: authHeaders(accessToken)
-    })
-      .then((res) => res.json())
-      .then((data) => data.items ?? []);
-
-    const fetchUsers = fetch("/api/users", {
-      headers: authHeaders(accessToken)
-    }).then((res) => res.json());
-
-    Promise.all([fetchEvents, fetchUsers])
+    Promise.all([fetchEventsList(), fetchUsersList()])
       .then(([eventItems, userItems]) => {
         if (cancelled) return;
         setEvents(eventItems);
-        setUsers(userItems);
+        setUsers(Array.isArray(userItems) ? userItems : []);
       })
-      .catch(() => !cancelled && setMessage("Failed to load admin data"))
-      .finally(() => !cancelled && setLoading(false));
+      .catch((e) => {
+        if (!cancelled) setMessage(e.message || "Failed to load admin data");
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
 
     return () => {
       cancelled = true;
@@ -73,7 +84,7 @@ export default function AdminPanel({ accessToken }) {
       venueid: "",
       date: "",
       description: "",
-      presenter: ""
+      presenter: "",
     });
     setEditingEventId(null);
   };
@@ -82,14 +93,11 @@ export default function AdminPanel({ accessToken }) {
     setUserForm({
       username: "",
       password: "",
-      role: "user"
+      role: "user",
     });
     setEditingUserId(null);
   };
 
-  /* ------------------------------------------------------------------
-   * Event CRUD
-   * ----------------------------------------------------------------*/
   const handleEventSubmit = async (e) => {
     e.preventDefault();
     setMessage("");
@@ -97,28 +105,27 @@ export default function AdminPanel({ accessToken }) {
     try {
       const method = editingEventId ? "PATCH" : "POST";
       const url = editingEventId
-        ? `/api/admin/events/${editingEventId}`
-        : "/api/admin/events";
+        ? `${API_BASE}/api/admin/events/${editingEventId}`
+        : `${API_BASE}/api/admin/events`;
 
       const res = await fetch(url, {
         method,
         headers: authHeaders(accessToken),
-        body: JSON.stringify(eventForm)
+        credentials: "include",
+        body: JSON.stringify(eventForm),
       });
 
       if (!res.ok) {
-        const { error } = await res.json();
-        throw new Error(error || "Failed to save event");
+        const text = await res.text();
+        throw new Error(text || "Failed to save event");
       }
 
-      const refreshed = await fetch("/api/events", {
-        headers: authHeaders(accessToken)
-      }).then((r) => r.json());
-      setEvents(refreshed.items ?? []);
+      const eventItems = await fetchEventsList();
+      setEvents(eventItems);
       resetEventForm();
       setMessage("Event saved successfully.");
     } catch (err) {
-      setMessage(err.message);
+      setMessage(err.message || "Failed to save event");
     }
   };
 
@@ -130,7 +137,7 @@ export default function AdminPanel({ accessToken }) {
       venueid: evt.venueid,
       date: evt.date,
       description: evt.description ?? "",
-      presenter: evt.presenter ?? ""
+      presenter: evt.presenter ?? "",
     });
   };
 
@@ -139,36 +146,37 @@ export default function AdminPanel({ accessToken }) {
     setMessage("");
 
     try {
-      const res = await fetch(`/api/admin/events/${id}`, {
+      const res = await fetch(`${API_BASE}/api/admin/events/${id}`, {
         method: "DELETE",
-        headers: authHeaders(accessToken)
+        headers: authHeaders(accessToken),
+        credentials: "include",
       });
 
       if (!res.ok && res.status !== 204) {
-        const { error } = await res.json();
-        throw new Error(error || "Failed to delete event");
+        const text = await res.text();
+        throw new Error(text || "Failed to delete event");
       }
 
       setEvents((prev) => prev.filter((evt) => evt.id !== id));
       if (editingEventId === id) resetEventForm();
       setMessage("Event deleted.");
     } catch (err) {
-      setMessage(err.message);
+      setMessage(err.message || "Failed to delete event");
     }
   };
 
-  /* ------------------------------------------------------------------
-   * User CRUD
-   * ----------------------------------------------------------------*/
   const handleUserSubmit = async (e) => {
     e.preventDefault();
     setMessage("");
 
     try {
       const method = editingUserId ? "PATCH" : "POST";
-      const url = editingUserId ? `/api/users/${editingUserId}` : "/api/users";
+      const url = editingUserId
+        ? `${API_BASE}/api/users/${editingUserId}`
+        : `${API_BASE}/api/users`;
 
       const payload = { role: userForm.role };
+
       if (!editingUserId) {
         payload.username = userForm.username;
         payload.password = userForm.password;
@@ -179,23 +187,21 @@ export default function AdminPanel({ accessToken }) {
       const res = await fetch(url, {
         method,
         headers: authHeaders(accessToken),
-        body: JSON.stringify(payload)
+        credentials: "include",
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
-        const { error } = await res.json();
-        throw new Error(error || "Failed to save user");
+        const text = await res.text();
+        throw new Error(text || "Failed to save user");
       }
 
-      const refreshed = await fetch("/api/users", {
-        headers: authHeaders(accessToken)
-      }).then((r) => r.json());
-
-      setUsers(refreshed);
+      const userItems = await fetchUsersList();
+      setUsers(Array.isArray(userItems) ? userItems : []);
       resetUserForm();
       setMessage("User saved successfully.");
     } catch (err) {
-      setMessage(err.message);
+      setMessage(err.message || "Failed to save user");
     }
   };
 
@@ -204,7 +210,7 @@ export default function AdminPanel({ accessToken }) {
     setUserForm({
       username: user.username,
       password: "",
-      role: user.role
+      role: user.role,
     });
   };
 
@@ -213,33 +219,32 @@ export default function AdminPanel({ accessToken }) {
     setMessage("");
 
     try {
-      const res = await fetch(`/api/users/${userId}`, {
+      const res = await fetch(`${API_BASE}/api/users/${userId}`, {
         method: "DELETE",
-        headers: authHeaders(accessToken)
+        headers: authHeaders(accessToken),
+        credentials: "include",
       });
 
       if (!res.ok && res.status !== 204) {
-        const { error } = await res.json();
-        throw new Error(error || "Failed to delete user");
+        const text = await res.text();
+        throw new Error(text || "Failed to delete user");
       }
 
-      setUsers((prev) => prev.filter((user) => (user._id || user.id) !== userId));
+      setUsers((prev) => prev.filter((u) => (u._id || u.id) !== userId));
       if (editingUserId === userId) resetUserForm();
       setMessage("User deleted.");
     } catch (err) {
-      setMessage(err.message);
+      setMessage(err.message || "Failed to delete user");
     }
   };
 
-  /* ------------------------------------------------------------------
-   * render helpers
-   * ----------------------------------------------------------------*/
   const sortedEvents = useMemo(
-    () => [...events].sort((a, b) => a.title.localeCompare(b.title)),
+    () => [...events].sort((a, b) => (a.title || "").localeCompare(b.title || "")),
     [events]
   );
+
   const sortedUsers = useMemo(
-    () => [...users].sort((a, b) => a.username.localeCompare(b.username)),
+    () => [...users].sort((a, b) => (a.username || "").localeCompare(b.username || "")),
     [users]
   );
 
@@ -253,6 +258,7 @@ export default function AdminPanel({ accessToken }) {
         <header>
           <h2>{editingEventId ? "Edit Event" : "Create Event"}</h2>
         </header>
+
         <form className="grid-form" onSubmit={handleEventSubmit}>
           <label>
             Event ID
@@ -263,6 +269,7 @@ export default function AdminPanel({ accessToken }) {
               disabled={!!editingEventId}
             />
           </label>
+
           <label>
             Title
             <input
@@ -271,16 +278,16 @@ export default function AdminPanel({ accessToken }) {
               required
             />
           </label>
+
           <label>
             Venue ID
             <input
               value={eventForm.venueid}
-              onChange={(e) =>
-                setEventForm({ ...eventForm, venueid: e.target.value })
-              }
+              onChange={(e) => setEventForm({ ...eventForm, venueid: e.target.value })}
               required
             />
           </label>
+
           <label>
             Date (e.g. 1-30/11/2025)
             <input
@@ -289,28 +296,25 @@ export default function AdminPanel({ accessToken }) {
               required
             />
           </label>
+
           <label className="span-2">
             Description
             <textarea
               value={eventForm.description}
-              onChange={(e) =>
-                setEventForm({ ...eventForm, description: e.target.value })
-              }
+              onChange={(e) => setEventForm({ ...eventForm, description: e.target.value })}
             />
           </label>
+
           <label className="span-2">
             Presenter
             <input
               value={eventForm.presenter}
-              onChange={(e) =>
-                setEventForm({ ...eventForm, presenter: e.target.value })
-              }
+              onChange={(e) => setEventForm({ ...eventForm, presenter: e.target.value })}
             />
           </label>
+
           <div className="form-actions span-2">
-            <button type="submit">
-              {editingEventId ? "Update Event" : "Create Event"}
-            </button>
+            <button type="submit">{editingEventId ? "Update Event" : "Create Event"}</button>
             {editingEventId && (
               <button type="button" className="secondary" onClick={resetEventForm}>
                 Cancel
@@ -357,6 +361,7 @@ export default function AdminPanel({ accessToken }) {
         <header>
           <h2>{editingUserId ? "Edit User" : "Create User"}</h2>
         </header>
+
         <form className="grid-form" onSubmit={handleUserSubmit}>
           <label>
             Username
@@ -369,6 +374,7 @@ export default function AdminPanel({ accessToken }) {
               disabled={!!editingUserId}
             />
           </label>
+
           <label>
             Password {editingUserId && <small>(leave blank to keep current)</small>}
             <input
@@ -378,6 +384,7 @@ export default function AdminPanel({ accessToken }) {
               required={!editingUserId}
             />
           </label>
+
           <label>
             Role
             <select
@@ -388,10 +395,9 @@ export default function AdminPanel({ accessToken }) {
               <option value="admin">admin</option>
             </select>
           </label>
+
           <div className="form-actions">
-            <button type="submit">
-              {editingUserId ? "Update User" : "Create User"}
-            </button>
+            <button type="submit">{editingUserId ? "Update User" : "Create User"}</button>
             {editingUserId && (
               <button type="button" className="secondary" onClick={resetUserForm}>
                 Cancel
@@ -410,15 +416,15 @@ export default function AdminPanel({ accessToken }) {
             </tr>
           </thead>
           <tbody>
-            {sortedUsers.map((user) => {
-              const id = user._id || user.id;
+            {sortedUsers.map((u) => {
+              const id = u._id || u.id;
               return (
                 <tr key={id}>
-                  <td>{user.username}</td>
-                  <td>{user.role}</td>
-                  <td>{user.createdAt ? new Date(user.createdAt).toLocaleString() : "—"}</td>
+                  <td>{u.username}</td>
+                  <td>{u.role}</td>
+                  <td>{u.createdAt ? new Date(u.createdAt).toLocaleString() : "—"}</td>
                   <td>
-                    <button onClick={() => handleEditUser(user)}>Edit</button>
+                    <button onClick={() => handleEditUser(u)}>Edit</button>
                     <button className="danger" onClick={() => handleDeleteUser(id)}>
                       Delete
                     </button>

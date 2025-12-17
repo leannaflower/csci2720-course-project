@@ -1,0 +1,59 @@
+.admin-panel {
+    padding: 20px;
+}
+
+.admin-panel .card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+    background: #fff;
+}
+
+.admin-panel .grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.admin-panel .grid-form .span-2 {
+    grid-column: 1 / span 2;
+}
+
+.admin-panel input,
+.admin-panel textarea,
+.admin-panel select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.admin-panel table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.admin-panel th,
+.admin-panel td {
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    text-align: left;
+}
+
+.admin-panel .form-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin-panel .danger {
+    background: #c62828;
+    color: #fff;
+}
+
+.admin-panel .secondary {
+    background: #eee;
+}

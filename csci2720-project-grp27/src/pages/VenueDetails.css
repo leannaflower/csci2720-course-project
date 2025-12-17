@@ -60,11 +60,6 @@
   transition: color 0.2s ease;
 }
 
-.event-link:hover {
-  color: var(--nav-accent-hover);
-  text-decoration: underline;
-}
-
 .event-meta {
   display: flex;
   flex-wrap: wrap;

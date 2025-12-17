@@ -13,8 +13,6 @@ import Register from "./pages/Register";
 import AdminRoute from "./pages/AdminRoute";
 import AdminUsers from "./pages/AdminUsers";
 import AdminEvents from "./pages/AdminEvents";
-import EventList from "./pages/EventList";
-
 
 import "./App.css";
 

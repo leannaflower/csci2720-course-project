@@ -1,0 +1,43 @@
+.events-page {
+padding: 20px;
+}
+.title {
+margin-bottom: 12px;
+}
+.filter-panel {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+align-items: center;
+margin-bottom: 12px;
+}
+.filter-search {
+min-width: 260px;
+padding: 8px 10px;
+}
+.spacer {
+flex: 1;
+}
+.pagination button {
+margin: 0 4px;
+}
+.events-table {
+width: 100%;
+border-collapse: collapse;
+}
+.events-table th, .events-table td {
+border-bottom: 1px solid #eee;
+padding: 8px 10px;
+vertical-align: top;
+}
+.sortable {
+cursor: pointer;
+user-select: none;
+}
+.event-desc-row td {
+background: var(--dropdown-bg);
+color: var(--desc-fg);
+}
+.event-description {
+white-space: pre-wrap;
+}

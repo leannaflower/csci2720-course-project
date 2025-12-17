@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./pages/Navbar";
 import VenueList from "./pages/VenueList";
 import VenueDetail from "./pages/VenueDetail";
+import EventList from "./pages/EventList";
 import Map from "./pages/Map";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
@@ -55,6 +56,13 @@ export default function App() {
             <ProtectedRoute>
               <VenueDetail />
             </ProtectedRoute>
+          }
+        />
+
+        <Route 
+          path="/events"
+          element={
+            <EventList />
           }
         />
 

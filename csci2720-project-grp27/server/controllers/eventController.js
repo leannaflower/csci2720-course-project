@@ -7,10 +7,11 @@ export const listEvents = async (req, res) => {
   try {
     const schema = z.object({
       venueid: z.string().min(1).optional(),
+	  presenter: z.string().min(1).optional(),
       q: z.string().min(1).optional(), // search in title
       limit: z.coerce.number().int().min(1).max(100).default(50),
       offset: z.coerce.number().int().min(0).default(0),
-      sort: z.enum(["date", "title", "id"]).default("date"),
+      sort: z.enum(["date", "title", "id", "presenter", "venue"]).default("date"),
       order: z.enum(["asc", "desc"]).default("asc"),
       dateFrom: z.string().min(1).optional(),
       dateTo: z.string().min(1).optional()
@@ -21,10 +22,11 @@ export const listEvents = async (req, res) => {
       return res.status(400).json({ error: parsed.error.flatten() });
     }
 
-    const { venueid, q, limit, offset, sort, order, dateFrom, dateTo } = parsed.data;
+    const { venueid, presenter, q, limit, offset, sort, order, dateFrom, dateTo } = parsed.data;
 
     const filter = {};
     if (venueid) filter.venueid = venueid;
+	if (presenter) filter.presenter = { $regex: presenter, $options: "i" };
     if (q) filter.title = { $regex: q, $options: "i" };
     if (dateFrom || dateTo) {
       filter.date = {};
@@ -33,17 +35,35 @@ export const listEvents = async (req, res) => {
     }
 
     const sortStage =
-      sort === "title"
-        ? { title: order === "desc" ? -1 : 1 }
-        : sort === "id"
-        ? { id: order === "desc" ? -1 : 1 }
-        : { date: order === "desc" ? -1 : 1 };
+      sort === "title" ? { title: order === "desc" ? -1 : 1 } :
+      sort === "id" ? { id: order === "desc" ? -1 : 1 } :
+      sort === "presenter" ? { presenter: order === "desc" ? -1 : 1 } :
+      sort === "venue" ? { venueName: order === "desc" ? -1 : 1 } :
+      { date: order === "desc" ? -1 : 1 };
 
     const [items, total] = await Promise.all([
-      Event.find(filter).sort(sortStage).skip(offset).limit(limit),
+      Event.aggregate([
+        { $match: filter },
+        { $skip: offset },
+        { $limit: limit },
+        {
+          $lookup: {
+            from: "venues",
+            localField: "venueid",
+            foreignField: "id",
+            as: "venueDoc"
+          }
+        },
+        {
+          $addFields: {
+          venueName: { $ifNull: [{ $arrayElemAt: ["$venueDoc.name", 0] }, "" ] }
+          }
+        },
+        { $sort: sortStage },
+        { $project: { venueDoc: 0 } }
+      ]),
       Event.countDocuments(filter)
     ]);
-
     return res.json({ items, total, limit, offset });
   } catch (error) {
     console.error("listEvents error:", error);

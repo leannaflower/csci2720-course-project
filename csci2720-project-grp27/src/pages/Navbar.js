@@ -72,9 +72,10 @@ export default function Navbar({ user, setUser }) {
         </div>
 
         {!user && (
-          <Link to="/login" className="login-button">
-            Log In
-          </Link>
+          <div style={{ display: "flex", gap: 12 }}>
+            <Link to="/login" className="nav-link">Log in</Link>
+            <Link to="/register" className="nav-link">Sign up</Link>
+          </div>
         )}
 
         {user && (

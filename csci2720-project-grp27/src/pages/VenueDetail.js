@@ -410,9 +410,9 @@ export default function VenueDetail({ user }) {
                   <div className="event-card-content">
                     <div className="event-details">
                       <h4 className="event-title">
-                        <Link to={`/event/${event.id}`} className="event-link">
+                        <span className="event-link">
                           {event.title}
-                        </Link>
+                        </span>
                       </h4>
                       <div className="event-meta">
                         <span className="event-meta-item">

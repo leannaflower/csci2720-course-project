@@ -56,7 +56,7 @@ export default function ProfilePage() {
     const passwordErrors = (() => {
       const errs = [];
       if (!currentPassword) errs.push("Current password is required");
-      if (newPassword.length < 5) errs.push("New password must be at least 5 characters");
+      if (newPassword.length < 6) errs.push("New password must be at least 6 characters");
       if (newPassword && newPassword === currentPassword) errs.push("New password must be different from current password");
       if (confirmPassword !== newPassword) errs.push("Passwords do not match");
       return errs;

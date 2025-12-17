@@ -198,7 +198,7 @@ export const changePassword = async (req, res) => {
   try {
     const schema = z.object({
     currentPassword: z.string().min(1, "Current password is required"),
-    newPassword: z.string().min(5, "New password must be at least 5 characters"),
+    newPassword: z.string().min(6, "New password must be at least 6 characters"),
     });
     const parsed = schema.safeParse(req.body);
     if (!parsed.success) {

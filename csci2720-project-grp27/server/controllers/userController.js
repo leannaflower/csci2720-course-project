@@ -12,6 +12,11 @@ const loginSchema = z.object({
   password: z.string().min(6)
 });
 
+const registerSchema = z.object({
+  username: z.string().min(3),
+  password: z.string().min(6)
+});
+
 const refreshCookieOptions = {
   httpOnly: true,
   sameSite: "strict",
@@ -27,6 +32,7 @@ const sanitizeUser = (user) => ({
 
 const normalizeUsername = (value) => value.trim().toLowerCase();
 
+// login controller
 export const login = async (req, res) => {
   try {
     const parsed = loginSchema.safeParse(req.body);
@@ -57,6 +63,39 @@ export const login = async (req, res) => {
   } catch (error) {
     console.error("login error:", error);
     return res.status(500).json({ error: "Login failed" });
+  }
+};
+
+// register controller
+export const register = async (req, res) => {
+  try {
+    const parsed = registerSchema.safeParse(req.body);
+    if (!parsed.success) {
+      return res.status(400).json({ error: parsed.error.flatten() });
+    }
+
+    const username = normalizeUsername(parsed.data.username);
+    const { password } = parsed.data;
+
+    const existing = await User.findOne({ username });
+    if (existing) {
+      return res.status(409).json({ error: "Username already taken" });
+    }
+
+    const passwordHash = await bcrypt.hash(password, 12);
+    const user = await User.create({ username, passwordHash, role: "user" });
+
+    const payload = { sub: user.id, username: user.username, role: user.role };
+    const accessToken = signAccessToken(payload);
+    const refreshToken = signRefreshToken(payload);
+
+    return res
+      .status(201)
+      .cookie("rtk", refreshToken, refreshCookieOptions)
+      .json({ accessToken, user: sanitizeUser(user) });
+  } catch (error) {
+    console.error("register error:", error);
+    return res.status(500).json({ error: "Register failed" });
   }
 };
 

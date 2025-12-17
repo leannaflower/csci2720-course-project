@@ -8,6 +8,7 @@ import Map from "./pages/Map";
 import Login from "./pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import Favorites from "./pages/Favorites";
+import Register from "./pages/Register";
 
 import "./App.css";
 
@@ -32,7 +33,8 @@ export default function App() {
       <Navbar user={user} setUser={setUser}/>
 
       <Routes>
-        <Route path="/login" element={<Login setUser={setUser}/>} />
+        <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/register" element={<Register setUser={setUser} />} />
 
         <Route
           path="/"

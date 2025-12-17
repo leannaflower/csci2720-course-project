@@ -71,6 +71,13 @@ export default function Navbar({ user, setUser }) {
           </button>
         </div>
 
+        {!user && (
+          <div style={{ display: "flex", gap: 12 }}>
+            <Link to="/login" className="nav-link">Log in</Link>
+            <Link to="/register" className="nav-link">Sign up</Link>
+          </div>
+        )}
+
         {user && (
           <div className="profile-wrapper" ref={menuRef}>
             <div className="profile-icon" onClick={toggleMenu}>

@@ -41,6 +41,12 @@
   gap: 12px;
 }
 
+.auth-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
 .profile-wrapper {
   position: relative;
 }

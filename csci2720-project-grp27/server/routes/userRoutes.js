@@ -7,6 +7,7 @@ const router = Router();
 router.post("/login", userController.login);
 router.post("/logout", userController.logout);
 router.post("/refresh", userController.refresh);
+router.post("/register", userController.register);
 
 router.get("/me", authenticate, authorize("user", "admin"), userController.me);
 

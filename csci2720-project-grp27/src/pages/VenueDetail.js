@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -29,6 +29,8 @@ export default function VenueDetail({ user }) {
   const [eventsLoading, setEventsLoading] = useState(false); // New loading state
   const [eventsError, setEventsError] = useState(""); // New error state
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const EVENTS_PER_PAGE = 4;
 
   // comments feature
   const [comments, setComments] = useState([]);
@@ -41,6 +43,88 @@ export default function VenueDetail({ user }) {
 
   const location = useLocation();
   const isAdmin = user?.role === "admin";
+
+  const totalPages = useMemo(() => {
+    return Math.ceil(events.length / EVENTS_PER_PAGE);
+  }, [events]);
+
+  const paginatedEvents = useMemo(() => {
+    const startIndex = (currentPage - 1) * EVENTS_PER_PAGE;
+    const endIndex = startIndex + EVENTS_PER_PAGE;
+    return events.slice(startIndex, endIndex);
+  }, [events, currentPage]);
+
+  const startItem = useMemo(() => {
+    return (currentPage - 1) * EVENTS_PER_PAGE + 1;
+  }, [currentPage]);
+
+  const endItem = useMemo(() => {
+    return Math.min(currentPage * EVENTS_PER_PAGE, events.length);
+  }, [currentPage, events.length]);
+
+  // Reset to page 1 when events change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [events]);
+
+  const goToPage = (page) => {
+    setCurrentPage(page);
+  };
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const goToPrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisiblePages = 5;
+    
+    if (totalPages <= maxVisiblePages) {
+      // Show all pages
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Show first, last, and pages around current
+      pages.push(1);
+      
+      let start = Math.max(2, currentPage - 1);
+      let end = Math.min(totalPages - 1, currentPage + 1);
+      
+      if (currentPage <= 3) {
+        end = 4;
+      }
+      
+      if (currentPage >= totalPages - 2) {
+        start = totalPages - 3;
+      }
+      
+      if (start > 2) {
+        pages.push('...');
+      }
+      
+      for (let i = start; i <= end; i++) {
+        pages.push(i);
+      }
+      
+      if (end < totalPages - 1) {
+        pages.push('...');
+      }
+      
+      pages.push(totalPages);
+    }
+    
+    return pages;
+  };
+
 
   useEffect(() => {
     let cancelled = false;
@@ -302,6 +386,7 @@ export default function VenueDetail({ user }) {
         </MapContainer>
       )}
 
+      {/* Events Section with pagination */}
       <section className="events-section">
         <h3>Upcoming Events at this Venue</h3>
         
@@ -318,41 +403,72 @@ export default function VenueDetail({ user }) {
             No upcoming events scheduled at this venue.
           </div>
         ) : (
-          <div className="events-list">
-            {events.map((event) => (
-              <div key={event.id} className="event-card">
-                <div className="event-card-content">
-                  <div className="event-details">
-                    <h4 className="event-title">
-                      <span className="event-link">
-                        {event.title}
-                      </span>
-                    </h4>
-                    <div className="event-meta">
-                      <span className="event-meta-item">
-                        <strong>Event ID:</strong> {event.id}
-                      </span>
-                      <span className="event-meta-item">
-                        <strong>Date:</strong> {event.date}
-                      </span>
-                    </div>
-                    {event.description && (
-                      <p className="event-description">
-                        {event.description.length > 150 
-                          ? `${event.description.substring(0, 150)}...` 
-                          : event.description}
-                      </p>
-                    )}
-                    {event.presenter && (
-                      <div className="event-presenter">
-                        <strong>Presenter:</strong> {event.presenter}
+          <>
+            <div className="events-list">
+              {paginatedEvents.map((event) => (
+                <div key={event.id} className="event-card">
+                  <div className="event-card-content">
+                    <div className="event-details">
+                      <h4 className="event-title">
+                        <Link to={`/event/${event.id}`} className="event-link">
+                          {event.title}
+                        </Link>
+                      </h4>
+                      <div className="event-meta">
+                        <span className="event-meta-item">
+                          <strong>Event ID:</strong> {event.id}
+                        </span>
+                        <span className="event-meta-item">
+                          <strong>Date:</strong> {event.date}
+                        </span>
                       </div>
-                    )}
+                      {event.description && (
+                        <p className="event-description">
+                          {event.description.length > 150 
+                            ? `${event.description.substring(0, 150)}...` 
+                            : event.description}
+                        </p>
+                      )}
+                      {event.presenter && (
+                        <div className="event-presenter">
+                          <strong>Presenter:</strong> {event.presenter}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
+              ))}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="pagination">
+                <button 
+                  className="pagination-button"
+                  onClick={goToPrevPage}
+                  disabled={currentPage === 1}
+                >
+                  Previous
+                </button>
+
+                <div className="pagination-info">
+                  Showing {startItem}-{endItem} of {events.length} events
+                </div>
+
+                <div className="pagination-info">
+                  Page {currentPage} of {totalPages}
+                </div>
+
+                <button 
+                  className="pagination-button"
+                  onClick={goToNextPage}
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </button>
               </div>
-            ))}
-          </div>
+            )}
+          </>
         )}
       </section>
 

@@ -1,35 +1,69 @@
 [
   {
-    "eventId": "177028",
-    "title": "'Cheers!'  Series: Non-verbal Full Mask Theatre \"Plastic Island\" by  Free-To-Play",
+    "eventId": "175660",
+    "title": "'Cheers!' Series: 'The Storyville Mosquito' by Kid Koala (Canada)",
     "dates": [
-      "2026-01-30",
-      "2026-01-31"
+      "2026-02-06",
+      "2026-02-07"
     ],
-    "description": "",
-    "presenter": "Presented by Leisure and Cultural Services Department",
+    "description": "♪ Puppetry  ♫ Miniature sets  ♪ Cinematography  ♫ Live music\n\n✩  Outstanding Touring Production at Dora Awards 2023  ✩ \n\n\n\nThe Storyville Mosquito is a live multi-media film production that is performed, filmed and scored in real time.  A team of 14 performers, musicians, foley artists and technicians bring the characters to life cinematically using 20 miniature sets, 75 puppets, 8 cameras, and screens onstage.\n\nA mosquito moves to the big city to pursue his dream of playing at the legendary music hall... What awaits him? The performance is filmed in one continuous take, accompanied by an original music soundtrack featuring a string trio and the multi-talented Canadian DJ Kid Koala on turntables, keyboards and electronics. Each performance is uniquely tailored, providing audience a one-of-a-kind theatre experience - watching both a live film on the screen and the “making of” on stage without a pause. \n\n♪ Meet-the-artist session after each performance (In English with Cantonese Interpretation)\n\n♪ 7.2.2026(4pm) Stage Tour (In English with Cantonese Interpretation) $80\n♪ 7.2.2026(5pm) Meet-the-Puppet Session (Event details and exact location will be announced in due course)",
+    "presenter": "Leisure and Cultural Services Department",
     "venue": {
-      "id": "35510044",
-      "name": "Tai Po Civic Centre (Black Box Theatre)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
+      "id": "826817417",
+      "name": "East Kowloon Cultural Centre (The Hall)",
+      "latitude": 22.32427,
+      "longitude": 114.21494,
       "eventCount": 3
     }
   },
   {
-    "eventId": "175805",
-    "title": "'Cheers!' Series: Non-verbal full mask theatre \"Plastic Island\" by Free-To-Play",
+    "eventId": "177415",
+    "title": "'Cheers!' Series: YOAH by Cirquework (Japan)",
     "dates": [
-      "2026-02-01"
+      "2026-01-23",
+      "2026-01-24",
+      "2026-01-25"
     ],
-    "description": "For details, please refer to the facebook page of the presenter: Free-To-Play",
-    "presenter": "Free-To-Play",
+    "description": "",
+    "presenter": "Leisure and Cultural Services Department",
     "venue": {
-      "id": "35510044",
-      "name": "Tai Po Civic Centre (Black Box Theatre)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 3
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
+    "eventId": "177416",
+    "title": "'Cheers!' Series: YOAH by Cirquework (Japan) Backstage Tour",
+    "dates": [
+      "2026-01-25"
+    ],
+    "description": "",
+    "presenter": "Leisure and Cultural Services Department",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
+    "eventId": "175735",
+    "title": "‘Cheers!’ Series:  YOAH  by Cirquework (Japan)",
+    "dates": [
+      "2026-01-23"
+    ],
+    "description": "✩ Best of Circus at Adelaide Fringe Weekly Award Winners 2024 & 2025 ✩\n✩ Outstanding Female Performer Winner at Asian Art Awards of Edinburgh Festival Fringe 2024 ✩\n\nThe story themed around ‘The Moon at Dawn (Hope)’. It was about a fantasy story of a girl lost in the underworld where she meets four sinister wizards in mysterious black garbs, who conjure magic with their diabolos, but the girl did not lose hope with the moon's guidance to find the path home.\n\nIn this story full of fantasy and adventure, courage and faith help the girl overcome darkness and find her way home. The moon's guidance symbolizes hope, rekindling light in every heart amidst despair.\n\n▫️ The running time of each performance is approximately 1 hour without intermission.\n▫️ Suitable for ages 6 and above.\n▫️ Members of the audience are strongly advised to arrive punctually.  Latecomers and those who leave their seats during the performance will only be admitted and allowed to return to their seats respectively at a suitable break.  The presenter reserves the right to refuse admission of latecomers, or determine the time and manner of admission of latecomers.\n▫️ Performers have been professionally trained.  Audience is advised not to imitate their acts.\n▫️ The programme contains high‑frequency sounds, strobe lighting and darkened effect.\n▫️ The presenter reserves the right to change the programme and substitute artists without prior notice\n▫️ The programme does not represent the views of the Leisure and Cultural Services Department.\n\nFringe Activities\n🔸 23 Jan 2026 Meet-the-artist session after the first performance (In Japanese with Cantonese interpretation).\n🔸 21 Jan 2026 Workshop 1 - Childen Class (Best for ages 6-11)  (In Japanese with Cantonese interpretation).\n🔸 22 Jan 2026 Workshop 2 - Youth and Adult Classes (Best for ages 12 and above) (In Japanese with Cantonese interpretation).\n🔸 25 Jan 2026 Backstage Tour (Best for ages 6 or above) (In Japanese with Cantonese interpretation).",
+    "presenter": "Leisure and Cultural Services Department",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
     }
   },
   {
@@ -50,178 +84,68 @@
     }
   },
   {
-    "eventId": "177243",
-    "title": "&nbsp;Stretching Dance (Ladies Only)",
+    "eventId": "177303",
+    "title": "“Beare's Premiere Music Festival 2026: Musical Fireworks” by Premiere Performances of Hong Kong",
     "dates": [
-      "2026-01-06",
-      "2026-01-08",
-      "2026-01-13",
-      "2026-01-15",
-      "2026-01-20",
-      "2026-01-22",
-      "2026-01-27",
-      "2026-01-29",
-      "2026-02-03",
-      "2026-02-05",
-      "2026-02-10",
-      "2026-02-12",
-      "2026-02-24",
-      "2026-02-26",
-      "2026-03-03",
-      "2026-03-05",
-      "2026-03-10",
-      "2026-03-12",
-      "2026-03-17",
-      "2026-03-19",
-      "2026-03-24",
-      "2026-03-26",
-      "2026-03-31",
-      "2026-04-02",
-      "2026-04-09",
-      "2026-04-14",
-      "2026-04-16",
-      "2026-04-21",
-      "2026-04-23",
-      "2026-04-28",
-      "2026-04-30",
-      "2026-05-05",
-      "2026-05-07",
-      "2026-05-12",
-      "2026-05-14",
-      "2026-05-19",
-      "2026-05-21",
-      "2026-05-26",
-      "2026-05-28",
-      "2026-06-02",
-      "2026-06-04",
-      "2026-06-09",
-      "2026-06-11",
-      "2026-06-16",
-      "2026-06-18",
-      "2026-06-23",
-      "2026-06-25",
-      "2026-06-30"
+      "2026-01-25"
     ],
     "description": "",
-    "presenter": "Presented by CHIU CHI KWONG",
+    "presenter": "Premiere Performances of Hong Kong",
     "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
     }
   },
   {
-    "eventId": "177157",
-    "title": "Tai Po  Civic Centre Fun Day:\tThe Boys' &amp; Girls' Clubs Association of Hong Kong Busking Performance / Street Dance Performance",
+    "eventId": "177302",
+    "title": "“The Bartered Bride by Smetana” by Bel Canto Singers",
     "dates": [
-      "2026-01-10"
-    ],
-    "description": "",
-    "presenter": "Presented by PVO(NTE) - MDA",
-    "venue": {
-      "id": "35517495",
-      "name": "Tai Po Civic Centre (Foyer Exhibition Area)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 7
-    }
-  },
-  {
-    "eventId": "177156",
-    "title": "Tai Po  Civic Centre Fun Day:\tThe Hong Kong Federation of Youth Groups—Tai Po Youth S.P.O.T. Busking  Performance",
-    "dates": [
-      "2026-01-10"
-    ],
-    "description": "",
-    "presenter": "Presented by PVO(NTE) - MDA",
-    "venue": {
-      "id": "35517495",
-      "name": "Tai Po Civic Centre (Foyer Exhibition Area)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 7
-    }
-  },
-  {
-    "eventId": "177155",
-    "title": "Tai Po  Civic Centre Fun Day: CCAS 2025: Hong Kong Education of Innovation and Performing Arts Association  'StepUp Hong Kong' — Community Dance Tour / Community Dance Workshop",
-    "dates": [
-      "2026-01-10"
-    ],
-    "description": "",
-    "presenter": "Presented by PVO(NTE) - MDA",
-    "venue": {
-      "id": "35517495",
-      "name": "Tai Po Civic Centre (Foyer Exhibition Area)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 7
-    }
-  },
-  {
-    "eventId": "177158",
-    "title": "Tai Po Civic Centre Celebration Programme:\tTai Po Public  Library — Read &amp; Arts: Parent-child Storytime",
-    "dates": [
+      "2026-01-16",
       "2026-01-17"
     ],
     "description": "",
-    "presenter": "Presented by PVO(NTE) - MDA",
+    "presenter": "Bel Canto Singers",
     "venue": {
-      "id": "35517495",
-      "name": "Tai Po Civic Centre (Foyer Exhibition Area)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 7
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
     }
   },
   {
-    "eventId": "177160",
-    "title": "Tai Po Civic Centre Celebration Programme:\tTai Po Public Library — Read &amp; Arts: Parent-child Storytime",
+    "eventId": "177304",
+    "title": "“Tien Ma Chorus Golden Jubilee Concert” by Tien Ma Chorus",
     "dates": [
       "2026-01-31"
     ],
     "description": "",
-    "presenter": "Presented by PVO(NTE) - MDA",
+    "presenter": "Tien Ma Chorus",
     "venue": {
-      "id": "35517495",
-      "name": "Tai Po Civic Centre (Foyer Exhibition Area)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 7
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
     }
   },
   {
-    "eventId": "177159",
-    "title": "Tai Po Civic Centre Celebration Programme:\tThe Salvation Army Tai Po Integrated Service for Young People — Busking  Performance",
+    "eventId": "177297",
+    "title": "(Concert)",
     "dates": [
-      "2026-01-17"
+      "2026-01-27"
     ],
     "description": "",
-    "presenter": "Presented by PVO(NTE) - MDA",
+    "presenter": "(Concert)",
     "venue": {
-      "id": "35517495",
-      "name": "Tai Po Civic Centre (Foyer Exhibition Area)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 7
-    }
-  },
-  {
-    "eventId": "177161",
-    "title": "Tai Po Civic Centre Celebration Programme:\tThe Salvation Army Tai Po Integrated Service for Young People — Busking  Performance",
-    "dates": [
-      "2026-01-31"
-    ],
-    "description": "",
-    "presenter": "Presented by PVO(NTE) - MDA",
-    "venue": {
-      "id": "35517495",
-      "name": "Tai Po Civic Centre (Foyer Exhibition Area)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 7
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
     }
   },
   {
@@ -241,90 +165,99 @@
     }
   },
   {
-    "eventId": "172096",
-    "title": "Ballet Class of Sha Tin Arts Association",
+    "eventId": "177137",
+    "title": "2026 Hong Kong Youth Chinese Orchestra Annual Concert",
     "dates": [
-      "2025-07-05",
-      "2025-07-12",
-      "2025-07-19",
-      "2025-07-26",
-      "2025-08-02",
-      "2025-08-09",
-      "2025-08-16",
-      "2025-12-06",
-      "2025-12-13",
-      "2025-12-20",
-      "2025-12-27"
+      "2026-01-04"
     ],
-    "description": "",
-    "presenter": "Presented by Sha Tin Arts Association Limited",
+    "description": "The Hong Kong Youth Chinese Orchestra (HKYCO) will present its annual concert “The Prosperous Times” with guest performance by the Hong Kong Young Chinese Orchestra, on January 4 2026, at 3pm in the Concert Hall of the Hong Kong Cultural Centre.\nThis concert, features a diverse and captivating repertoire under the baton of Music Office Instructor Bosco Kwok Kin-ming and guest conductor Rupert Woo Pak-tuen. The concert programme includes the lively 3rd movement \"A Happy Gathering\" from Suite Impressions of Hainan that will evoke tropical charm, Dizi Principal of the HKYCO, Luk Tsun-ki will be the soloist of the majestic dizi concerto The Song of Flight, followed by the joyful Lantern Festival and exuberant Eager to Fly. The two orchestras will join forces to present The Sisters' Islands, a piece inspired by mythological legend, and the concert will culminate in the world premiere of Xu Xinchi's Symphony No. 1 \"The Prosperous Times\", commissioned by the Music Office, leading the audience on a journey through the resplendent beauty of Chinese culture. The concert is also one of the activities in the Chinese Culture Promotion Series.",
+    "presenter": "Music Office",
     "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
     }
   },
   {
-    "eventId": "172097",
-    "title": "Ballet Class of Sha Tin Arts Association",
+    "eventId": "177172",
+    "title": "30th Anniversary Celebration Concert",
     "dates": [
-      "2025-07-06",
-      "2025-07-13",
-      "2025-07-20",
-      "2025-07-27",
-      "2025-08-03",
-      "2025-08-10",
-      "2025-08-17",
-      "2025-12-07",
-      "2025-12-14",
-      "2025-12-21",
-      "2025-12-28"
+      "2026-01-02"
     ],
     "description": "",
-    "presenter": "Presented by Sha Tin Arts Association Limited",
+    "presenter": "Hong Kong Children's Symphony Orchestra",
     "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
     }
   },
   {
-    "eventId": "171892",
-    "title": "Buddhism Class",
+    "eventId": "177321",
+    "title": "Annual Dancing Variety Show of STAA",
     "dates": [
-      "2025-07-16",
-      "2025-07-23",
-      "2025-07-30",
-      "2025-08-06",
-      "2025-08-20",
-      "2025-08-27",
-      "2025-09-03",
-      "2025-09-10",
-      "2025-09-17",
-      "2025-09-24",
-      "2025-10-08",
-      "2025-10-15",
-      "2025-10-22",
-      "2025-11-05",
-      "2025-11-12",
-      "2025-11-19",
-      "2025-11-26",
-      "2025-12-03",
-      "2025-12-10",
-      "2025-12-17"
+      "2026-01-03"
     ],
     "description": "",
-    "presenter": "Presented by Chi Hong Ching Yuen Limited",
+    "presenter": "Sha Tin Arts Association Ltd.",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
+      "id": "87310051",
+      "name": "Yuen Long Theatre (Auditorium)",
+      "latitude": 22.44152,
+      "longitude": 114.02289,
+      "eventCount": 8
+    }
+  },
+  {
+    "eventId": "177038",
+    "title": "Beare’s Premiere Music Festival 2026 - Festival Finale: Four Seasons",
+    "dates": [
+      "2026-01-30"
+    ],
+    "description": "",
+    "presenter": "Premiere Performances of Hong Kong",
+    "venue": {
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "177036",
+    "title": "Beare’s Premiere Music Festival 2026 - Ode to Beethoven",
+    "dates": [
+      "2026-01-26"
+    ],
+    "description": "",
+    "presenter": "Premiere Performances of Hong Kong",
+    "venue": {
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "177037",
+    "title": "Beare’s Premiere Music Festival 2026 - Strings in Motion",
+    "dates": [
+      "2026-01-28"
+    ],
+    "description": "",
+    "presenter": "Premiere Performances of Hong Kong",
+    "venue": {
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
     }
   },
   {
@@ -346,359 +279,115 @@
     }
   },
   {
-    "eventId": "177242",
-    "title": "Cantonese  Operatic Songs Class",
+    "eventId": "177054",
+    "title": "Cantonese Opera",
     "dates": [
-      "2026-01-06",
-      "2026-01-13",
-      "2026-01-20",
-      "2026-01-27",
-      "2026-02-03",
-      "2026-02-10",
-      "2026-02-24",
-      "2026-03-03",
-      "2026-03-10",
-      "2026-03-17",
-      "2026-03-24",
-      "2026-03-31",
-      "2026-04-07",
-      "2026-04-14",
-      "2026-04-21",
-      "2026-04-28",
-      "2026-05-12",
-      "2026-05-19",
-      "2026-05-26",
-      "2026-06-02",
-      "2026-06-09",
-      "2026-06-16",
-      "2026-06-23",
-      "2026-06-30"
+      "2025-12-21"
     ],
     "description": "",
-    "presenter": "Presented by The Best Team",
+    "presenter": "Yuen Long District Arts Committee",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
+      "id": "87310051",
+      "name": "Yuen Long Theatre (Auditorium)",
+      "latitude": 22.44152,
+      "longitude": 114.02289,
+      "eventCount": 8
+    }
+  },
+  {
+    "eventId": "177325",
+    "title": "Cantonese Opera Excerpts",
+    "dates": [
+      "2026-01-10"
+    ],
+    "description": "",
+    "presenter": "Choi Fung Cheung Opera Troupe",
+    "venue": {
+      "id": "87310051",
+      "name": "Yuen Long Theatre (Auditorium)",
+      "latitude": 22.44152,
+      "longitude": 114.02289,
+      "eventCount": 8
+    }
+  },
+  {
+    "eventId": "176299",
+    "title": "Cantonese Opera Excerpts",
+    "dates": [
+      "2025-12-26"
+    ],
+    "description": "",
+    "presenter": "Glamorous Cantonese Opera Troupe",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
       "eventCount": 21
     }
   },
   {
-    "eventId": "177241",
-    "title": "Cantonese  Operatic Songs Class",
+    "eventId": "177406",
+    "title": "Cantonese Opera Excerpts and Cantonese Operatic Songs Concert",
     "dates": [
-      "2026-01-08",
-      "2026-01-15",
-      "2026-01-22",
-      "2026-01-29",
-      "2026-02-05",
-      "2026-02-26",
-      "2026-03-05",
-      "2026-03-12",
-      "2026-03-19",
-      "2026-03-26",
-      "2026-04-02",
-      "2026-04-09",
-      "2026-04-16",
-      "2026-04-23",
-      "2026-04-30",
-      "2026-05-14",
-      "2026-05-21",
-      "2026-05-28",
-      "2026-06-04",
-      "2026-06-11",
-      "2026-06-18",
-      "2026-06-25"
+      "2026-01-04"
     ],
     "description": "",
-    "presenter": "Presented by Yuk Kiu Artist Guild",
+    "presenter": "Chung Sing Cantonese Opera Group",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
       "eventCount": 21
     }
   },
   {
-    "eventId": "177225",
-    "title": "Cantonese  Operatic Songs Class",
+    "eventId": "177409",
+    "title": "Cantonese Opera Excerpts and Cantonese Operatic Songs Concert",
     "dates": [
-      "2026-01-07",
-      "2026-01-14",
-      "2026-01-21",
-      "2026-01-28",
-      "2026-02-04",
-      "2026-02-11",
-      "2026-02-25",
-      "2026-03-04",
-      "2026-03-11",
-      "2026-03-18",
-      "2026-03-25",
-      "2026-04-01",
-      "2026-04-08",
-      "2026-04-15",
-      "2026-04-22",
-      "2026-04-29",
-      "2026-05-13",
-      "2026-05-20",
-      "2026-05-27",
-      "2026-06-03",
-      "2026-06-10",
-      "2026-06-17",
-      "2026-06-24"
+      "2026-01-13"
     ],
     "description": "",
-    "presenter": "Presented by 花千樹曲藝社",
+    "presenter": "Amazing Folk Art Club",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
       "eventCount": 21
     }
   },
   {
-    "eventId": "173755",
-    "title": "Cantonese Opera &amp; Operatic Songs Class",
+    "eventId": "177405",
+    "title": "Cantonese Opera Excerpts and Cantonese Operatic Songs Concert",
     "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-08-21",
-      "2025-08-28",
-      "2025-09-04",
-      "2025-09-11",
-      "2025-09-18",
-      "2025-09-25",
-      "2025-10-02",
-      "2025-10-09",
-      "2025-10-16",
-      "2025-10-23",
-      "2025-10-30",
-      "2025-11-06",
-      "2025-11-13",
-      "2025-11-20",
-      "2025-11-27",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
+      "2026-01-03"
     ],
     "description": "",
-    "presenter": "Presented by Yiu Ming Sing Cantonese Opera",
+    "presenter": "Sunrise Cantonese Opera Club Hong Kong",
     "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "173756",
-    "title": "Cantonese Opera &amp; Operatic Songs Class",
-    "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-08-21",
-      "2025-08-28",
-      "2025-09-04",
-      "2025-09-11",
-      "2025-09-18",
-      "2025-09-25",
-      "2025-10-02",
-      "2025-10-09",
-      "2025-10-16",
-      "2025-10-23",
-      "2025-10-30",
-      "2025-11-06",
-      "2025-11-13",
-      "2025-11-20",
-      "2025-11-27",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
-    ],
-    "description": "",
-    "presenter": "Presented by Yiu Ming Sing Cantonese Opera",
-    "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "171885",
-    "title": "Cantonese Opera Class",
-    "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-08-21",
-      "2025-08-28",
-      "2025-09-04",
-      "2025-09-11",
-      "2025-09-18",
-      "2025-09-25",
-      "2025-10-02",
-      "2025-10-09",
-      "2025-10-16",
-      "2025-10-23",
-      "2025-10-30",
-      "2025-11-06",
-      "2025-11-13",
-      "2025-11-20",
-      "2025-11-27",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
-    ],
-    "description": "",
-    "presenter": "Presented by 日月軒曲藝社",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
       "eventCount": 21
     }
   },
   {
-    "eventId": "171884",
-    "title": "Cantonese Opera Class",
+    "eventId": "177320",
+    "title": "Cantonese Opera Excerpts and Cantonese Operatic Songs Concert",
     "dates": [
-      "2025-07-02",
-      "2025-07-09",
-      "2025-07-16",
-      "2025-07-23",
-      "2025-07-30",
-      "2025-08-06",
-      "2025-08-13",
-      "2025-08-20",
-      "2025-08-27",
-      "2025-09-03",
-      "2025-09-10",
-      "2025-09-17",
-      "2025-09-24",
-      "2025-10-08",
-      "2025-10-15",
-      "2025-10-22",
-      "2025-11-05",
-      "2025-11-19",
-      "2025-11-26",
-      "2025-12-03",
-      "2025-12-10",
-      "2025-12-17",
-      "2025-12-24",
-      "2025-12-31"
+      "2026-01-02"
     ],
     "description": "",
-    "presenter": "Presented by Color Rhyme Cantonese Opera Association",
+    "presenter": "堂皇曲苑",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171896",
-    "title": "Cantonese Opera Class",
-    "dates": [
-      "2025-07-01",
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-08-19",
-      "2025-08-26",
-      "2025-09-02",
-      "2025-09-09",
-      "2025-09-16",
-      "2025-09-23",
-      "2025-09-30",
-      "2025-10-07",
-      "2025-10-14",
-      "2025-10-21",
-      "2025-10-28",
-      "2025-11-04",
-      "2025-11-11",
-      "2025-11-18",
-      "2025-11-25",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
-    ],
-    "description": "",
-    "presenter": "Presented by The Best Team",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171895",
-    "title": "Cantonese Opera Class",
-    "dates": [
-      "2025-07-07",
-      "2025-07-14",
-      "2025-07-21",
-      "2025-07-28",
-      "2025-08-04",
-      "2025-08-11",
-      "2025-08-18",
-      "2025-08-25",
-      "2025-09-01",
-      "2025-09-08",
-      "2025-09-15",
-      "2025-09-22",
-      "2025-09-29",
-      "2025-10-06",
-      "2025-10-13",
-      "2025-10-20",
-      "2025-10-27",
-      "2025-11-03",
-      "2025-11-10",
-      "2025-11-17",
-      "2025-11-24",
-      "2025-12-01",
-      "2025-12-08",
-      "2025-12-15",
-      "2025-12-22",
-      "2025-12-29"
-    ],
-    "description": "",
-    "presenter": "Presented by The Best Team",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
+      "id": "87310051",
+      "name": "Yuen Long Theatre (Auditorium)",
+      "latitude": 22.44152,
+      "longitude": 114.02289,
+      "eventCount": 8
     }
   },
   {
@@ -734,204 +423,51 @@
     }
   },
   {
-    "eventId": "173757",
-    "title": "Cantonese Opera Training for Teenagers Class",
+    "eventId": "177414",
+    "title": "Cantonese Operatic Songs Concert",
     "dates": [
-      "2025-07-05",
-      "2025-07-12",
-      "2025-07-19",
-      "2025-07-26",
-      "2025-08-02",
-      "2025-08-09",
-      "2025-08-16",
-      "2025-08-23",
-      "2025-08-30",
-      "2025-09-06",
-      "2025-09-13",
-      "2025-09-20",
-      "2025-09-27",
-      "2025-10-04",
-      "2025-10-11",
-      "2025-10-18",
-      "2025-10-25",
-      "2025-11-01",
-      "2025-11-08",
-      "2025-11-15",
-      "2025-11-22",
-      "2025-11-29",
-      "2025-12-06",
-      "2025-12-13",
-      "2025-12-20",
-      "2025-12-27"
+      "2026-01-18"
     ],
     "description": "",
-    "presenter": "Presented by Yiu Ming Sing Cantonese Opera",
+    "presenter": "Pak Yui Cantonese Opera Society",
     "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "171955",
-    "title": "Cantonese Operatic Songs Class",
-    "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-08-21",
-      "2025-08-28",
-      "2025-09-04",
-      "2025-09-11",
-      "2025-09-18",
-      "2025-09-25",
-      "2025-10-02",
-      "2025-10-09",
-      "2025-10-16",
-      "2025-10-23",
-      "2025-10-30",
-      "2025-11-06",
-      "2025-11-13",
-      "2025-11-20",
-      "2025-11-27",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
-    ],
-    "description": "",
-    "presenter": "Presented by Lai Wing Music Art",
-    "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "171893",
-    "title": "Cantonese Operatic Songs Class",
-    "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-08-19",
-      "2025-08-26",
-      "2025-09-02",
-      "2025-09-09",
-      "2025-09-16",
-      "2025-09-23",
-      "2025-09-30",
-      "2025-10-14",
-      "2025-10-21",
-      "2025-10-28",
-      "2025-11-04",
-      "2025-11-11",
-      "2025-11-18",
-      "2025-11-25",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
-    ],
-    "description": "",
-    "presenter": "Presented by Ming Wai Music Association",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
       "eventCount": 21
     }
   },
   {
-    "eventId": "171891",
-    "title": "Cantonese Operatic Songs Class",
+    "eventId": "176301",
+    "title": "Cantonese Operatic Songs Concert",
     "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-08-21",
-      "2025-08-28",
-      "2025-09-04",
-      "2025-09-11",
-      "2025-09-18",
-      "2025-09-25",
-      "2025-10-02",
-      "2025-10-09",
-      "2025-10-16",
-      "2025-10-23",
-      "2025-10-30",
-      "2025-11-06",
-      "2025-11-13",
-      "2025-11-20",
-      "2025-11-27",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
+      "2025-12-29"
     ],
     "description": "",
-    "presenter": "Presented by Yuk Kiu Artust Guild",
+    "presenter": "Yuet Long Group",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
       "eventCount": 21
     }
   },
   {
-    "eventId": "171883",
-    "title": "Cantonese Operatic Songs Class",
+    "eventId": "177322",
+    "title": "Cantonese Operatic Songs Concert",
     "dates": [
-      "2025-07-02",
-      "2025-07-09",
-      "2025-07-16",
-      "2025-07-23",
-      "2025-07-30",
-      "2025-08-06",
-      "2025-08-13",
-      "2025-08-20",
-      "2025-08-27",
-      "2025-09-03",
-      "2025-09-10",
-      "2025-09-17",
-      "2025-09-24",
-      "2025-10-08",
-      "2025-10-15",
-      "2025-10-22",
-      "2025-11-05",
-      "2025-11-12",
-      "2025-11-19",
-      "2025-11-26",
-      "2025-12-03",
-      "2025-12-10",
-      "2025-12-17",
-      "2025-12-24",
-      "2025-12-31"
+      "2026-01-04"
     ],
     "description": "",
-    "presenter": "Presented by 花千樹曲藝社",
+    "presenter": "Pak Yui Cantonese Opera Society",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
+      "id": "87310051",
+      "name": "Yuen Long Theatre (Auditorium)",
+      "latitude": 22.44152,
+      "longitude": 114.02289,
+      "eventCount": 8
     }
   },
   {
@@ -948,6 +484,39 @@
       "latitude": 22.501639,
       "longitude": 114.128911,
       "eventCount": 14
+    }
+  },
+  {
+    "eventId": "177413",
+    "title": "Cantonese Operatic Songs Concert",
+    "dates": [
+      "2026-01-17"
+    ],
+    "description": "",
+    "presenter": "Pak Yui Cantonese Opera Society",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
+    "eventId": "176302",
+    "title": "Cantonese Operatic Songs Concert",
+    "dates": [
+      "2025-12-31",
+      "2026-01-01"
+    ],
+    "description": "",
+    "presenter": "Honor Music Club",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
     }
   },
   {
@@ -999,1171 +568,498 @@
     }
   },
   {
-    "eventId": "172934",
-    "title": "Children Ballet Classes",
+    "eventId": "175832",
+    "title": "Dreamy Brass Feast",
     "dates": [
-      "2025-07-06",
-      "2025-07-13",
-      "2025-07-20",
-      "2025-07-27",
-      "2025-08-03",
-      "2025-08-10",
-      "2025-08-17",
-      "2025-08-24",
-      "2025-08-31",
-      "2025-09-07",
-      "2025-09-14",
-      "2025-09-21",
-      "2025-09-28",
-      "2025-10-05",
-      "2025-10-12",
-      "2025-10-19",
-      "2025-10-26",
-      "2025-11-02",
-      "2025-11-09",
-      "2025-11-16",
-      "2025-11-23",
-      "2025-11-30",
-      "2025-12-07",
-      "2025-12-14",
-      "2025-12-21",
-      "2025-12-28"
-    ],
-    "description": "",
-    "presenter": "Presented by North District Arts Advancement Association Limited",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "177227",
-    "title": "Chinese  Dance Class",
-    "dates": [
-      "2026-01-02",
-      "2026-01-09",
-      "2026-01-16",
-      "2026-01-23",
-      "2026-01-30",
-      "2026-02-06",
-      "2026-02-13",
-      "2026-02-27",
-      "2026-03-06",
-      "2026-03-13",
-      "2026-03-20",
-      "2026-03-27",
-      "2026-04-10",
-      "2026-04-17",
-      "2026-04-24",
-      "2026-05-08",
-      "2026-05-15",
-      "2026-05-22",
-      "2026-05-29",
-      "2026-06-05",
-      "2026-06-12",
-      "2026-06-26"
-    ],
-    "description": "",
-    "presenter": "Presented by WU CHI KWAN",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "177274",
-    "title": "Chinese  Dance Class",
-    "dates": [
-      "2026-01-05",
-      "2026-01-12",
-      "2026-01-19",
-      "2026-01-26",
-      "2026-02-02",
-      "2026-02-09",
-      "2026-02-23",
-      "2026-03-02",
-      "2026-03-09",
-      "2026-03-16",
-      "2026-03-23",
-      "2026-03-30",
-      "2026-04-13",
-      "2026-04-20",
-      "2026-04-27",
-      "2026-05-04",
-      "2026-05-11",
-      "2026-05-18",
-      "2026-06-01",
-      "2026-06-08",
-      "2026-06-15",
-      "2026-06-22",
-      "2026-06-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Ma On Shan Promotion of Livelihood & Recreation Association",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "174641",
-    "title": "Chinese Calligraphy Class",
-    "dates": [
-      "2025-11-01",
-      "2025-11-08",
-      "2025-11-15",
-      "2025-11-22",
-      "2025-12-06",
-      "2025-12-13",
-      "2025-12-20",
-      "2025-12-27"
-    ],
-    "description": "",
-    "presenter": "Presented by Laka Calligraphy Association",
-    "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "171897",
-    "title": "Chinese Dance Class",
-    "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-08-22",
-      "2025-08-29",
-      "2025-09-05",
-      "2025-09-12",
-      "2025-09-19",
-      "2025-09-26",
-      "2025-10-03",
-      "2025-10-10",
-      "2025-10-17",
-      "2025-10-24",
-      "2025-10-31",
-      "2025-11-07",
-      "2025-11-14",
-      "2025-11-21",
-      "2025-11-28",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
-    ],
-    "description": "",
-    "presenter": "Presented by WU CHI KWAN",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "173716",
-    "title": "Chinese Dance Class",
-    "dates": [
-      "2025-07-02",
-      "2025-07-09",
-      "2025-07-16",
-      "2025-07-23",
-      "2025-07-30",
-      "2025-08-06",
-      "2025-08-13",
-      "2025-12-03",
-      "2025-12-10",
-      "2025-12-17",
-      "2025-12-24",
-      "2025-12-31"
-    ],
-    "description": "",
-    "presenter": "Presented by Ma On Shan Promotion of Livelihood & Recreation Association",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "173717",
-    "title": "Chinese Dance Class",
-    "dates": [
-      "2025-07-06",
-      "2025-07-13",
-      "2025-07-20",
-      "2025-07-27",
-      "2025-08-03",
-      "2025-08-10",
-      "2025-08-17",
-      "2025-12-07",
-      "2025-12-14",
-      "2025-12-21",
-      "2025-12-28"
-    ],
-    "description": "",
-    "presenter": "Presented by Ma On Shan Promotion of Livelihood & Recreation Association",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "177240",
-    "title": "Dance  Course",
-    "dates": [
-      "2026-01-07",
-      "2026-01-14",
-      "2026-01-21",
-      "2026-01-28",
-      "2026-02-04",
-      "2026-02-11",
-      "2026-02-25",
-      "2026-03-04",
-      "2026-03-11",
-      "2026-03-18",
-      "2026-03-25",
-      "2026-04-01",
-      "2026-04-08",
-      "2026-04-15",
-      "2026-04-22",
-      "2026-04-29",
-      "2026-05-13",
-      "2026-05-20",
-      "2026-05-27",
-      "2026-06-03",
-      "2026-06-10",
-      "2026-06-17",
-      "2026-06-24"
-    ],
-    "description": "",
-    "presenter": "Presented by Starry Dancing Association",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171906",
-    "title": "Dance Class",
-    "dates": [
-      "2025-07-02",
-      "2025-07-09",
-      "2025-07-16",
-      "2025-07-23",
-      "2025-07-30",
-      "2025-08-06",
-      "2025-08-13",
-      "2025-08-20",
-      "2025-08-27",
-      "2025-09-03",
-      "2025-09-10",
-      "2025-09-17",
-      "2025-09-24",
-      "2025-10-08",
-      "2025-10-15",
-      "2025-10-22",
-      "2025-11-05",
-      "2025-11-12",
-      "2025-11-19",
-      "2025-11-26",
-      "2025-12-03",
-      "2025-12-10",
-      "2025-12-17"
-    ],
-    "description": "",
-    "presenter": "Presented by Lofty Dancing Club",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171907",
-    "title": "Dance Class",
-    "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-08-22",
-      "2025-08-29",
-      "2025-09-05",
-      "2025-09-12",
-      "2025-09-19",
-      "2025-09-26",
-      "2025-10-03",
-      "2025-10-10",
-      "2025-10-17",
-      "2025-10-24",
-      "2025-10-31",
-      "2025-11-07",
-      "2025-11-14",
-      "2025-11-21",
-      "2025-11-28",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
-    ],
-    "description": "",
-    "presenter": "Presented by Lofty Dancing Club",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171904",
-    "title": "Dance Class",
-    "dates": [
-      "2025-07-07",
-      "2025-07-14",
-      "2025-07-21",
-      "2025-07-28",
-      "2025-08-04",
-      "2025-08-11",
-      "2025-08-18",
-      "2025-08-25",
-      "2025-09-01",
-      "2025-09-08",
-      "2025-09-15",
-      "2025-09-22",
-      "2025-09-29",
-      "2025-10-13",
-      "2025-10-20",
-      "2025-10-27",
-      "2025-11-03",
-      "2025-11-10",
-      "2025-11-17",
-      "2025-11-24",
-      "2025-12-01",
-      "2025-12-08",
-      "2025-12-15",
-      "2025-12-22",
-      "2025-12-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Lofty Dancing Club",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171905",
-    "title": "Dance Class",
-    "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-08-19",
-      "2025-08-26",
-      "2025-09-02",
-      "2025-09-09",
-      "2025-09-16",
-      "2025-09-23",
-      "2025-09-30",
-      "2025-10-14",
-      "2025-10-21",
-      "2025-10-28",
-      "2025-11-04",
-      "2025-11-11",
-      "2025-11-18",
-      "2025-11-25",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
-    ],
-    "description": "",
-    "presenter": "Presented by Lofty Dancing Club",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "172083",
-    "title": "Dance Class",
-    "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
-    ],
-    "description": "",
-    "presenter": "Presented by Artist Club",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171887",
-    "title": "Dance Course",
-    "dates": [
-      "2025-07-02",
-      "2025-07-09",
-      "2025-07-16",
-      "2025-07-23",
-      "2025-07-30",
-      "2025-08-06",
-      "2025-08-13",
-      "2025-08-20",
-      "2025-08-27",
-      "2025-09-03",
-      "2025-09-10",
-      "2025-09-17",
-      "2025-09-24",
-      "2025-10-08",
-      "2025-10-15",
-      "2025-10-22",
-      "2025-11-05",
-      "2025-11-12",
-      "2025-11-19",
-      "2025-11-26",
-      "2025-12-03",
-      "2025-12-10",
-      "2025-12-17",
-      "2025-12-24",
-      "2025-12-31"
-    ],
-    "description": "",
-    "presenter": "Presented by Starry Dancing Association",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171886",
-    "title": "Dance Course",
-    "dates": [
-      "2025-07-07",
-      "2025-07-14",
-      "2025-07-21",
-      "2025-07-28",
-      "2025-08-04",
-      "2025-08-11",
-      "2025-08-18",
-      "2025-08-25",
-      "2025-09-01",
-      "2025-09-08",
-      "2025-09-15",
-      "2025-09-22",
-      "2025-09-29",
-      "2025-10-13",
-      "2025-10-20",
-      "2025-10-27",
-      "2025-11-03",
-      "2025-11-10",
-      "2025-11-17",
-      "2025-11-24",
-      "2025-12-01",
-      "2025-12-08",
-      "2025-12-15",
-      "2025-12-22",
-      "2025-12-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Starry Dancing Association",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171899",
-    "title": "Dance Training Classes (Ballet, Chinese, Jazz, KPOP, Latin, Rhythmic Gymnastices)",
-    "dates": [
-      "2025-07-05",
-      "2025-07-12",
-      "2025-07-19",
-      "2025-07-26",
-      "2025-08-02",
-      "2025-08-09",
-      "2025-08-16",
-      "2025-08-23",
-      "2025-08-30",
-      "2025-09-06",
-      "2025-09-13",
-      "2025-09-20",
-      "2025-09-27",
-      "2025-10-04",
-      "2025-10-11",
-      "2025-10-18",
-      "2025-10-25",
-      "2025-11-01",
-      "2025-11-08",
-      "2025-11-15",
-      "2025-11-22",
-      "2025-11-29",
-      "2025-12-06",
-      "2025-12-13",
-      "2025-12-20",
-      "2025-12-27"
-    ],
-    "description": "",
-    "presenter": "Presented by Hong Kong Art Groupe",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "172038",
-    "title": "Dance Training Course",
-    "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
-    ],
-    "description": "",
-    "presenter": "Presented by Ballroom Dance Promotion Society",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "172039",
-    "title": "Dance Training Course",
-    "dates": [
-      "2025-07-05",
-      "2025-07-12",
-      "2025-07-19",
-      "2025-07-26",
-      "2025-08-02",
-      "2025-08-09",
-      "2025-08-16",
-      "2025-12-06",
-      "2025-12-13",
-      "2025-12-20",
-      "2025-12-27"
-    ],
-    "description": "",
-    "presenter": "Presented by Ballroom Dance Promotion Society",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "178026",
-    "title": "Gu Zheng Classes",
-    "dates": [
-      "2026-01-03",
-      "2026-01-05",
-      "2026-01-12",
-      "2026-01-17",
-      "2026-01-19",
-      "2026-01-24",
-      "2026-01-26",
-      "2026-01-31",
-      "2026-02-02",
-      "2026-02-07",
-      "2026-02-09",
-      "2026-02-14",
-      "2026-02-23",
-      "2026-02-28",
-      "2026-03-02",
-      "2026-03-07",
-      "2026-03-09",
-      "2026-03-14",
-      "2026-03-16",
-      "2026-03-21",
-      "2026-03-23",
-      "2026-03-28",
-      "2026-03-30",
-      "2026-04-11",
-      "2026-04-13",
-      "2026-04-18",
-      "2026-04-20",
-      "2026-04-25",
-      "2026-04-27",
-      "2026-05-02",
-      "2026-05-04",
-      "2026-05-09",
-      "2026-05-11",
-      "2026-05-16",
-      "2026-05-18",
-      "2026-05-23",
-      "2026-05-30",
-      "2026-06-01",
-      "2026-06-06",
-      "2026-06-08",
-      "2026-06-13",
-      "2026-06-15",
-      "2026-06-20",
-      "2026-06-22",
-      "2026-06-27",
-      "2026-06-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Tai Po Gu Zheng Arts Association",
-    "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 9
-    }
-  },
-  {
-    "eventId": "172611",
-    "title": "Gu Zheng Workshop",
-    "dates": [
-      "2025-07-02",
-      "2025-07-09",
-      "2025-07-16",
-      "2025-07-23",
-      "2025-07-30",
-      "2025-08-06",
-      "2025-08-13",
-      "2025-08-20",
-      "2025-08-27",
-      "2025-09-03",
-      "2025-09-10",
-      "2025-09-17",
-      "2025-09-24",
-      "2025-10-08",
-      "2025-10-15",
-      "2025-10-22",
-      "2025-11-05",
-      "2025-11-12",
-      "2025-11-19",
-      "2025-11-26",
-      "2025-12-03",
-      "2025-12-10",
-      "2025-12-17"
-    ],
-    "description": "",
-    "presenter": "Presented by Tai Po Gu Zheng Arts Association",
-    "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 9
-    }
-  },
-  {
-    "eventId": "172612",
-    "title": "Gu Zheng Workshop",
-    "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-08-22",
-      "2025-08-29",
-      "2025-09-05",
-      "2025-09-12",
-      "2025-09-19",
-      "2025-09-26",
-      "2025-10-03",
-      "2025-10-10",
-      "2025-10-17",
-      "2025-10-24",
-      "2025-10-31",
-      "2025-11-07",
-      "2025-11-14",
-      "2025-11-21",
-      "2025-11-28",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
-    ],
-    "description": "",
-    "presenter": "Presented by Tai Po Gu Zheng Arts Association",
-    "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 9
-    }
-  },
-  {
-    "eventId": "173737",
-    "title": "Gu Zheng Workshop",
-    "dates": [
-      "2025-07-05",
-      "2025-07-12",
-      "2025-07-19",
-      "2025-07-26",
-      "2025-08-02",
-      "2025-08-09",
-      "2025-08-16",
-      "2025-08-23",
-      "2025-09-06",
-      "2025-09-13",
-      "2025-09-20",
-      "2025-09-27",
-      "2025-10-04",
-      "2025-10-11",
-      "2025-10-25",
-      "2025-11-01",
-      "2025-11-08",
-      "2025-11-15",
-      "2025-11-22",
-      "2025-11-29",
-      "2025-12-06",
       "2025-12-20"
     ],
     "description": "",
-    "presenter": "Presented by Tai Po Gu Sheng Arts Association",
+    "presenter": "Ching Ngai Kiu",
     "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
       "eventCount": 9
     }
   },
   {
-    "eventId": "172613",
-    "title": "Gu Zheng Workshop",
+    "eventId": "175807",
+    "title": "EKCC Opening Season: \"Lucie in the Sky\" by Australasian Dance Collective (Australia)",
     "dates": [
-      "2025-07-06",
-      "2025-07-13",
-      "2025-07-20",
-      "2025-08-03",
-      "2025-08-10",
-      "2025-08-17",
-      "2025-08-24",
-      "2025-08-31",
-      "2025-09-07",
-      "2025-09-14",
-      "2025-09-28",
-      "2025-10-05",
-      "2025-10-12",
-      "2025-10-19",
-      "2025-10-26",
-      "2025-11-02",
-      "2025-11-09",
-      "2025-11-16",
-      "2025-11-23",
-      "2025-12-07",
+      "2025-12-19",
+      "2025-12-20"
+    ],
+    "description": "Emotionally. Coded. Drones.\n\nIf drones were to perform alongside their human counterparts, could they share our vulnerabilities, hopes and fears? In this ground-breaking programme melding dance and advanced technology, Australasian Dance Collective—winner of the three Helpmann Awards and three Australian Dance Awards—will collaborate with the Swiss drone pioneer Verity Studios. By imbuing drones with vitality and distinct personalities, choreographing them to emulate complex human emotions and dance alongside six dancers, an unprecedented stage language is revealed—opening up a mind-blowing new world.\n\nAudiences are invited to explore and re-examine the delicate power relationship between humans and machines, as well as their dependence and desire for each other—are we friends or enemies? In this highly digitised era, how should we position ourselves? Step into this imagined future and challenge your perceptions—are you ready for it?\n\nThe content of this programme does not reflect the views of the Leisure and Cultural Services Department\nThe presenter reserves the right to change the programme and substitute artists should unavoidable circumstances make it necessary",
+    "presenter": "Leisure and Cultural Services Department",
+    "venue": {
+      "id": "826817417",
+      "name": "East Kowloon Cultural Centre (The Hall)",
+      "latitude": 22.32427,
+      "longitude": 114.21494,
+      "eventCount": 3
+    }
+  },
+  {
+    "eventId": "177324",
+    "title": "Farewell Snake, Welcome Horse Spring Concert",
+    "dates": [
+      "2026-01-07"
+    ],
+    "description": "",
+    "presenter": "The Sound of Galaxy",
+    "venue": {
+      "id": "87310051",
+      "name": "Yuen Long Theatre (Auditorium)",
+      "latitude": 22.44152,
+      "longitude": 114.02289,
+      "eventCount": 8
+    }
+  },
+  {
+    "eventId": "176367",
+    "title": "Food for Thought - A Cinematic Feast",
+    "dates": [
+      "2025-12-06",
+      "2026-01-18"
+    ],
+    "description": "Over a century ago, when the Lumière Brothers first screened films for the public, alongside the renowned The Arrival of a Train at La Ciotat, there was also Le Repas de bébé, capturing footage of Auguste Lumière feeding his daughter. In that forty seconds, it recorded not only food consumption, but also a precious moment of parent-child bonding. From this short film onwards, countless films centred on food have been produced, with various suggestions readily available online. The finest among them explore more than mere chewing and digestion. Food transcends from being a source of nutrition; it connects to emotions, culture, history, identity, and belonging. It has the power to bring people together and evoke our feelings and memories.\n\nIf one were to transform a food movie playlist into a cuisine menu, the light-hearted Kamome Diner would make an ideal starter. Serving up delectable bites, it draws strangers closer, fostering unexpected friendships in the homeland of the Moomins. The Lunchbox is another touching tale, where a misdelivered lunchbox sparks heartful exchange between two strangers. Guess Who’s Coming to Dinner tells a pre-meal story itself, tackling serious themes with light-hearted humour. Toast also serves as an appetiser, as the son traces the origins of his culinary passion through his childhood recollections.\n\nAs for main course, Babette’s Feast and Big Night could hardly be more fitting. Both depict individuals in foreign lands preparing lavish feasts originating from their homeland, treating culinary delights as divine blessings. Julie & Julia and Cooking History both use cookbooks as conduits to explore deeper themes. The former uses a cookbook to bridge two eras, invoking a dialogue between women across generation and time; the latter employs recipes to weave together six historical segments, tracing the stories of military cooks and soldiers to observe shifting tides through kitchen windows. First Cow also delves into history, tracing back to the American frontier era to depict two men’s culinary entrepreneurial dreams.\n\nFor dessert, comedies may offer some light-hearted delights. Tampopo indulges in dark humour, brimming with exaggerated satire that remains rich without being overpowering, sweet at an amount that is just right. The Cook, The Thief, His Wife & Her Lover could also be viewed as a black comedy on the absurd side while masterfully blending cuisine with love and hatred. The Chinese Feast not only fulfils the requirements of a festive comedy but also combines culinary themes with kung fu and wuxia elements. Though not a comedy, Boiling Point features a seamless single-take rhythm, making it a delightful after-dinner treat that lingers in the memory.\n\nToday’s special selection features Master Cheng, starring Chu Pak-hong. Like Kamome Diner, it was also filmed in Finland, setting against the soothing landscapes of Scandinavia. It will be screened at the East Kowloon Cultural Centre (EKCC). Concurrently, the enrichment programme “Bon Cinéppétit!” invites audiences to share memorable flavours remind them of these fourteen films, which will be compiled into a display at the EKCC and online. Participating viewers could earn free tickets to a delectable “Grand Finale”, a multi-sensory screening of Ratatouille and An. The former, a family-friendly animation, conveys the universal aspiration that anyone can cook; the latter, through the story of a dorayaki shop, captures insights into life, mutual understanding, and care between people.\n\nSpecial thanks to the four art directors for taking time to attend the seminars, and heartfelt gratitude to all guest speakers for agreeing to participate in the post-screening talks. We hope this diverse menu of film genres and styles invites audiences to join us for a feast for the eyes, ears and taste buds. Let’s embark on a soul-stirring journey of flavours.\n\nCurator｜Ernest Chan",
+    "presenter": "Presented by Leisure and Cultural Services Department",
+    "venue": {
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "176377",
+    "title": "Food for Thought - A Cinematic Feast: \"Big Night\"",
+    "dates": [
+      "2025-12-20",
+      "2026-01-09"
+    ],
+    "description": "1996 | USA | Colour | 109′ | 35mm\nDirectors: Campbell Scott, Stanley Tucci\nScreenwriters: Joseph Tropiano, Stanley Tucci\nCinematographer: Ken Kelsch\nCast: Stanley Tucci, Tony Shalhoub, Minnie Driver, Isabella Rossellini\nIn English and Italian with Chinese and English subtitles\n\nA pair of Italian brothers emigrate to America to start a business, opening a restaurant named Paradise. The elder brother, also the perfectionist chef, refuses to compromise his standards to pander to customers’ tastes. The younger one is the manager, who aspires to make his mark in the culinary world, dreaming for Italian cuisine to win acclaim. Yet realising their dream proved difficult; customers’ response is lukewarm, tensions begin to surface between the brothers, and their frustration deepens witnessing competitors draw crowds without prioritising food quality. To save the restaurant, they stage a lavish VIP banquet, determined to turn their fortunes around. Directed by Campbell Scott and Stanley Tucci, with the latter also starring as the younger brother, this low-budget production became a food film classic. Risotto tricolore, timpano, and Fiorentina sauce – the dishes left diners spellbound. Even a simple fried egg carries the weight of unspoken emotions.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
+    "venue": {
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "176387",
+    "title": "Food for Thought - A Cinematic Feast: \"Boiling Point\"",
+    "dates": [
+      "2025-12-27",
+      "2026-01-11"
+    ],
+    "description": "2021 | UK | Colour | 95′ | DCP\nDirector: Philip Barantini\nScreenwriters: James Cummings, Philip Barantini\nCinematographer: Matthew Lewis\nCast: Stephen Graham, Vinette Robinson, Alice Feetham\nIn English with Chinese and English subtitles\n\nPost-screening seminar in Cantonese on 27th December at Hong Kong Film Archive\nSpeakers: Irving Cheung, Leung Tsz-yin | Host: Ernest Chan\n\nOn the busiest night before Christmas at a fine dining restaurant in London, tables are fully booked, ingredients are running low, and staff are arriving late. Before the doors have even opened, the kitchen is already in chaos. To make things worse, a health inspector arrives for an inspection, deeming the kitchen hygiene substandard. Even the seasoned head chef felt under immense pressure, his nerves taut, seemingly weighed down by deep concerns. As guests stream in, one is planning a marriage proposal, some are deliberately causing trouble, and a celebrity chef unexpectedly hosts a surprise visit of a food critic. Chaos is looming and everything is on the line. A signature work from the creative team behind Adolescence, this film draws on the personal experiences of chef-turned-director Philip Barantini. Originally conceived as a short film of the same name, it was expanded into a 90-minute single-take film. Through the actors’ precise performances, it captures the suffocating tension both inside and outside the kitchen, immersing the audience in an escalating vortex of conflict and pressure.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
+    "venue": {
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "176380",
+    "title": "Food for Thought - A Cinematic Feast: \"Cooking History\"",
+    "dates": [
+      "2025-12-20"
+    ],
+    "description": "2009 | Slovakia, Austria, Czech Republic | Colour | 88′ | DCP\nDirector: Peter Kerekes\nCinematographer: Martin Kollár\nIn Slovak, Hungarian, Czech, German and Russian with Chinese and English subtitles\n\n2009 Special Jury Award, Hot Docs Canadian International Documentary Festival\n2009 Best Documentary, Vienna Internation Film Festival\n\nPost-screening talk in Cantonese\nSpeaker: Wong Siu-pong | Host: Ernest Chan\n\nTen recipes spanning six wars and military crackdowns, featuring dishes from Russian Shashlik to French Coq au Vin, even arsenic bread as retribution against the Nazis. From the WWII to the Yugoslav Wars and the Chechen conflicts, examining history through cuisine while witnessing the history through food. In times of turmoil, sustenance becomes paramount; food is the people’s heaven. Soldiers must not only fight but also eat. The aggressors eat, and so do those who are defending their homeland. Peter Kerekes, director of Wishing on a Star, blends documentary with re-enactment, employing a refreshingly humorous approach to revisit war through the chefs’ perspectives. By inviting them to recreate wartime dishes, he unearths the forgotten memories of ordinary people lost within grand historical moments. Tito’s personal nutritionist shares the menus served during the negotiations between the Yugoslav ethnic leaders, as if foreshadowing the nation’s fragmentation and strife.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
+    "venue": {
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "176381",
+    "title": "Food for Thought - A Cinematic Feast: \"First Cow\"",
+    "dates": [
+      "2025-12-14",
+      "2026-01-01"
+    ],
+    "description": "2019 | USA | Colour | 122′ | DCP\nDirector: Kelly Reichardt\nScreenwriters: Jon Raymond, Kelly Reichardt\nCinematographer: Christopher Blauvelt\nCast: John Magaro, Orion Lee\nIn English with Chinese and English subtitles\n2021 Best Film, Cahiers du Cinéma\n\nPost-screening talk in Cantonese on 14th December at Hong Kong Film Archive\nSpeaker: Dr Derek Lam\n\nThe river of time flows silently, and tales buried along its banks are eventually unearthed. In the early 19th century American West, people ventured into the wilderness of mountains and forests, dreaming of sudden riches. A gentle, meticulous chef meets a sharp, resourceful Chinese labourer, and the two bond instantly, sharing hardships and forging a partnership. Exceling at baking pastries, the chef begins selling fresh oily cakes with the help of the Chinese, who possesses a keen business sense. However, their recipe requires milk, compelling them to steal it from the landowner’s milking cow under cover of night. This clandestine ingredient made their cakes legendary, drawing even the dairy owner’s attention. Would their secret be exposed? The acclaimed American independent filmmaker Kelly Reichardt revisits the desire-driven origins of the capitalist American dream through mouthwatering pastries, depicting a tender male friendship that subverts the rugged masculinity of traditional Westerns with understated warmth.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
+    "venue": {
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "176378",
+    "title": "Food for Thought - A Cinematic Feast: \"Julie & Julia\"",
+    "dates": [
       "2025-12-21"
     ],
-    "description": "",
-    "presenter": "Presented by Tai Po Gu Zheng Arts Association",
+    "description": "2009 | USA | Colour | 123′ | DCP\nDirector／Screenwriter: Nora Ephron\nCinematographer: Stephen Goldblatt\nCast: Meryl Streep, Amy Adams, Stanley Tucci, Chris Messina\nIn English with Chinese and English subtitles\n\n2010 Best Actress, Golden Globe Awards\n\nPost-war, Julia Child moved to France with her diplomat husband. Remaining idle at home against her wish, Julia enrolled in the Le Cordon Bleu cooking course, which at the time admitted only male students. This led her to discover her life’s calling: introducing French cuisine to her compatriots. She appeared on television as a culinary teacher and collaborated with friends to publish the first French cookbook written for Americans. In present day half a century apart, Julie Powell, approaching thirty, grew weary of her current job. She rediscovered her passion for writing online and resolved to recreate every dish found in Julia’s cookbook, sharing her experiences and insights through a blog. Director Nora Ephron, renowned for her romantic comedies, draws inspiration from the true stories of these two women. Through a cookbook, she connects two eras and two lives, contrasting past and present to illustrate how one life can inspire another, finding fulfilment through the act of cooking. Meryl Streep’s masterful portrayal elevates the emotional depth of this culinary journey.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
     "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 9
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
     }
   },
   {
-    "eventId": "173736",
-    "title": "Gu Zheng Workshop",
+    "eventId": "176388",
+    "title": "Food for Thought - A Cinematic Feast: \"Master Cheng\"",
     "dates": [
-      "2025-07-07",
-      "2025-07-14",
-      "2025-07-21",
-      "2025-07-28",
-      "2025-08-04",
-      "2025-08-11",
-      "2025-08-18",
-      "2025-08-25",
-      "2025-09-01",
-      "2025-09-08",
-      "2025-09-15",
-      "2025-09-22",
-      "2025-09-29",
-      "2025-10-06",
-      "2025-10-13",
-      "2025-10-20",
-      "2025-10-27",
-      "2025-11-03",
-      "2025-11-10",
-      "2025-11-17",
-      "2025-11-24",
-      "2025-12-01",
-      "2025-12-08",
-      "2025-12-15",
-      "2025-12-22",
-      "2025-12-29"
+      "2026-01-17"
     ],
-    "description": "",
-    "presenter": "Presented by Tai Po Gu Sheng Arts Association",
+    "description": "2019 | Colour | 114′ | DCP\nDirector: Mika Kaurismäki\nScreenwriter: Hannu Oravisto\nCinematographer: Jari Mutikainen\nCast: Chu Pak-hong, Anna-Maija Tuokko\nIn English, Finnish and Putonghua with Chinese and English subtitles\n\n2019 Audience Prize, Lübeck Nordic Film Days\n\nProfessional chef Cheng travels with his young son to a remote Finnish village looking for his friend but to no avail. Having nowhere to stay, Cheng is helped by the café owner Sirkka who offers him accommodation. In return he helps her in the kitchen surprising the locals and tourists with the delights of Chinese cuisine. He uses local ingredients to make delicious perch soup and reindeer bah-kut-teh, satisfying cravings, as well as healing body and soul. Café regulars reciprocate by introducing him to the joy of an authentic Finnish sauna. He finds a peaceful paradise in a foreign land away from the hustle and bustle, recovering from past traumas and rekindling passion. Before the release of My Prince Edward, actor Chu Pak-hong has already showcased his acting talent in the leading role of this foreign language film. Directed by Mika Kaurismäki (the elder brother of acclaimed Finnish director Aki Kaurismäki), with a feel-good fairy-tale ambience, Master Cheng serves a feast of cross-cultural love in scenic Finland through the theme of culinary art. ",
+    "presenter": "Presented by Leisure and Cultural Services Department",
     "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 9
+      "id": "826817417",
+      "name": "East Kowloon Cultural Centre (The Hall)",
+      "latitude": 22.32427,
+      "longitude": 114.21494,
+      "eventCount": 3
     }
   },
   {
-    "eventId": "173785",
-    "title": "Junior Latin Dance Class",
+    "eventId": "176382",
+    "title": "Food for Thought - A Cinematic Feast: \"Tampopo\" (4K Restored Version) (Cancelled)",
     "dates": [
-      "2025-07-05",
-      "2025-07-12",
-      "2025-07-19",
-      "2025-07-26",
-      "2025-08-02",
-      "2025-08-09",
-      "2025-08-16",
-      "2025-08-23",
-      "2025-08-30",
-      "2025-09-06",
-      "2025-09-13",
-      "2025-09-20",
-      "2025-09-27",
-      "2025-10-04",
-      "2025-10-11",
-      "2025-10-18",
-      "2025-10-25",
-      "2025-11-01",
-      "2025-11-08",
-      "2025-11-15",
-      "2025-11-22",
-      "2025-11-29",
-      "2025-12-06",
+      "2025-12-28",
+      "2026-01-11"
+    ],
+    "description": "1985 | Japan | Colour | 114′ | DCP\nDirector／Screenwriter: Itami Juzo\nCinematographer: Tamura Masaki\nCast: Yamazaki Tsutomu, Miyamoto Nobuko, Yakusho Koji\nIn Japanese with Chinese and English subtitles\n\n1987 USA National Board of Review’s Top Foreign Films\n\nWhen Japanese ramen meets Western film elements, an unexpectedly unique flavour is created. Breaking the fourth wall from the outset, tables are set up within the cinema itself, directly prompting audience film-watching etiquette. The widowed Tampopo single-handedly runs the ramen shop left by her late husband, yet her lack of culinary skill leads to poor business and even harassment from thugs. One day she encounters a truck driver in cowboy attire who stood up for her. Discovering his profound knowledge of flavour, Tampopo decides to apprentice under him, undergoing hellish training to master mouth-watering culinary skills. Much like a ramen-themed version of Shane, Itami Juzo focuses not merely on the mission to save the eatery, he employs a kaleidoscopic plot structure that transcends cinematic genres. Copiously seasoned with dark humour, the story is a torrent of whimsical ideas with richly layered subplots, stirring up desires, satirising absurdities, and mocking society’s foibles.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
+    "venue": {
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "176385",
+    "title": "Food for Thought - A Cinematic Feast: \"The Chinese Feast\" (4K Restored Version)",
+    "dates": [
+      "2026-01-10"
+    ],
+    "description": "1995 | Colour | 100′ | DCP\nDirector: Tsui Hark\nScreenwriters: Tsui Hark, Philip Cheng, Ng Man-fai, Yuen Kai-chi\nCinematographer: Peter Pau\nCast: Leslie Cheung, Anita Yuen, Kenny Bee, Vincent Zhao, Law Kar-ying\nIn Cantonese and Putonghua with Chinese and English subtitles\n\nPost-screening seminar in Cantonese\nSpeakers: Man Lim-chung, Cheung Siu-hong | Host: Ernest Chan\n\nTired of his life in the underworld, Sun resolves to reroute by becoming a chef and emigrating abroad. He seeks apprenticeship at the Qing Han Restaurant, where he causes a series of comical mishaps. One day, a chef trained under a rival culinary school arrived bearing a challenge, setting the stage for a duel that would determine the restaurant’s honour and very survival. To boost their odds, Sun and Qing Han Restaurant’s heiress pull out all the stops to track down a long-retired Guangzhou master chef for assistance. Yet the legendary chef spends his days drunk and disheveled, making it imperative to restore his palate and skills for crafting the Manchu-Han Imperial Feast. What begins as a tale of culinary rivalry transforms into a vibrant, unconventional comedy as director Tsui Hark infuses wuxia elements and comic aesthetics. From everyday dishes like beef chow fun, sweet and sour pork to rare delicacies from land and sea, the film unleashes boundless imagination, crafting dazzling culinary spectacles. Master chefs duel through culinary creations, where cooking techniques mimic blades in action – the kitchen is an epitome of the world of wushu.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
+    "venue": {
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "176383",
+    "title": "Food for Thought - A Cinematic Feast: \"The Cook, The Thief, His Wife & Her Lover\"",
+    "dates": [
       "2025-12-13",
-      "2025-12-20",
-      "2025-12-27"
+      "2025-12-28"
     ],
-    "description": "",
-    "presenter": "Presented by North District Arts Advancement Association Limited",
+    "description": "1989 | UK, France | Colour | 124′ | DCP\nDirector／Screenwriter: Peter Greenaway\nCinematographer: Sacha Vierny\nCast: Richard Bohringer, Michael Gambon, Helen Mirren, Alan Howard\nIn English with Chinese and English subtitles\n\n1990 Best Foreign Film, Annual Chicago Film Critics Awards\n\nPost-screening talk in Cantonese on 28th December at Hong Kong Film Archive\nSpeaker: Horace Chan\n\nThe vulgar tycoon, insatiable in his greed, bullies the weak with his brute force. He buys up a restaurant to flaunt his wealth, indulging his gluttonous appetite. His neglected wife, lonely and yearning, watches silently as the scholarly gentleman never puts down his books. The kitchen and washrooms become their secret dating places. This lover, surrounded by mountains of books, seeks not only to satisfy his stomach but also to nourish his soul. The French chef observes it all, busily crafting exquisite dishes while helping the lovers find hiding places. Director Peter Greenaway uses food as a conduit to paint with films. He masterfully arranges distinct colour palettes across each scene, interweaving appetite with lust, passion with vengeance. This ultimate visual feast challenges the audience’s senses. The meticulously designed restaurant serves as both a stage for love and hatred, and a metaphor for social power structures, even offering a sharp critique of the wealth inequality exacerbated by the Thatcher era.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
     "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
     }
   },
   {
-    "eventId": "172710",
-    "title": "Latin Dance Class",
+    "eventId": "176374",
+    "title": "Food for Thought - A Cinematic Feast: \"Toast\"",
     "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
+      "2026-01-01"
     ],
-    "description": "",
-    "presenter": "Presented by Hong Kong Ballroom Dance Club",
+    "description": "2010 | UK | Colour | 96′ | Digital File\nDirector: S. J. Clarkson\nScreenwriter: Lee Hall\nCinematographer: Balazs Bolygo\nCast: Helena Bonham Carter, Ken Stott, Victoria Hamilton, Freddie Highmore, Oscar Kennedy\nIn English with Chinese and English subtitles\n\nNigel Slater, the renowned chef and food writer, was not only awarded the Order of the British Empire but also hailed as a British national treasure. His culinary talent became apparent in his teens, despite his mother being a poor cook who disdained fresh ingredients, but favouring tinned vegetables instead. When meals went wrong, she would simply serve toasts for supper. In spite of this, maternal love proved irreplaceable and ignited Nigel’s desire to cook for himself. After his mother’s passing, the arrival of the exquisitely skilled and alluring Mrs Potter spurred him to compete with her for his father’s affection and appetite. Adapted from Slater’s memoir, director Clarkson transforms these intimate childhood recollections into a drama. Food injects colours into bleak realities: toasts symbolise longing for his deceased mother, the pork pie evokes his first same-sex attraction, while the textured lemon meringue pie becomes the battleground in his rivalry with his stepmother.",
+    "presenter": "Presented by Leisure and Cultural Services Department",
     "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
     }
   },
   {
-    "eventId": "171872",
-    "title": "Latin Dance Class",
+    "eventId": "176245",
+    "title": "Heroic Christmas",
     "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-08-19",
-      "2025-08-26",
-      "2025-09-02",
-      "2025-09-09",
-      "2025-09-16",
-      "2025-09-23",
-      "2025-09-30",
-      "2025-10-14",
-      "2025-10-21",
-      "2025-10-28",
-      "2025-11-04",
-      "2025-11-11",
-      "2025-11-18",
-      "2025-11-25",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
+      "2025-12-26"
+    ],
+    "description": "",
+    "presenter": "My Orchestra Society",
+    "venue": {
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
+    }
+  },
+  {
+    "eventId": "177136",
+    "title": "HKCC \"King of the Instruments\" - Pipe Organ Education Series 2025 Students Finale Concert",
+    "dates": [
+      "2025-12-21"
+    ],
+    "description": "To promote organ music and to nurture local talents, Hong Kong Cultural Centre has been organising the \"King of the Instruments\" Pipe Organ Education Series every year since 1999 by providing fundamental training on the operation and performance skills of the organ. The students will share their fruitful achievement with the audiences in this finale concert.\n\nPrincipal Instructor:\nChiu Siu Ling\n\nInstructors:\nSimon Chan, Anne Lam, Shirley Cheng, Philip Chow\n\nTutors:\nChan Ting-ting, Winnie Yip, Sandy Li, Mandy Tsang\n\nStudents:\nLam Cheuk Wing, Law Emma\nChum Chi Yeung, Fan Mun Sum, Yung Long Yin\nChoi Shing Lam, Lau Hau Yu, Suen On Yi\nHo Ming Wai Teresa, Fung Suk Wun, Wong Kar Bo Pamela\n\nGuest Performers:\nMandy Tsang, Vivian Lau, Adrian Wong",
+    "presenter": "Leisure and Cultural Services Department",
+    "venue": {
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
+    }
+  },
+  {
+    "eventId": "177171",
+    "title": "HKCSO x Alasdair Malloy! Let's Play!",
+    "dates": [
+      "2026-01-01"
+    ],
+    "description": "",
+    "presenter": "",
+    "venue": {
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
+    }
+  },
+  {
+    "eventId": "177301",
+    "title": "Hong Kong City Hall Venue Partnership Scheme — \"Great Piano Concertos\": Dmitry Shishkin Plays Prokofiev No 3 by Hong Kong Sinfonietta",
+    "dates": [
+      "2026-03-13"
+    ],
+    "description": "Conductor\nStanislav Kochanovsky\nPiano\nDmitry Shishkin\n \nProgramme\nGlinka\nRusslan and Ludmilla Overture\n\nProkofiev\nPiano Concerto No 3 in C, Op 26\n\nTchaikovsky\nSymphony No 2 in C minor, Op 17, “Little Russian”",
+    "presenter": "Hong Kong Sinfonietta",
+    "venue": {
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "177299",
+    "title": "Hong Kong City Hall Venue Partnership Scheme — \"Peter Eötvös: The Speaking Drums\" by Hong Kong Sinfonietta",
+    "dates": [
+      "2026-01-24"
+    ],
+    "description": "Music Director/Conductor\nChristoph Poppen\nPercussion\nMarianna Bednarska\n \nProgramme\nRossini\nWilliam Tell Overture\n\nPeter Eötvös\nSpeaking Drums (2012/2013) \n\nRachmaninov\nSymphony No 2 in E minor, Op 27\n\n\nHaving enjoyed a meteoric rise on the international concert platform since winning 2nd Prize at the prestigious Geneva International Music Competition in 2019, Polish star percussionist Marianna Bednarska is bringing her electrifying performances to Hong Kong for the very first time. Joining hands with Hong Kong Sinfonietta and Music Director Christoph Poppen, she will present monumental composer Peter Eötvös’ Speaking Drums – an instantly captivating masterpiece utilising an impressive range of percussion instruments as well as the versatile human voice; the result is marvellous musical storytelling exploring the primal connection between music and speech. Rossini’s beloved William Tell Overture will start the concert, and Rachmaninov’s towering symphonic achievement – the sublime Symphony No 2 – will conclude the unmissable programme.\n\n \n\nMarianna Bednarska (Percussion)\n“She dances elegantly through the percussion course and sets off a firework of rhythms and timbres.”\n\n“She is not only an acrobat with her hands, but above all with her voice: magnificent, breathtaking, virtuosic.”\nLuzerner Zeitung\n\n2nd Prize & Special Prize, Geneva International Music Competition 2019\nCredit Suisse Award 2019\nGrand Prix, International Music Competition ENKOR 2018\nHas appeared at festivals such as Lucerne Festival, Tongyeong International Music Festival and has performed with orchestras such as Orchestre de la Suisse Romande, Komische Oper Orchestra, Poznań Philharmonic Orchestra, etc",
+    "presenter": "Hong Kong Sinfonietta",
+    "venue": {
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "177300",
+    "title": "Hong Kong City Hall Venue Partnership Scheme — \"The Enchanting Flute\" by Hong Kong Sinfonietta",
+    "dates": [
+      "2026-02-07"
+    ],
+    "description": "Conductor\nChien Wen-pin\nFlute\nElizaveta Ivanova\n \nProgramme\nDai Fujikura\nRitual for Orchestra & Electronics (2025) (Hong Kong première)\nCommissioned by IRCAM-Centre Pompidou – Lucerne Festival, with the support of the Pierre Boulez Foundation,\nHong Kong Sinfonietta and Pacific Philharmonia Tokyo\n\nReinecke\nFlute Concerto, Op 283\n\nSibelius\nSymphony No 1 in E minor, Op 39\n\n\nElizaveta Ivanova (Flute)\n“Each phrase, each intention is underlined with outrageous conviction.”\nDiapason\n\nBBC New Generation Artist (2024-2026)\n1st Prize, Geneva International Music Competition 2023\nAssociate Principal Flute, Frankfurt Opern & Museumsorchester\n \n\nChien Wen-pin (Conductor)\nGeneral & Artistic Director, National Kaohsiung Center for the Arts (Weiwuying)\nResident Conductor, Deutsche Oper am Rhein (1996-2018)",
+    "presenter": "Hong Kong Sinfonietta",
+    "venue": {
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "177298",
+    "title": "Hong Kong City Hall Venue Partnership Scheme: \"Good Music for Kids – Alasdair’s Haunted House Adventure\" by Hong Kong Sinfonietta",
+    "dates": [
+      "2026-01-09",
+      "2026-01-10",
+      "2026-01-11"
+    ],
+    "description": "Conductor\nRay Chan\nDevised & Presented by\nAlasdair Malloy\n \nProgramme\nCharles Williams\nThe Devil’s Galop\n\nProkofiev\nCinderella: Midnight\n\nMussorgsky\nPictures at an Exhibition: Gnome\n\nFalla\nEl Amor Brujo: Ritual Fire Dance\n\nLeroy Anderson\nThe Waltzing Cat\n\nKazumi Totaka\nLuigi’s Mansion\n\nSaint-Saëns\nDanse Macabre\n\nVic Mizzy\nThe Addams Family Theme\n\nDanny Elfman\nWednesday: Main Title\n\nVarious/Malloy arr\nAlasdair’s Magic Moments\n\nGrieg\nPeer Gynt: In the Hall of the Mountain King\n\nZach Wallmark/Malloy arr\nTransylvanian Tango\n\nBach\nToccata in D minor\n\nKristen Anderson-Lopez/Robert Lopez/Malloy arr\nCoco: Remember Me\n\nDavid Rimelis\nThe Cool Ghoul\n\nMussorgsky/Rimsky-Korsakov arr\nNight on a Bald Mountain\n\n\nBeware! You have now entered the mysterious, the chilling, the SPOOKTACULAR Haunted House of Alasdair! As the clock strikes twelve, all creatures ghoulish and unruly have come out to play… and the only question is, are YOU brave enough to put on your spookiest outfits and join us for a thrilling adventure through the dark, creaky corridors of the Haunted House, as we battle off the naughty spirits with the most hair-raising music of Bach, Prokofiev, Saint-Saëns, The Addams Family, Luigi’s Mansion and more?\n\nDress code: Your spookiest outfit!",
+    "presenter": "Hong Kong Sinfonietta",
+    "venue": {
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "177094",
+    "title": "Hong Kong City Hall Venue Partnership Scheme: Panasonic proudly sponsors \"Good Music This Lunch\" by Hong Kong Sinfonietta",
+    "dates": [
+      "2026-01-20"
+    ],
+    "description": "Programme\nSteven Snowden\nA Man with a Gun Lives Here (2011)\n\nPercussion: Chau Chin-tung, Rieko Koyama, Ashley Lo *\n\nShostakovich\nFive Pieces\n\nViolin: Hsu Yu-chia, Ambrose Lui\nPiano: Joanne Li *\n\nBritten\nPhantasy Quartet for Oboe, Violin, Viola & Cello, Op 2\n\nOboe: Sandy Xu\nViolin: Yang Kyo\nViola: Christina Bean\nCello: Laurent Perrin\n\nStravinsky\nThe Soldier’s Tale Suite\n\nViolin: Chan Cheuk-long Aaron\nClarinet: Woo Hee-soo\nPiano: Colleen Lee (HKS Artist Associate 2010-2011) *\n\n\n* Guest performer\n\n \n\nRecharge yourself with a little chamber music in the afternoon at Hong Kong Sinfonietta’s free lunchtime concert series “Panasonic Proudly Sponsors: Good Music This Lunch”, supported by Title Sponsor Shun Hing Group!\n\nPlease note that no food or beverages are allowed inside the concert hall.",
+    "presenter": "Hong Kong Sinfonietta",
+    "venue": {
+      "id": "87510008",
+      "name": "Hong Kong City Hall (Concert Hall)",
+      "latitude": 22.282279,
+      "longitude": 114.161545,
+      "eventCount": 11
+    }
+  },
+  {
+    "eventId": "177098",
+    "title": "Hong Kong Cultural Centre Venue Partnership Scheme: “Anne-Sophie Mutter Plays John Williams” by Hong Kong Philharmonic Orchestra",
+    "dates": [
+      "2026-01-29",
+      "2026-01-30"
+    ],
+    "description": "A legendary virtuoso meets a cinematic maestro! Anne-Sophie Mutter brings her dazzling artistry to an all-John Williams programme, where classical grandeur intertwines with silver-screen magic. Experience the soaring adventures of Star Wars and the thrilling world of Harry Potter as Williams’s music takes on breathtaking new colours from Mutter’s violin. At the heart of the evening is his Violin Concerto no. 2 – a spellbinding piece commissioned and written specifically for Mutter. Join us for an unforgettable evening where the worlds of classical music and film collide in spectacular fashion!",
+    "presenter": "Hong Kong Philharmonic Orchestra",
+    "venue": {
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
+    }
+  },
+  {
+    "eventId": "176143",
+    "title": "Hong Kong Cultural Centre Venue Partnership Scheme: “China Life (Overseas) Proudly Sponsors: New Year Celebration | Vienna of the Habsburg Dynasty” by Hong Kong Philharmonic Orchestra",
+    "dates": [
+      "2025-12-29",
       "2025-12-30"
     ],
-    "description": "",
-    "presenter": "Presented by Hong Kong Ballroom Dance Club",
+    "description": "For this year’s New Year’s Gala, travel with us back to Vienna, Europe's centre of music, art and culture during the Austro-Hungarian Habsburg dynasty. The HK Phil performs waltzes, marches and polkas by the King of Waltz, Johann Strauss and family, alongside the ever-popular Hungarian Dances of Brahms and the brilliant Hungarian Rhapsodies by Liszt. Conductor Gergely Madaras, a native Hungarian who studied composition in Budapest and conducting in Vienna, will lead this jubilant musical journey between the two great capitals. With his unique connection to both traditions, he is the perfect guide for an evening of elegance, joy, and charm.",
+    "presenter": "Hong Kong Philharmonic Orchestra",
     "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
     }
   },
   {
-    "eventId": "174832",
-    "title": "Latin Dance Class",
+    "eventId": "177097",
+    "title": "Hong Kong Cultural Centre Venue Partnership Scheme: “Daniele Gatti Conducts Mahler 7 ” by Hong Kong Philharmonic Orchestra",
     "dates": [
-      "2025-09-05",
-      "2025-09-12",
-      "2025-09-19",
-      "2025-09-26",
-      "2025-10-03",
-      "2025-10-10",
-      "2025-10-17",
-      "2025-10-24",
-      "2025-10-31",
+      "2026-01-23"
+    ],
+    "description": "MAHLER | Symphony no. 7 in E minor\n \nFollowing his stunning success conducting Mahler’s Third Symphony in March 2025, acclaimed Maestro Daniele Gatti returns to lead the HK Phil in Mahler’s majestic Seventh Symphony. Often referred to as Mahler’s \"Song of the Night,\" this symphony weaves an extravagant tapestry of orchestral colour, showcasing unconventional instruments like the tenor horn, mandolin and guitar, along with distinctive writing that gives each section of the orchestra its moment to shine.",
+    "presenter": "Hong Kong Philharmonic Orchestra",
+    "venue": {
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
+    }
+  },
+  {
+    "eventId": "176142",
+    "title": "Hong Kong Cultural Centre Venue Partnership Scheme: “Frozen Live in Concert” by Hong Kong Philharmonic Orchestra",
+    "dates": [
+      "2025-12-18",
+      "2025-12-19",
+      "2025-12-20"
+    ],
+    "description": "Join us for a journey into the enchanting world of Arendelle! Immerse yourself in the lush sounds and vibrant orchestral colours that bring Elsa, Anna, Olaf, and your favourite Frozen characters to life. From the soaring melody of Let It Go to the playful Do You Want to Build a Snowman?, this magical programme captures the wonder and excitement of the Disney classic, enhanced by the heartwarming melodies you know and love performed live by the HK Phil!\n\nOriginal Score of the film was written by Christophe Beck, and the songs were written by Kristen Anderson-Lopez and Robert Lopez.\n\nComplete film screening (English with Chinese and English subtitles) with live orchestra performance. This film is classified as Category I.",
+    "presenter": "Hong Kong Philharmonic Orchestra",
+    "venue": {
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
+    }
+  },
+  {
+    "eventId": "177119",
+    "title": "Hong Kong Cultural Centre Venue Partnership Scheme: Swire Maestro Series - “Gatti Conducts Mendelssohn and Beethoven” by Hong Kong Philharmonic Orchestra",
+    "dates": [
+      "2026-01-17",
+      "2026-01-18"
+    ],
+    "description": "BEETHOVEN | Egmont Overture, op. 84\nMENDELSSOHN | Symphony no. 4 in A major, op. 90, Italian\nBEETHOVEN | Symphony no. 4 in B flat major, op. 60\n\nUnder Maestro Daniele Gatti’s distinguished baton, the HK Phil presents a programme of classical elegance and delight. The concert opens with Beethoven’s Egmont Overture, distilling Goethe’s tragedy into a journey from oppression to triumph. Mendelssohn’s Italian Symphony, composed during his Grand Tour and described by the composer as “the most joyful piece I have yet composed,” radiates Mediterranean colour — sunlit skies, solemn processions, majestic monuments and a Neapolitan saltarello. Beethoven’s Fourth Symphony, written between the heroic Third and the iconic Fifth, crowns the evening in uplifting B flat major.",
+    "presenter": "Hong Kong Philharmonic Orchestra",
+    "venue": {
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
+    }
+  },
+  {
+    "eventId": "176366",
+    "title": "Morning Matinee: Youthful Imprints: 60th Anniversary of the Seven Princesses' Sisterhood",
+    "dates": [
       "2025-11-07",
-      "2025-11-14",
-      "2025-11-21",
-      "2025-11-28",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
+      "2026-02-27"
     ],
-    "description": "",
-    "presenter": "Presented by Stars Dance Studio Limited",
+    "description": "Hong Kong filmmakers and film workers of its golden age formed deep bonds with each other. Kindred spirits often became sworn brothers and sisters as an expression of their friendship and appreciation for each other. Such legendary alliances include ‘The Seven Idles’, a group of elite behind-the-scenes crew in the 1950s; the ‘Eight Peonies’, consisting of celebrated opera performers in the 1960s; and the opera starlets known for playing second female leads erbang huadans, who became the ‘Nine Big Sisters’. In 1965, seven young actresses—who all started out as child actors and were brought together by their shared journey in film—formed a sisterhood known as the famous ‘Seven Princesses’.\n\nThe Seven Princesses, in order of seniority, were Fung So-bor, Shum Chi-wah, Connie Chan Po-chu, Josephine Siao Fong-fong, Nancy Sit Kar-yin, Wong Oi-ming, and Fung’s younger sibling, Fung Bo-bo. Each a star in her own right, these seven actresses often collaborated onscreen, and have shared an intimate, enduring sisterly bond offscreen for six decades.\n\nIn commemoration of their 60th anniversary, the Hong Kong Film Archive presents a special programme, ‘Youthful Imprints’, spotlighting the early works of the Seven Princesses, including those made before and after their bond. Fifteen films will be screened across four categories: ‘Commemoration of Sisterhood’, ‘Signature Works’, ‘Youthful Love’, and ‘Shadows of Grace and Intrigue’.\n\nThough the seven actresses have appeared in many films in various pairings from a young age, only one film featured all of them together: Seven Princesses. This film, along with its sequel will be screened as part of ‘Commemoration of Sisterhood’. ‘Signature Works’ features one representative film per princess, showcasing defining moments of breakthrough in their careers, such as Connie Chan’s first lead role in a contemporary drama You Do Me Wrong (1966) and Nancy Sit’s debut as leading lady in Bunny Girl (1967). In the late 1960s, as the princesses grew up into young women, they stepped into roles that captured youthful dreams and romantic longing, as befitting their maidenly images. The four films in ‘Youthful Love’ alternate between charming and bittersweet tales of love, highlighting this period in the princesses’ careers. Finally, ‘Shadows of Grace and Intrigue’ captures the princesses’ martial prowess. Connie Chan, Josephine Siao and Shum Chi-wah trained under Peking opera master Fen Ju Hua, and their Northern-style martial arts skills are on full display in the selected action films, where they deliver unforgettable performances as heroines in costumes.\n\nThe Archive has digitally scanned some selected films, which will be screened for the first time as part of this programme, offering cinephiles enhanced audio-visual quality. Select screenings will also feature post-screening talks with members of the Seven Princesses and film critics.",
+    "presenter": "Hong Kong Film Archive",
     "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
+      "id": "75010017",
+      "name": "Hong Kong Film Archive (Cinema)",
+      "latitude": 22.285056,
+      "longitude": 114.222075,
+      "eventCount": 11
     }
   },
   {
-    "eventId": "174831",
-    "title": "Latin Dance Class",
+    "eventId": "177084",
+    "title": "Nine Flavors in Hong Kong",
     "dates": [
-      "2025-09-07",
-      "2025-09-14",
-      "2025-09-21",
-      "2025-09-28",
-      "2025-10-05",
-      "2025-10-12",
-      "2025-10-19",
-      "2025-10-26",
-      "2025-11-02",
-      "2025-11-09",
-      "2025-11-16",
-      "2025-11-23",
-      "2025-11-30",
-      "2025-12-07",
-      "2025-12-14",
-      "2025-12-21",
-      "2025-12-28"
+      "2026-01-03"
     ],
-    "description": "",
-    "presenter": "Presented by Stars Dance Studio Limited",
+    "description": "The concert performs new works in 8 flavors and video by young musicians. Let's experience 9 flavors in Hong Kong !",
+    "presenter": "The Maniacs",
     "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
+      "eventCount": 9
     }
   },
   {
-    "eventId": "172708",
-    "title": "Music Training Class",
+    "eventId": "177323",
+    "title": "Oldies Concert",
     "dates": [
-      "2025-07-05",
-      "2025-07-12",
-      "2025-07-26",
-      "2025-08-02",
-      "2025-08-09",
-      "2025-08-16",
-      "2025-08-23",
-      "2025-08-30",
-      "2025-09-06",
-      "2025-09-13",
-      "2025-09-20",
-      "2025-09-27",
-      "2025-10-04",
-      "2025-10-11",
-      "2025-10-18",
-      "2025-10-25",
-      "2025-11-01",
-      "2025-11-08",
-      "2025-11-15",
-      "2025-11-22",
-      "2025-11-29",
-      "2025-12-06",
-      "2025-12-13",
-      "2025-12-20",
-      "2025-12-27"
+      "2026-01-05"
     ],
     "description": "",
-    "presenter": "Presented by Hong Kong North Philharmonic Orchestra",
+    "presenter": "詩韻歌詠社",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "172709",
-    "title": "Music Training Class",
-    "dates": [
-      "2025-07-06",
-      "2025-07-13",
-      "2025-07-20",
-      "2025-07-27",
-      "2025-08-03",
-      "2025-08-10",
-      "2025-08-17",
-      "2025-08-24",
-      "2025-08-31",
-      "2025-09-07",
-      "2025-09-14",
-      "2025-09-21",
-      "2025-09-28",
-      "2025-10-05",
-      "2025-10-12",
-      "2025-10-19",
-      "2025-10-26",
-      "2025-11-02",
-      "2025-11-09",
-      "2025-11-16",
-      "2025-11-23",
-      "2025-11-30",
-      "2025-12-07",
-      "2025-12-14",
-      "2025-12-21",
-      "2025-12-28"
-    ],
-    "description": "",
-    "presenter": "Presented by Hong Kong North Philharmonic Orchestra",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171836",
-    "title": "Musical Theatre",
-    "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-08-19",
-      "2025-08-26",
-      "2025-09-02",
-      "2025-09-09",
-      "2025-09-16",
-      "2025-09-23",
-      "2025-09-30",
-      "2025-10-14",
-      "2025-10-21",
-      "2025-10-28",
-      "2025-11-04",
-      "2025-11-11",
-      "2025-11-18",
-      "2025-11-25",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
-    ],
-    "description": "",
-    "presenter": "Presented by Amazing Drama",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
+      "id": "87310051",
+      "name": "Yuen Long Theatre (Auditorium)",
+      "latitude": 22.44152,
+      "longitude": 114.02289,
+      "eventCount": 8
     }
   },
   {
@@ -2215,75 +1111,35 @@
     }
   },
   {
-    "eventId": "169678",
-    "title": "Outreach Music Interest Courses",
+    "eventId": "177412",
+    "title": "Oldies Concert",
     "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-08-22",
-      "2025-08-29",
-      "2025-09-05",
-      "2025-09-12",
-      "2025-09-19",
-      "2025-09-26",
-      "2025-10-03",
-      "2025-10-10",
-      "2025-10-17",
-      "2025-10-24",
-      "2025-10-31",
-      "2025-11-07",
-      "2025-11-14",
-      "2025-11-21",
-      "2025-11-28",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
+      "2026-01-16"
     ],
     "description": "",
-    "presenter": "Presented by Music Office, LCSD",
+    "presenter": "Strings Will Hear Songs Results",
     "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
     }
   },
   {
-    "eventId": "171957",
-    "title": "Outreach Music Interest Courses",
+    "eventId": "177410",
+    "title": "Oldies Concert",
     "dates": [
-      "2025-09-07",
-      "2025-09-14",
-      "2025-09-21",
-      "2025-09-28",
-      "2025-10-05",
-      "2025-10-12",
-      "2025-10-19",
-      "2025-10-26",
-      "2025-11-02",
-      "2025-11-09",
-      "2025-11-16",
-      "2025-11-23",
-      "2025-11-30",
-      "2025-12-07",
-      "2025-12-14",
-      "2025-12-21",
-      "2025-12-28"
+      "2026-01-14"
     ],
     "description": "",
-    "presenter": "Presented by Music Office, LCSD",
+    "presenter": "New Method Bobby Singing Group",
     "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
     }
   },
   {
@@ -2308,812 +1164,51 @@
     }
   },
   {
-    "eventId": "177289",
-    "title": "Singing  Skill Course",
+    "eventId": "176193",
+    "title": "Red & White Challenge, First Strike of Sing and Dance Art Collection",
     "dates": [
-      "2026-01-02",
-      "2026-01-05",
-      "2026-01-09",
-      "2026-01-12",
-      "2026-01-16",
-      "2026-01-19",
-      "2026-01-23",
-      "2026-01-26",
-      "2026-01-30",
-      "2026-02-02",
-      "2026-02-06",
-      "2026-02-09",
-      "2026-02-13",
-      "2026-02-23",
-      "2026-02-27",
-      "2026-03-02",
-      "2026-03-06",
-      "2026-03-09",
-      "2026-03-13",
-      "2026-03-16",
-      "2026-03-20",
-      "2026-03-23",
-      "2026-03-27",
-      "2026-03-30",
-      "2026-04-03",
-      "2026-04-17",
-      "2026-04-20",
-      "2026-04-24",
-      "2026-04-27",
-      "2026-05-08",
-      "2026-05-11",
-      "2026-05-15",
-      "2026-05-18",
-      "2026-05-22",
-      "2026-05-25",
-      "2026-05-29",
-      "2026-06-01",
-      "2026-06-05",
-      "2026-06-08",
-      "2026-06-12",
-      "2026-06-15",
-      "2026-06-22",
-      "2026-06-26",
-      "2026-06-29"
+      "2026-02-21"
     ],
     "description": "",
-    "presenter": "Presented by Hong Kong Yong Yan Chorus",
+    "presenter": "Sing and Dance Art Collection",
     "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171913",
-    "title": "Singing Skill Course",
-    "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-08-22",
-      "2025-08-29",
-      "2025-09-19",
-      "2025-09-26",
-      "2025-10-03",
-      "2025-10-10",
-      "2025-10-17",
-      "2025-10-24",
-      "2025-10-31",
-      "2025-11-07",
-      "2025-11-14",
-      "2025-11-21",
-      "2025-11-28",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
-    ],
-    "description": "",
-    "presenter": "Presented by Hong Kong Yong Yan Chorus",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171912",
-    "title": "Singing Skill Course",
-    "dates": [
-      "2025-07-07",
-      "2025-07-14",
-      "2025-07-21",
-      "2025-07-28",
-      "2025-08-04",
-      "2025-08-11",
-      "2025-08-18",
-      "2025-08-25",
-      "2025-09-01",
-      "2025-09-15",
-      "2025-09-22",
-      "2025-09-29",
-      "2025-10-13",
-      "2025-10-20",
-      "2025-10-27",
-      "2025-11-03",
-      "2025-11-10",
-      "2025-11-17",
-      "2025-11-24",
-      "2025-12-01",
-      "2025-12-08",
-      "2025-12-15",
-      "2025-12-22",
-      "2025-12-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Hong Kong Yong Yan Chorus",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171894",
-    "title": "Singing Skill Course",
-    "dates": [
-      "2025-07-07",
-      "2025-07-14",
-      "2025-07-21",
-      "2025-07-28",
-      "2025-08-04",
-      "2025-08-11",
-      "2025-08-18",
-      "2025-08-25",
-      "2025-09-01",
-      "2025-09-15",
-      "2025-09-22",
-      "2025-09-29",
-      "2025-10-13",
-      "2025-10-20",
-      "2025-10-27",
-      "2025-11-03",
-      "2025-11-10",
-      "2025-11-17",
-      "2025-11-24",
-      "2025-12-01",
-      "2025-12-08",
-      "2025-12-15",
-      "2025-12-22",
-      "2025-12-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Hong Kong Yong Yan Arts Troupe",
-    "venue": {
-      "id": "3110565",
-      "name": "North District Town Hall (Function Room (1))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "177336",
-    "title": "Social  Dance",
-    "dates": [
-      "2026-01-08",
-      "2026-01-15",
-      "2026-01-22",
-      "2026-01-29",
-      "2026-02-05",
-      "2026-03-05",
-      "2026-03-12",
-      "2026-03-19",
-      "2026-03-26",
-      "2026-04-02",
-      "2026-04-09",
-      "2026-04-16",
-      "2026-04-23",
-      "2026-04-30",
-      "2026-05-07",
-      "2026-05-14",
-      "2026-05-21",
-      "2026-05-28",
-      "2026-06-04",
-      "2026-06-11",
-      "2026-06-18",
-      "2026-06-25"
-    ],
-    "description": "",
-    "presenter": "Presented by Nelson's Dancing Studio",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "178001",
-    "title": "Social Dance Class",
-    "dates": [
-      "2026-01-05",
-      "2026-01-12",
-      "2026-01-19",
-      "2026-01-26",
-      "2026-02-02",
-      "2026-02-09",
-      "2026-02-23",
-      "2026-03-02",
-      "2026-03-09",
-      "2026-03-16",
-      "2026-03-23",
-      "2026-03-30",
-      "2026-04-13",
-      "2026-04-20",
-      "2026-04-27",
-      "2026-05-04",
-      "2026-05-11",
-      "2026-05-18",
-      "2026-05-25",
-      "2026-06-01",
-      "2026-06-08",
-      "2026-06-15",
-      "2026-06-22",
-      "2026-06-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Magic International Dancing Association",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171902",
-    "title": "Social Dance Class",
-    "dates": [
-      "2025-07-02",
-      "2025-07-09",
-      "2025-07-16",
-      "2025-07-23",
-      "2025-07-30",
-      "2025-08-06",
-      "2025-08-13",
-      "2025-08-20",
-      "2025-08-27",
-      "2025-09-03",
-      "2025-09-10",
-      "2025-09-17",
-      "2025-09-24",
-      "2025-10-08",
-      "2025-10-15",
-      "2025-10-22",
-      "2025-11-05",
-      "2025-11-12",
-      "2025-11-19",
-      "2025-11-26",
-      "2025-12-03",
-      "2025-12-10",
-      "2025-12-17",
-      "2025-12-24",
-      "2025-12-31"
-    ],
-    "description": "",
-    "presenter": "Presented by MING ARTS DANCE STUDIO",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171903",
-    "title": "Social Dance Class",
-    "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-08-21",
-      "2025-08-28",
-      "2025-09-04",
-      "2025-09-11",
-      "2025-09-18",
-      "2025-09-25",
-      "2025-10-02",
-      "2025-10-09",
-      "2025-10-16",
-      "2025-10-23",
-      "2025-10-30",
-      "2025-11-06",
-      "2025-11-13",
-      "2025-11-20",
-      "2025-11-27",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
-    ],
-    "description": "",
-    "presenter": "Presented by MING ARTS DANCE STUDIO",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171900",
-    "title": "Social Dance Class",
-    "dates": [
-      "2025-07-07",
-      "2025-07-14",
-      "2025-07-21",
-      "2025-07-28",
-      "2025-08-04",
-      "2025-08-11",
-      "2025-08-18",
-      "2025-08-25",
-      "2025-09-01",
-      "2025-09-08",
-      "2025-09-15",
-      "2025-09-22",
-      "2025-09-29",
-      "2025-10-13",
-      "2025-10-20",
-      "2025-10-27",
-      "2025-11-03",
-      "2025-11-10",
-      "2025-11-17",
-      "2025-11-24",
-      "2025-12-01",
-      "2025-12-08",
-      "2025-12-15",
-      "2025-12-22",
-      "2025-12-29"
-    ],
-    "description": "",
-    "presenter": "Presented by MING ARTS DANCE STUDIO",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171901",
-    "title": "Social Dance Class",
-    "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-08-19",
-      "2025-08-26",
-      "2025-09-02",
-      "2025-09-09",
-      "2025-09-16",
-      "2025-09-23",
-      "2025-09-30",
-      "2025-10-14",
-      "2025-10-21",
-      "2025-10-28",
-      "2025-11-04",
-      "2025-11-11",
-      "2025-11-18",
-      "2025-11-25",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
-    ],
-    "description": "",
-    "presenter": "Presented by MING ARTS DANCE STUDIO",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171898",
-    "title": "Social Dance Class",
-    "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-08-21",
-      "2025-08-28",
-      "2025-09-04",
-      "2025-09-11",
-      "2025-09-18",
-      "2025-09-25",
-      "2025-10-02",
-      "2025-10-09",
-      "2025-10-16",
-      "2025-10-23",
-      "2025-10-30",
-      "2025-11-06",
-      "2025-11-13",
-      "2025-11-20",
-      "2025-11-27",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
-    ],
-    "description": "",
-    "presenter": "Presented by Fong Kin Ling Dance Studio",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "171941",
-    "title": "Social Dance Class",
-    "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-08-21",
-      "2025-08-28",
-      "2025-09-04",
-      "2025-09-11",
-      "2025-09-18",
-      "2025-09-25",
-      "2025-10-02",
-      "2025-10-09",
-      "2025-10-16",
-      "2025-10-23",
-      "2025-10-30",
-      "2025-11-06",
-      "2025-11-13",
-      "2025-11-20",
-      "2025-11-27",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
-    ],
-    "description": "",
-    "presenter": "Presented by MING ARTS DANCE STUDIO",
-    "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
       "eventCount": 9
     }
   },
   {
-    "eventId": "171942",
-    "title": "Social Dance Class",
+    "eventId": "176197",
+    "title": "Singing Concert",
     "dates": [
-      "2025-07-04",
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-08-22",
-      "2025-08-29",
-      "2025-09-05",
-      "2025-09-12",
-      "2025-09-19",
-      "2025-09-26",
-      "2025-10-03",
-      "2025-10-10",
-      "2025-10-17",
-      "2025-10-24",
-      "2025-10-31",
-      "2025-11-07",
-      "2025-11-14",
-      "2025-11-21",
-      "2025-11-28",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
+      "2026-02-02"
     ],
     "description": "",
-    "presenter": "Presented by MING ARTS DANCE STUDIO",
+    "presenter": "聚星歌舞",
     "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
       "eventCount": 9
     }
   },
   {
-    "eventId": "173743",
-    "title": "Social Dance Class",
+    "eventId": "177174",
+    "title": "Symphonic Cantopop",
     "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
+      "2026-01-08"
     ],
     "description": "",
-    "presenter": "Presented by Ma On Shan Promotion of Livelihood & Recreation Association",
+    "presenter": "Hong Kong Amateur Orchestra",
     "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171940",
-    "title": "Social Dance Class",
-    "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-08-19",
-      "2025-08-26",
-      "2025-09-02",
-      "2025-09-09",
-      "2025-09-16",
-      "2025-09-23",
-      "2025-09-30",
-      "2025-10-14",
-      "2025-10-21",
-      "2025-10-28",
-      "2025-11-04",
-      "2025-11-11",
-      "2025-11-18",
-      "2025-11-25",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
-    ],
-    "description": "",
-    "presenter": "Presented by MING ARTS DANCE STUDIO",
-    "venue": {
-      "id": "35517396",
-      "name": "Tai Po Civic Centre (Function Room (2))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 9
-    }
-  },
-  {
-    "eventId": "173786",
-    "title": "Social Dance Class",
-    "dates": [
-      "2025-07-06",
-      "2025-07-13",
-      "2025-07-20",
-      "2025-07-27",
-      "2025-08-03",
-      "2025-08-10",
-      "2025-08-17",
-      "2025-08-24",
-      "2025-08-31",
-      "2025-09-07",
-      "2025-09-14",
-      "2025-09-21",
-      "2025-09-28",
-      "2025-10-05",
-      "2025-10-12",
-      "2025-10-19",
-      "2025-10-26",
-      "2025-11-02",
-      "2025-11-09",
-      "2025-11-16",
-      "2025-11-23",
-      "2025-11-30",
-      "2025-12-07",
-      "2025-12-14",
-      "2025-12-21",
-      "2025-12-28"
-    ],
-    "description": "",
-    "presenter": "Presented by North District Arts Advancement Association Limited",
-    "venue": {
-      "id": "3110267",
-      "name": "North District Town Hall (Function Room (2))",
-      "latitude": 22.501639,
-      "longitude": 114.128911,
-      "eventCount": 17
-    }
-  },
-  {
-    "eventId": "172025",
-    "title": "Song of Melody",
-    "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-08-19",
-      "2025-08-26",
-      "2025-09-02",
-      "2025-09-09",
-      "2025-09-16",
-      "2025-09-23",
-      "2025-09-30",
-      "2025-10-14",
-      "2025-10-21",
-      "2025-10-28",
-      "2025-11-04",
-      "2025-11-11",
-      "2025-11-18",
-      "2025-11-25",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
-    ],
-    "description": "",
-    "presenter": "Presented by Rhythm of The Song",
-    "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "172037",
-    "title": "Stretching Dance (Ladies Only)",
-    "dates": [
-      "2025-07-03",
-      "2025-07-10",
-      "2025-07-17",
-      "2025-07-24",
-      "2025-07-31",
-      "2025-08-07",
-      "2025-08-14",
-      "2025-12-04",
-      "2025-12-11",
-      "2025-12-18"
-    ],
-    "description": "",
-    "presenter": "Presented by CHIU CHI KWONG",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "172036",
-    "title": "Stretching Dance (Ladies Only)",
-    "dates": [
-      "2025-07-08",
-      "2025-07-15",
-      "2025-07-22",
-      "2025-07-29",
-      "2025-08-05",
-      "2025-08-12",
-      "2025-12-02",
-      "2025-12-09",
-      "2025-12-16",
-      "2025-12-23",
-      "2025-12-30"
-    ],
-    "description": "",
-    "presenter": "Presented by CHIU CHI KWONG",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "171956",
-    "title": "Taekwondo Training",
-    "dates": [
-      "2025-07-11",
-      "2025-07-18",
-      "2025-07-25",
-      "2025-08-01",
-      "2025-08-08",
-      "2025-08-15",
-      "2025-08-22",
-      "2025-08-29",
-      "2025-09-05",
-      "2025-09-12",
-      "2025-09-19",
-      "2025-09-26",
-      "2025-10-03",
-      "2025-10-10",
-      "2025-10-17",
-      "2025-10-24",
-      "2025-10-31",
-      "2025-11-07",
-      "2025-11-14",
-      "2025-11-21",
-      "2025-11-28",
-      "2025-12-05",
-      "2025-12-12",
-      "2025-12-19"
-    ],
-    "description": "",
-    "presenter": "Presented by International Taekwondo H. K. Association",
-    "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "177992",
-    "title": "Tai Chi Class",
-    "dates": [
-      "2026-01-07",
-      "2026-01-14",
-      "2026-01-21",
-      "2026-01-28",
-      "2026-02-04",
-      "2026-02-11",
-      "2026-02-25",
-      "2026-03-04",
-      "2026-03-11",
-      "2026-03-18"
-    ],
-    "description": "",
-    "presenter": "Presented by Fung Ying Seen Koon Tai Po Neighbourhood for The Elderly",
-    "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "177029",
-    "title": "Tai Po Civic Centre Fun Day:&nbsp; Toolbox Percussion Demonstration Performance and Workshop",
-    "dates": [
-      "2026-01-10"
-    ],
-    "description": "",
-    "presenter": "Presented by PVO(NTE) - MDA",
-    "venue": {
-      "id": "35510044",
-      "name": "Tai Po Civic Centre (Black Box Theatre)",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 3
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
     }
   },
   {
@@ -3135,6 +1230,124 @@
     }
   },
   {
+    "eventId": "176297",
+    "title": "Tin Tin 30th Anniversary Gala Show",
+    "dates": [
+      "2025-12-23"
+    ],
+    "description": "",
+    "presenter": "Tin Shui Wai Catholic Primary School",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
+    "eventId": "177173",
+    "title": "Treasures of Time Charity Concert 2026",
+    "dates": [
+      "2026-01-03"
+    ],
+    "description": "",
+    "presenter": "Hong Kong Youth Symphonic Charity",
+    "venue": {
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
+    }
+  },
+  {
+    "eventId": "177408",
+    "title": "Tuen Mun District Dance Competition",
+    "dates": [
+      "2026-01-09",
+      "2026-01-10",
+      "2026-01-11"
+    ],
+    "description": "",
+    "presenter": "Tuen Mun Arts Promotion Association",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
+    "eventId": "177411",
+    "title": "Tuen Mun North East Area Committee Variety Show",
+    "dates": [
+      "2026-01-15"
+    ],
+    "description": "",
+    "presenter": "Tuen Mun District Office, Home Affairs Department",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
+    "eventId": "175815",
+    "title": "Tuen Mun Town Hall Venue Partnership Scheme : \"Umbrella Story\" by Spring-Time Experimental Theatre",
+    "dates": [
+      "2025-12-19",
+      "2025-12-20",
+      "2025-12-21"
+    ],
+    "description": "",
+    "presenter": "Spring-Time Experimental Theatre",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
+    "eventId": "176296",
+    "title": "Umbrella Story",
+    "dates": [
+      "2025-12-19",
+      "2025-12-20",
+      "2025-12-21"
+    ],
+    "description": "",
+    "presenter": "Spring-Time Experimental Theatre",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
+    "eventId": "176300",
+    "title": "Variety Show",
+    "dates": [
+      "2025-12-28"
+    ],
+    "description": "",
+    "presenter": "歡騰音樂社",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
     "eventId": "177023",
     "title": "Variety Show",
     "dates": [
@@ -3151,6 +1364,22 @@
     }
   },
   {
+    "eventId": "177140",
+    "title": "Variety Show",
+    "dates": [
+      "2026-01-05"
+    ],
+    "description": "",
+    "presenter": "Team Spirit Music Group",
+    "venue": {
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
+      "eventCount": 9
+    }
+  },
+  {
     "eventId": "177016",
     "title": "Variety Show",
     "dates": [
@@ -3164,6 +1393,38 @@
       "latitude": 22.501639,
       "longitude": 114.128911,
       "eventCount": 14
+    }
+  },
+  {
+    "eventId": "177141",
+    "title": "Variety Show",
+    "dates": [
+      "2026-01-10"
+    ],
+    "description": "",
+    "presenter": "Universal Interest Cultural Association",
+    "venue": {
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
+      "eventCount": 9
+    }
+  },
+  {
+    "eventId": "177319",
+    "title": "Variety Show",
+    "dates": [
+      "2026-01-01"
+    ],
+    "description": "",
+    "presenter": "丹丹藝術團",
+    "venue": {
+      "id": "87310051",
+      "name": "Yuen Long Theatre (Auditorium)",
+      "latitude": 22.44152,
+      "longitude": 114.02289,
+      "eventCount": 8
     }
   },
   {
@@ -3199,6 +1460,38 @@
     }
   },
   {
+    "eventId": "177153",
+    "title": "Variety Show",
+    "dates": [
+      "2026-01-29"
+    ],
+    "description": "",
+    "presenter": "華麗聚星歌舞",
+    "venue": {
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
+      "eventCount": 9
+    }
+  },
+  {
+    "eventId": "177407",
+    "title": "Variety Show",
+    "dates": [
+      "2026-01-08"
+    ],
+    "description": "",
+    "presenter": "Tuen Mun District Office, Home Affairs Department",
+    "venue": {
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
+      "eventCount": 21
+    }
+  },
+  {
     "eventId": "177021",
     "title": "Variety Show",
     "dates": [
@@ -3231,303 +1524,69 @@
     }
   },
   {
-    "eventId": "173863",
-    "title": "WE VOICE Musical Vocal Training",
+    "eventId": "176298",
+    "title": "Variety Show",
     "dates": [
-      "2025-07-26",
-      "2025-08-02",
-      "2025-08-09",
-      "2025-08-23",
-      "2025-08-30",
-      "2025-09-06",
-      "2025-09-13",
-      "2025-09-20",
-      "2025-09-27",
-      "2025-10-04",
-      "2025-10-11",
-      "2025-10-18",
-      "2025-10-25",
-      "2025-11-01",
-      "2025-11-08",
-      "2025-11-15",
-      "2025-11-22",
-      "2025-11-29",
-      "2025-12-06",
-      "2025-12-13",
-      "2025-12-20"
+      "2025-12-24"
     ],
     "description": "",
-    "presenter": "Presented by The People's Theatre Limited",
+    "presenter": "Stars Galaxy",
     "venue": {
-      "id": "35511887",
-      "name": "Tai Po Civic Centre (Function Room (1))",
-      "latitude": 22.45175,
-      "longitude": 114.16815,
-      "eventCount": 12
-    }
-  },
-  {
-    "eventId": "177273",
-    "title": "Western  Opera Excerpts",
-    "dates": [
-      "2026-01-05",
-      "2026-01-12",
-      "2026-01-19",
-      "2026-01-26",
-      "2026-02-02",
-      "2026-02-09",
-      "2026-02-23",
-      "2026-03-02",
-      "2026-03-09",
-      "2026-03-16",
-      "2026-03-23",
-      "2026-03-30",
-      "2026-04-06",
-      "2026-04-13",
-      "2026-04-20",
-      "2026-04-27",
-      "2026-05-04",
-      "2026-05-11",
-      "2026-05-18",
-      "2026-05-25",
-      "2026-06-01",
-      "2026-06-08",
-      "2026-06-15",
-      "2026-06-22",
-      "2026-06-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Fly High Production",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
+      "id": "76810048",
+      "name": "Tuen Mun Town Hall (Auditorium)",
+      "latitude": 22.39181,
+      "longitude": 113.976771,
       "eventCount": 21
     }
   },
   {
-    "eventId": "172082",
-    "title": "Western Opera Excerpts",
+    "eventId": "177150",
+    "title": "Winter Concert Practice Concert",
     "dates": [
-      "2025-07-07",
-      "2025-07-14",
-      "2025-07-21",
-      "2025-07-28",
-      "2025-08-04",
-      "2025-08-11",
-      "2025-12-01",
-      "2025-12-08",
-      "2025-12-15",
-      "2025-12-22",
-      "2025-12-29"
+      "2026-01-17"
     ],
     "description": "",
-    "presenter": "Presented by Fly High Production",
+    "presenter": "Wong Yik Hei",
     "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
+      "eventCount": 9
     }
   },
   {
-    "eventId": "177328",
-    "title": "Yoga Training Course",
+    "eventId": "177175",
+    "title": "Yomii-mania II XD",
     "dates": [
-      "2026-01-02",
-      "2026-01-06",
-      "2026-01-09",
-      "2026-01-13",
-      "2026-01-16",
-      "2026-01-20",
-      "2026-01-23",
-      "2026-01-27",
-      "2026-01-30",
-      "2026-02-03",
-      "2026-02-06",
-      "2026-02-10",
-      "2026-02-13",
-      "2026-02-24",
-      "2026-02-27",
-      "2026-03-03",
-      "2026-03-06",
-      "2026-03-10",
-      "2026-03-13",
-      "2026-03-17",
-      "2026-03-20",
-      "2026-03-24",
-      "2026-03-27",
-      "2026-03-31",
-      "2026-04-10",
-      "2026-04-14",
-      "2026-04-17",
-      "2026-04-21",
-      "2026-04-24",
-      "2026-04-28",
-      "2026-05-05",
-      "2026-05-08",
-      "2026-05-12",
-      "2026-05-15",
-      "2026-05-19",
-      "2026-05-22",
-      "2026-05-26",
-      "2026-05-29",
-      "2026-06-02",
-      "2026-06-05",
-      "2026-06-09",
-      "2026-06-12",
-      "2026-06-16",
-      "2026-06-23",
-      "2026-06-26",
-      "2026-06-30"
+      "2026-01-11"
     ],
     "description": "",
-    "presenter": "Presented by The Yoga Association of Hong Kong",
+    "presenter": "Hong Kong Doujin Production",
     "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
+      "id": "50110014",
+      "name": "Hong Kong Cultural Centre (Concert Hall)",
+      "latitude": 22.29386,
+      "longitude": 114.17053,
+      "eventCount": 14
     }
   },
   {
-    "eventId": "177269",
-    "title": "瘦身拉筋拉丁舞班",
+    "eventId": "177177",
+    "title": "風青青少年劇團五周年演出",
     "dates": [
-      "2026-01-02",
-      "2026-01-09",
-      "2026-01-16",
-      "2026-01-23",
-      "2026-01-30",
-      "2026-02-06",
-      "2026-02-13",
-      "2026-02-27",
-      "2026-03-06",
-      "2026-03-13",
-      "2026-03-20",
-      "2026-03-27",
-      "2026-04-10",
-      "2026-04-17",
-      "2026-04-24",
-      "2026-05-08",
-      "2026-05-15",
-      "2026-05-22",
-      "2026-05-29",
-      "2026-06-05",
-      "2026-06-12",
-      "2026-06-26"
+      "2025-12-26",
+      "2025-12-27",
+      "2025-12-28"
     ],
     "description": "",
-    "presenter": "Presented by Artist Club",
+    "presenter": "基督教家庭服務中心賽馬會跳躍青年坊",
     "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "178027",
-    "title": "綜合集體舞班",
-    "dates": [
-      "2026-01-02",
-      "2026-01-09",
-      "2026-01-16",
-      "2026-01-23",
-      "2026-01-30",
-      "2026-02-06",
-      "2026-02-13",
-      "2026-02-20",
-      "2026-02-27",
-      "2026-03-06",
-      "2026-03-13",
-      "2026-03-20",
-      "2026-03-27",
-      "2026-04-10",
-      "2026-04-17",
-      "2026-04-24",
-      "2026-05-08",
-      "2026-05-15",
-      "2026-05-22",
-      "2026-05-29",
-      "2026-06-05",
-      "2026-06-12",
-      "2026-06-26"
-    ],
-    "description": "",
-    "presenter": "Presented by Ma On Shan Promotion of Livelihood & Recreation Association",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
-    }
-  },
-  {
-    "eventId": "177282",
-    "title": "綜合集體舞班",
-    "dates": [
-      "2026-01-05",
-      "2026-01-07",
-      "2026-01-12",
-      "2026-01-14",
-      "2026-01-19",
-      "2026-01-21",
-      "2026-01-26",
-      "2026-01-28",
-      "2026-02-02",
-      "2026-02-04",
-      "2026-02-09",
-      "2026-02-11",
-      "2026-02-23",
-      "2026-02-25",
-      "2026-03-02",
-      "2026-03-04",
-      "2026-03-09",
-      "2026-03-11",
-      "2026-03-16",
-      "2026-03-18",
-      "2026-03-23",
-      "2026-03-25",
-      "2026-03-30",
-      "2026-04-01",
-      "2026-04-08",
-      "2026-04-13",
-      "2026-04-15",
-      "2026-04-20",
-      "2026-04-22",
-      "2026-04-27",
-      "2026-04-29",
-      "2026-05-04",
-      "2026-05-06",
-      "2026-05-11",
-      "2026-05-13",
-      "2026-05-18",
-      "2026-05-20",
-      "2026-05-27",
-      "2026-06-01",
-      "2026-06-03",
-      "2026-06-08",
-      "2026-06-10",
-      "2026-06-15",
-      "2026-06-17",
-      "2026-06-22",
-      "2026-06-24",
-      "2026-06-29"
-    ],
-    "description": "",
-    "presenter": "Presented by Ma On Shan Promotion of Livelihood & Recreation Association",
-    "venue": {
-      "id": "36310304",
-      "name": "Sha Tin Town Hall (Dance Studio)",
-      "latitude": 22.38136,
-      "longitude": 114.1899,
-      "eventCount": 21
+      "id": "87410028",
+      "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+      "latitude": 22.334583,
+      "longitude": 114.208766,
+      "eventCount": 9
     }
   }
 ]

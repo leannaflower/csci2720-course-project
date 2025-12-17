@@ -13,6 +13,16 @@ function formatDate(yyyymmdd) {
     return `${yyyymmdd.slice(0, 4)}-${yyyymmdd.slice(4, 6)}-${yyyymmdd.slice(6)}`;
 }
 
+const dedupeByLatLngFirst = (arr) => {
+  const seen = new Set();
+  return arr.filter(item => {
+    const key = `${item.latitude},${item.longitude}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+};
+
 async function main() {
     const eventsXML = await readXML("events.xml");
     const datesXML = await readXML("eventDates.xml");
@@ -61,8 +71,10 @@ async function main() {
         v.longitude &&
         venueEventCount[v.$.id] >= 3
     );
+	
+	const dedupedValidVenues = dedupeByLatLngFirst(validVenues);
 
-    const selectedVenues = validVenues.slice(0, 10);
+    const selectedVenues = dedupedValidVenues.slice(0, 10);
     const selectedVenueIds = new Set(selectedVenues.map(v => v.$.id));
 
     // Build venues_clean.json

@@ -45,14 +45,6 @@ export default function ProfilePage() {
     };
   }, [token]);
 
-  /*if (error) {
-    return (
-      <div className="profile-page" style={{ padding: 20 }}>
-        Error: {error}
-      </div>
-    );
-  }*/
-
     const passwordErrors = (() => {
       const errs = [];
       if (!currentPassword) errs.push("Current password is required");
@@ -87,7 +79,7 @@ export default function ProfilePage() {
           const msg =
             (data && (data.error || data.message)) ??
             (typeof data === "string" ? data : JSON.stringify(data));
-            throw new Error(msg || "Failed to change password.");
+            throw new Error(msg || "Failed to change password");
           }
 
           setSuccessMsg(data?.message || "Password updated successfully");
@@ -96,7 +88,7 @@ export default function ProfilePage() {
           setConfirmPassword("");
         } catch (e) {
           console.log(e);
-		  setError(e.message || "Failed to change password.");
+		  setError(e.message || "Failed to change password");
         } finally {
           setSaving(false);
         }

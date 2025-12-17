@@ -61,7 +61,9 @@ export default function App() {
         <Route 
           path="/events"
           element={
-            <EventList />
+            <ProtectedRoute>
+              <EventList />
+            </ProtectedRoute>
           }
         />
 

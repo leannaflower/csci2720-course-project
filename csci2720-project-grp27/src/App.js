@@ -13,6 +13,7 @@ import Register from "./pages/Register";
 import AdminRoute from "./pages/AdminRoute";
 import AdminUsers from "./pages/AdminUsers";
 import AdminEvents from "./pages/AdminEvents";
+import EventList from "./pages/EventList";
 
 
 import "./App.css";
@@ -50,14 +51,14 @@ export default function App() {
           }
         />
 
-        <Route
+        {/* <Route
           path="/location/:venueId"
           element={
             <ProtectedRoute>
               <VenueDetail />
             </ProtectedRoute>
           }
-        />
+        /> */}
 
         <Route 
           path="/events"
@@ -71,6 +72,15 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Map />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/events"
+          element={
+            <ProtectedRoute>
+              <EventList />
             </ProtectedRoute>
           }
         />
@@ -99,6 +109,15 @@ export default function App() {
             <AdminRoute user={user}>
               <AdminEvents accessToken={localStorage.getItem("token")} />
             </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/location/:venueId"
+          element={
+            <ProtectedRoute>
+              <VenueDetail user={user} />
+            </ProtectedRoute>
           }
         />
       </Routes>

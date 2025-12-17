@@ -1,0 +1,86 @@
+.event-page {
+  padding: 30px;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.event-table th,
+.event-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.event-table th {
+  background-color: var(--table-header-bg);
+  font-weight: 600;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.event-table td {
+  font-size: 14px;
+}
+
+.event-table td:nth-child(1) {
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-table td:nth-child(2) {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-table td:nth-child(3) {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-table td:nth-child(4) {
+  max-width: 180px;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.event-table td:nth-child(5) {
+  max-width: 200px;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-table td:nth-child(6) {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.venue-id {
+  display: none;
+}
+
+.no-events {
+  padding: 15px;
+  text-align: center;
+  color: var(--text-secondary);
+}

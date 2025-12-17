@@ -7,7 +7,7 @@
     border-radius: 12px;
     padding: 16px;
     margin-top: 16px;
-    background: #fff;
+    background: var(--nav-bg);
 }
 
 .admin-panel .grid-form {

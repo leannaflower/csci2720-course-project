@@ -146,10 +146,10 @@ export default function ProfilePage() {
                 onChange={(e) => setNewPassword(e.target.value)}
                 autoComplete="new-password"
                 required
-                minLength={5}
+                minLength={6}
               />
               <small>
-                At least 5 characters. Use a strong, unique password.
+                At least 6 characters. Use a strong, unique password.
               </small>
             </label>
 

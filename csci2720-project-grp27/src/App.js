@@ -10,7 +10,9 @@ import ProtectedRoute from "./ProtectedRoute";
 import Favorites from "./pages/Favorites";
 import Register from "./pages/Register";
 import AdminRoute from "./pages/AdminRoute";
-import AdminPanel from "./pages/AdminPanel";
+import AdminUsers from "./pages/AdminUsers";
+import AdminEvents from "./pages/AdminEvents";
+
 
 import "./App.css";
 
@@ -73,12 +75,21 @@ export default function App() {
             </ProtectedRoute>
           }
         />
-        
+
         <Route
-          path="/AdminPanel"
+          path="/admin/users"
           element={
             <AdminRoute user={user}>
-              <AdminPanel accessToken={localStorage.getItem("token")} />
+              <AdminUsers accessToken={localStorage.getItem("token")} currentUser={user} />
+            </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/admin/events"
+          element={
+            <AdminRoute user={user}>
+              <AdminEvents accessToken={localStorage.getItem("token")} />
             </AdminRoute>
           }
         />

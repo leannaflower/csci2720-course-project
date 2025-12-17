@@ -80,19 +80,39 @@ export default function Navbar({ user, setUser }) {
 
         {user && (
           <div className="profile-wrapper" ref={menuRef}>
-            <div className="profile-icon" onClick={toggleMenu}>
-              {user.username[0].toUpperCase()}
-            </div>
+            <button
+              type="button"
+              className="profile-icon"
+              onClick={toggleMenu}
+              aria-label="Open profile menu"
+            >
+              {user.username?.[0]?.toUpperCase() || "U"}
+            </button>
 
             {menuOpen && (
               <div className="dropdown-menu">
-                {user.role === "admin" && (
-                  <>
-                    <Link to="/AdminPanel" className="dropdown-item">Admin Panel</Link>
-                  </>
-                )}
+                <div className="dropdown-header">
+                  <div className="dropdown-name">{user.username}</div>
+                  {user.email && <div className="dropdown-email">{user.email}</div>}
+                </div>
+
+                <div className="dropdown-section">
+                  {user.role === "admin" && (
+                    <>
+                      <Link to="/admin/users" className="dropdown-item">User Manager</Link>
+                      <Link to="/admin/events" className="dropdown-item">Event Manager</Link>
+                    </>
+                  )}
+                </div>
+
+                <div className="dropdown-section">
+                  <Link to="/profile" className="dropdown-item">Profile</Link>
+                </div>
+
+                <div className="dropdown-divider" />
+
                 <button className="dropdown-item logout" onClick={handleSignOut}>
-                  Sign Out
+                  Sign out
                 </button>
               </div>
             )}

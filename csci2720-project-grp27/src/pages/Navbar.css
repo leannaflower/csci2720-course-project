@@ -96,6 +96,32 @@
   background-color: var(--dropdown-hover-bg);
 }
 
+.dropdown-header {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--dropdown-border);
+}
+
+.dropdown-name {
+  font-weight: 700;
+  color: var(--nav-text);
+}
+
+.dropdown-email {
+  font-size: 12px;
+  color: var(--meta-text);
+  margin-top: 2px;
+}
+
+.dropdown-section {
+  padding: 6px 0;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--dropdown-border);
+  margin: 6px 0;
+}
+
 .logout {
   color: var(--danger-text);
 }

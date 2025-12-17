@@ -51,13 +51,29 @@ export default function Favorites() {
             credentials: "include",
           })
             .then(async (r) => {
+              if (r.status === 404) return { favoriteId: f._id, missing: true };
               if (!r.ok) throw new Error(await r.text());
-              return r.json();
+              const data = await r.json();
+              return { favoriteId: f._id, venue: data.venue, eventCount: data.events.length };
             })
-            .then((data) => ({ favoriteId: f._id, venue: data.venue, eventCount: data.events.length }))
         );
 
         const settled = await Promise.allSettled(venuePromises);
+        const stale = settled
+          .filter((s) => s.status === "fulfilled" && s.value?.missing)
+          .map((s) => s.value.favoriteId);
+
+        if (stale.length > 0) {
+          // fire-and-forget delete (do not block UI)
+          stale.forEach((favoriteId) => {
+            fetch(`http://localhost:5001/api/favorites/${favoriteId}`, {
+              method: "DELETE",
+              headers: { Authorization: `Bearer ${token}` },
+              credentials: "include",
+            }).catch(() => { });
+          });
+        }
+
         const CUHK = { lat: 22.4163, lng: 114.21 };
 
         const mapped = settled

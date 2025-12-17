@@ -1,85 +1,97 @@
-const fs = require('fs');
-const xml2js = require('xml2js');
+const fs = require("fs");
+const xml2js = require("xml2js");
 
 const parser = new xml2js.Parser({ explicitArray: false });
 
-async function parseXML(file) {
-    const data = fs.readFileSync(file);
-    return await parser.parseStringPromise(data);
+function readXML(path) {
+    const xml = fs.readFileSync(path, "utf8");
+    return parser.parseStringPromise(xml);
+}
+
+function formatDate(yyyymmdd) {
+    if (!yyyymmdd || yyyymmdd === "20990101") return null;
+    return `${yyyymmdd.slice(0, 4)}-${yyyymmdd.slice(4, 6)}-${yyyymmdd.slice(6)}`;
 }
 
 async function main() {
-    // const venuesData = await parseXML('venues.xml');
-    const venues = JSON.parse(fs.readFileSync("venues_clean.json", "utf8"));
-    const venueIdSet = new Set(venues.map(v => String(v.id)));
+    const eventsXML = await readXML("events.xml");
+    const datesXML = await readXML("eventDates.xml");
+    const venuesXML = await readXML("venues.xml");
 
-    const eventsData = await parseXML('events.xml');
-    const events = Array.isArray(eventsData.events.event)
-        ? eventsData.events.event
-        : [eventsData.events.event];
-    
-    const cleanEvents = events
-        .filter(ev => venueIdSet.has(String(ev.venueid)))
+    const events = eventsXML.events.event;
+    const dateEvents = datesXML.event_dates.event;
+    const venues = venuesXML.venues.venue;
+
+
+    // Build eventId → dates map
+    const eventDatesMap = {};
+
+    dateEvents.forEach(ev => {
+        const id = ev.$.id;
+        const dates = Array.isArray(ev.indate) ? ev.indate : [ev.indate];
+
+        eventDatesMap[id] = dates
+            .map(d => formatDate(d))
+            .filter(Boolean);
+    });
+
+
+    // Normalize events (english only)
+    const normalizedEvents = events.map(ev => {
+        const id = ev.$.id;
+        return {
+            eventId: id,
+            title: ev.titlee && ev.titlee !== "--" ? ev.titlee : ev.titlec || "",
+            venueId: ev.venueid,
+            dates: eventDatesMap[id] || [],
+            description: ev.desce || "",
+            presenter: ev.presenterorge || ""
+        };
+    }).filter(ev => ev.dates.length > 0);
+
+    // Count events per venue
+    const venueEventCount = {};
+    normalizedEvents.forEach(ev => {
+        venueEventCount[ev.venueId] = (venueEventCount[ev.venueId] || 0) + 1;
+    });
+
+    // Filter valid venues
+    const validVenues = venues.filter(v =>
+        v.latitude &&
+        v.longitude &&
+        venueEventCount[v.$.id] >= 3
+    );
+
+    const selectedVenues = validVenues.slice(0, 10);
+    const selectedVenueIds = new Set(selectedVenues.map(v => v.$.id));
+
+    // Build venues_clean.json
+    const venuesClean = selectedVenues.map(v => ({
+        id: v.$.id,
+        name: v.venuee,
+        latitude: parseFloat(v.latitude),
+        longitude: parseFloat(v.longitude),
+        eventCount: venueEventCount[v.$.id]
+    }));
+
+    // Build events_clean.json
+    const eventsClean = normalizedEvents
+        .filter(ev => selectedVenueIds.has(ev.venueId))
         .map(ev => ({
-            id: ev.$?.id ?? null,
-            title: ev.titlee ?? null,
-            venueid: String(ev.venueid),
-            date: ev.predateE ?? null,
-            description: ev.desce ?? null,
-            presenter: ev.presenterorge ?? null
+            eventId: ev.eventId,
+            title: ev.title,
+            dates: ev.dates,
+            description: ev.description,
+            presenter: ev.presenter,
+            venue: venuesClean.find(v => v.id === ev.venueId)
         }));
 
-    fs.writeFileSync("events_clean.json", JSON.stringify(cleanEvents, null, 2));
-    console.log(`Done. Wrote ${cleanEvents.length} events to events_clean.json`);
+    fs.writeFileSync("venues_clean.json", JSON.stringify(venuesClean, null, 2));
+    fs.writeFileSync("events_clean.json", JSON.stringify(eventsClean, null, 2));
 
-
-
-    // const venues = venuesData.venues.venue;
-    // const events = eventsData.events.event;
-
-    // const eventCount = {};
-    // events.forEach(ev => {
-    //     const vid = ev.venueid;
-    //     if (!eventCount[vid]) eventCount[vid] = 0;
-    //     eventCount[vid]++;
-    // });
-
-    // const validVenues = venues.filter(v =>
-    //     eventCount[v.$.id] >= 3 &&
-    //     v.latitude && String(v.latitude).trim() !== "" &&
-    //     v.longitude && String(v.longitude).trim() !== ""
-    // );
-
-    // const chosen = validVenues.slice(0, 10);
-
-    // map IDs
-    // const chosenIDs = chosen.map(v => v.$.id);
-
-    // Filter events that belong to these venues
-    // const chosenEvents = events.filter(ev => chosenIDs.includes(ev.venueid));
-
-    // Clean fields
-    // const cleanVenues = chosen.map(v => ({
-    //     id: v.$.id,
-    //     name: v.venuee,
-    //     latitude: v.latitude || null,
-    //     longitude: v.longitude || null
-    // }));
-
-    // const cleanEvents = chosenEvents.map(ev => ({
-    //     id: ev.$.id,
-    //     title: ev.titlee,
-    //     venueid: ev.venueid,
-    //     date: ev.predateE,
-    //     description: ev.desce,
-    //     presenter: ev.presenterorge
-    // }));
-
-    // Save to JSON
-    // fs.writeFileSync('venues_clean.json', JSON.stringify(cleanVenues, null, 2));
-    // fs.writeFileSync('events_clean.json', JSON.stringify(cleanEvents, null, 2));
-
-    // console.log('Done. Generated venues_clean.json and events_clean.json');
+    console.log("Preprocessing complete");
+    console.log(`Venues: ${venuesClean.length}`);
+    console.log(`Events: ${eventsClean.length}`);
 }
 
-main();
+main().catch(console.error);

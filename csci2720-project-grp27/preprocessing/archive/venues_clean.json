@@ -1,0 +1,62 @@
+[
+  {
+    "id": "22512700",
+    "name": "Hong Kong Heritage Museum (Thematic Galleries 1 & 2)",
+    "latitude": "22.37737",
+    "longitude": "114.1853"
+  },
+  {
+    "id": "76810048",
+    "name": "Tuen Mun Town Hall (Auditorium)",
+    "latitude": "22.391810",
+    "longitude": "113.976771"
+  },
+  {
+    "id": "826817419",
+    "name": "East Kowloon Cultural Centre (The Turns)",
+    "latitude": "22.32427",
+    "longitude": "114.21494"
+  },
+  {
+    "id": "87110023",
+    "name": "Kwai Tsing Theatre (Auditorium)",
+    "latitude": "22.35665",
+    "longitude": "114.12623"
+  },
+  {
+    "id": "87210045",
+    "name": "Tsuen Wan Town Hall (Auditorium)",
+    "latitude": "22.37109",
+    "longitude": "114.11277"
+  },
+  {
+    "id": "36310304",
+    "name": "Sha Tin Town Hall (Dance Studio)",
+    "latitude": "22.38136",
+    "longitude": "114.18990"
+  },
+  {
+    "id": "87310196",
+    "name": "Yuen Long Theatre (Lecture Room)",
+    "latitude": "22.44152",
+    "longitude": "114.02289"
+  },
+  {
+    "id": "87410028",
+    "name": "Ngau Chi Wan Civic Centre (Cultural Activities Hall)",
+    "latitude": "22.334583",
+    "longitude": "114.208766"
+  },
+  {
+    "id": "87510008",
+    "name": "Hong Kong City Hall (Concert Hall)",
+    "latitude": "22.282279",
+    "longitude": "114.161545"
+  },
+  {
+    "id": "87616551",
+    "name": "Ko Shan Theatre (New Wing Auditorium)",
+    "latitude": "22.31368",
+    "longitude": "114.18556"
+  }
+]

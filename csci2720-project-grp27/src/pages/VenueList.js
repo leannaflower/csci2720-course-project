@@ -25,6 +25,7 @@ function distanceKm(lat1, lon1, lat2, lon2) {
 
 export default function VenueList() {
   const [venues, setVenues] = useState([]);
+  const [lastUpdated, setLastUpdated] = useState(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -102,7 +103,10 @@ export default function VenueList() {
           };
         });
         
-        if (!cancelled) setVenues(withData);
+        if (!cancelled) {
+          setVenues(withData);
+          setLastUpdated(new Date());
+        }
         
         const fRes = await fetch(`http://localhost:5001/api/favorites?t=${Date.now()}`, {
           headers: { Authorization: `Bearer ${token}`, Accept: "application/json" },
@@ -316,6 +320,22 @@ export default function VenueList() {
           </tbody>
         </table>
       )}
+	  <div className="page-footer">
+        {lastUpdated ? (
+        <span>
+          Last updated: {new Intl.DateTimeFormat(undefined, {
+          year: "numeric",
+          month: "short",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          }).format(lastUpdated)}
+        </span>
+        ) : (
+        <span>Last updated: —</span>
+        )}
+      </div>
     </div>
   );
 }

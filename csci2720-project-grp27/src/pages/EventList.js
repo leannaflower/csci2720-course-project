@@ -17,6 +17,7 @@ export default function EventsList() {
 
   const [localKeyword, setLocalKeyword] = useState(urlKeyword);
   const [localPresenter, setLocalPresenter] = useState(urlPresenter);
+  const [lastUpdated, setLastUpdated] = useState(null);
 
   useEffect(() => {
     setLocalKeyword(urlKeyword);
@@ -148,6 +149,7 @@ export default function EventsList() {
         if (!cancelled) {
           setEvents(Array.isArray(data.items) ? data.items : []);
           setTotal(data.total ?? 0);
+		  setLastUpdated(new Date());
         }
       } catch (e) {
         console.error(e);
@@ -377,6 +379,23 @@ export default function EventsList() {
           </tbody>
         </table>
       )}
+	  
+	  <div className="page-footer">
+        {lastUpdated ? (
+        <span>
+          Last updated: {new Intl.DateTimeFormat(undefined, {
+          year: "numeric",
+          month: "short",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          }).format(lastUpdated)}
+        </span>
+        ) : (
+        <span>Last updated: —</span>
+        )}
+      </div>
     </div>
   );
 }

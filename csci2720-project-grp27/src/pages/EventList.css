@@ -41,3 +41,10 @@ color: var(--desc-fg);
 .event-description {
 white-space: pre-wrap;
 }
+.page-footer {
+margin-top: 12px;
+padding: 8px 0;
+font-size: 12px;
+color: var(--muted, #6b7280);
+border-top: 1px solid var(--border, #e5e7eb);
+}

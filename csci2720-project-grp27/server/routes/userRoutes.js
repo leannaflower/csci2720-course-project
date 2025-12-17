@@ -11,6 +11,8 @@ router.post("/register", userController.register);
 
 router.get("/me", authenticate, authorize("user", "admin"), userController.me);
 
+router.post("/change-password", authenticate, authorize("user", "admin"), userController.changePassword);
+
 router.get("/", authenticate, authorize("admin"), userController.listUsers);
 router.post("/", authenticate, authorize("admin"), userController.createUser);
 router.patch("/:userId", authenticate, authorize("admin"), userController.updateUser);

@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import Favorites from "./pages/Favorites";
 import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 import AdminRoute from "./pages/AdminRoute";
 import AdminUsers from "./pages/AdminUsers";
 import AdminEvents from "./pages/AdminEvents";
@@ -90,6 +91,15 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Favorites />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
             </ProtectedRoute>
           }
         />

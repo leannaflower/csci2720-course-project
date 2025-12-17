@@ -193,3 +193,33 @@ export const deleteUser = async (req, res) => {
     return res.status(500).json({ error: "Failed to delete user" });
   }
 };
+
+export const changePassword = async (req, res) => {
+  try {
+    const schema = z.object({
+    currentPassword: z.string().min(1, "Current password is required"),
+    newPassword: z.string().min(5, "New password must be at least 5 characters"),
+    });
+    const parsed = schema.safeParse(req.body);
+    if (!parsed.success) {
+      return res.status(400).json({ error: parsed.error.flatten() });
+    }
+    const { currentPassword, newPassword } = parsed.data;
+    const user = await User.findById(req.user.id);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    const ok = await bcrypt.compare(currentPassword, user.passwordHash);
+    if (!ok) return res.status(400).json({ error: "Current password is incorrect" });
+
+    const same = await bcrypt.compare(newPassword, user.passwordHash);
+    if (same) return res.status(400).json({ error: "New password must be different from the current password" });
+
+    user.passwordHash = await bcrypt.hash(newPassword, 12);
+    await user.save();
+
+    return res.status(200).json({ message: "Password updated successfully" });
+  } catch (error) {
+    console.error("changePassword error:", error);
+    return res.status(500).json({ error: "Failed to change password" });
+  }
+};

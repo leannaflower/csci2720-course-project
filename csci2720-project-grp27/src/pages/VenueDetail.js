@@ -17,21 +17,25 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-export default function VenueDetail() {
+const API_BASE = "http://localhost:5001";
+
+export default function VenueDetail({ user }) {
   const { venueId } = useParams();
   const [venue, setVenue] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // comments feature!
+  // comments feature
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState("");
   const [commentError, setCommentError] = useState("");
   const [commentLoading, setCommentLoading] = useState(false);
   const [posting, setPosting] = useState(false);
 
-  const location = useLocation();
+  const [deletingId, setDeletingId] = useState(null);
 
+  const location = useLocation();
+  const isAdmin = user?.role === "admin";
 
   useEffect(() => {
     let cancelled = false;
@@ -48,7 +52,7 @@ export default function VenueDetail() {
       }
 
       try {
-        const res = await fetch(`http://localhost:5001/api/venues/${venueId}`, {
+        const res = await fetch(`${API_BASE}/api/venues/${venueId}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -93,7 +97,7 @@ export default function VenueDetail() {
       }
 
       try {
-        const res = await fetch(`http://localhost:5001/api/comments/${venueId}`, {
+        const res = await fetch(`${API_BASE}/api/comments/${venueId}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -120,17 +124,6 @@ export default function VenueDetail() {
     };
   }, [venueId]);
 
-
-  if (loading) return <div style={{ padding: 20 }}>Loading venue…</div>;
-  if (error) return <div style={{ padding: 20 }}>Error: {error}</div>;
-  if (!venue) return <div style={{ padding: 20 }}>Venue not found.</div>;
-
-  const lat = Number(venue.latitude);
-  const lng = Number(venue.longitude);
-
-  const hasCoords = Number.isFinite(lat) && Number.isFinite(lng);
-
-  // submit handler to post a comment
   async function submitComment(e) {
     e.preventDefault();
     setPosting(true);
@@ -151,7 +144,7 @@ export default function VenueDetail() {
     }
 
     try {
-      const res = await fetch(`http://localhost:5001/api/comments/${venueId}`, {
+      const res = await fetch(`${API_BASE}/api/comments/${venueId}`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -175,13 +168,56 @@ export default function VenueDetail() {
     }
   }
 
+  async function deleteComment(commentId) {
+    if (!isAdmin) return;
+    const ok = window.confirm("Delete this comment?");
+    if (!ok) return;
+
+    const token = localStorage.getItem("token");
+    if (!token) {
+      setCommentError("No token found. Please log in again.");
+      return;
+    }
+
+    try {
+      setDeletingId(commentId);
+
+      const res = await fetch(`${API_BASE}/api/comments/${encodeURIComponent(commentId)}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/json",
+        },
+        credentials: "include",
+      });
+
+      if (!res.ok && res.status !== 204) throw new Error(await res.text());
+
+      setComments((prev) => prev.filter((c) => c._id !== commentId));
+    } catch (e) {
+      console.error(e);
+      alert(e.message || "Failed to delete comment");
+    } finally {
+      setDeletingId(null);
+    }
+  }
+
+  if (loading) return <div style={{ padding: 20 }}>Loading venue…</div>;
+  if (error) return <div style={{ padding: 20 }}>Error: {error}</div>;
+  if (!venue) return <div style={{ padding: 20 }}>Venue not found.</div>;
+
+  const lat = Number(venue.latitude);
+  const lng = Number(venue.longitude);
+  const hasCoords = Number.isFinite(lat) && Number.isFinite(lng);
 
   return (
     <div style={{ padding: 20 }}>
       <Link to={`/map${location.search}`}>← Back</Link>
 
       <h2>{venue.name}</h2>
-      <p><strong>ID:</strong> {venue.id}</p>
+      <p>
+        <strong>ID:</strong> {venue.id}
+      </p>
 
       {!hasCoords ? (
         <p>No location data available.</p>
@@ -198,7 +234,7 @@ export default function VenueDetail() {
           }}
         >
           <TileLayer
-            attribution='&copy; OpenStreetMap & Stadia Maps'
+            attribution="&copy; OpenStreetMap & Stadia Maps"
             url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png"
           />
 
@@ -237,10 +273,34 @@ export default function VenueDetail() {
           <div style={{ display: "grid", gap: 10 }}>
             {comments.map((c) => (
               <div key={c._id} style={{ padding: 12, border: "1px solid #ddd", borderRadius: 8 }}>
-                <div style={{ fontWeight: 600 }}>{c.username}</div>
-                <div style={{ fontSize: 12, opacity: 0.8 }}>
-                  {c.createdAt ? new Date(c.createdAt).toLocaleString() : ""}
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
+                  <div>
+                    <div style={{ fontWeight: 600 }}>{c.username}</div>
+                    <div style={{ fontSize: 12, opacity: 0.8 }}>
+                      {c.createdAt ? new Date(c.createdAt).toLocaleString() : ""}
+                    </div>
+                  </div>
+
+                  {isAdmin && (
+                    <button
+                      type="button"
+                      onClick={() => deleteComment(c._id)}
+                      disabled={deletingId === c._id}
+                      style={{
+                        background: "crimson",
+                        color: "white",
+                        border: "none",
+                        borderRadius: 8,
+                        padding: "8px 10px",
+                        cursor: "pointer",
+                        height: 36,
+                      }}
+                    >
+                      {deletingId === c._id ? "Deleting..." : "Delete"}
+                    </button>
+                  )}
                 </div>
+
                 <div style={{ marginTop: 6, whiteSpace: "pre-wrap" }}>{c.text}</div>
               </div>
             ))}

@@ -49,14 +49,14 @@ export default function App() {
           }
         />
 
-        <Route
+        {/* <Route
           path="/location/:venueId"
           element={
             <ProtectedRoute>
               <VenueDetail />
             </ProtectedRoute>
           }
-        />
+        /> */}
 
         <Route
           path="/map"
@@ -91,6 +91,15 @@ export default function App() {
             <AdminRoute user={user}>
               <AdminEvents accessToken={localStorage.getItem("token")} />
             </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/location/:venueId"
+          element={
+            <ProtectedRoute>
+              <VenueDetail user={user} />
+            </ProtectedRoute>
           }
         />
       </Routes>

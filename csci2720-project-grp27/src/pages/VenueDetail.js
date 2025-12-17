@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import "./VenueDetails.css";
 
 import L from "leaflet";
 
@@ -24,6 +25,10 @@ export default function VenueDetail({ user }) {
   const [venue, setVenue] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [events, setEvents] = useState([]); // New state for events
+  const [eventsLoading, setEventsLoading] = useState(false); // New loading state
+  const [eventsError, setEventsError] = useState(""); // New error state
+
 
   // comments feature
   const [comments, setComments] = useState([]);
@@ -80,6 +85,57 @@ export default function VenueDetail({ user }) {
       cancelled = true;
     };
   }, [venueId]);
+  
+  // fetch events for this venue
+  useEffect(() => {
+    let cancelled = false;
+    
+    const fetchEventsForVenue = async () => {
+      if (!venueId) return;
+      
+      setEventsLoading(true);
+      setEventsError("");
+      
+      const token = localStorage.getItem("token");
+      if (!token) {
+        setEventsError("No token found. Please log in again.");
+        setEventsLoading(false);
+        return;
+      }
+      
+      try {
+        const res = await fetch(`${API_BASE}/api/events?venueid=${venueId}`, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: "application/json",
+          },
+          credentials: "include",
+        });
+        
+        if (!res.ok) throw new Error(await res.text());
+        const data = await res.json();
+        
+        if (!cancelled) {
+          setEvents(data.items || []);
+        }
+      } catch (e) {
+        console.error(e);
+        if (!cancelled) setEventsError(e.message || "Failed to load events");
+      } finally {
+        if (!cancelled) setEventsLoading(false);
+      }
+    };
+    
+    if (venueId) {
+      fetchEventsForVenue();
+    }
+    
+    return () => {
+      cancelled = true;
+    };
+  }, [venueId]);
+
 
   // fetch comments for this venue
   useEffect(() => {
@@ -245,6 +301,60 @@ export default function VenueDetail({ user }) {
           </Marker>
         </MapContainer>
       )}
+
+      <section className="events-section">
+        <h3>Upcoming Events at this Venue</h3>
+        
+        {eventsLoading ? (
+          <div className="events-loading">
+            Loading events...
+          </div>
+        ) : eventsError ? (
+          <div className="events-error">
+            Error loading events: {eventsError}
+          </div>
+        ) : events.length === 0 ? (
+          <div className="events-empty">
+            No upcoming events scheduled at this venue.
+          </div>
+        ) : (
+          <div className="events-list">
+            {events.map((event) => (
+              <div key={event.id} className="event-card">
+                <div className="event-card-content">
+                  <div className="event-details">
+                    <h4 className="event-title">
+                      <span className="event-link">
+                        {event.title}
+                      </span>
+                    </h4>
+                    <div className="event-meta">
+                      <span className="event-meta-item">
+                        <strong>Event ID:</strong> {event.id}
+                      </span>
+                      <span className="event-meta-item">
+                        <strong>Date:</strong> {event.date}
+                      </span>
+                    </div>
+                    {event.description && (
+                      <p className="event-description">
+                        {event.description.length > 150 
+                          ? `${event.description.substring(0, 150)}...` 
+                          : event.description}
+                      </p>
+                    )}
+                    {event.presenter && (
+                      <div className="event-presenter">
+                        <strong>Presenter:</strong> {event.presenter}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
 
       <section style={{ marginTop: 24 }}>
         <h3>Comments</h3>

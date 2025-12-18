@@ -36,7 +36,6 @@ user-select: none;
 }
 .event-desc-row td {
 background: var(--dropdown-bg);
-color: var(--desc-fg);
 }
 .event-description {
 white-space: pre-wrap;

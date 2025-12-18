@@ -57,6 +57,7 @@ export default function Navbar({ user, setUser }) {
         <Link to="/events" className="nav-link">Event List</Link>
         <Link to={`/map${location.search}`} className="nav-link">Map</Link>
         <Link to="/favorites" className="nav-link">Favourite List</Link>
+        <Link to="/random" className="nav-link">Random Events</Link>
       </div>
 
       <div className="nav-right">

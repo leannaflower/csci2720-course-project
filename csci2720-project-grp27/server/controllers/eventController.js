@@ -126,3 +126,37 @@ export const deleteEvent = async (req, res) => {
   }
 };
 
+// GET /api/events/random?venueid=abc
+export const getRandomEvents = async (req, res) => {
+  try {
+    const venueid = typeof req.query.venueid === "string" && req.query.venueid.trim()
+      ? req.query.venueid.trim()
+      : undefined;
+
+    const matchStage = venueid ? { venueid } : {};
+
+    const items = await Event.aggregate([
+      { $match: matchStage },
+      { $sample: { size: 3 } },
+      {
+        $lookup: {
+          from: "venues",
+          localField: "venueid",
+          foreignField: "id",
+          as: "venueDoc"
+        }
+      },
+      {
+        $addFields: {
+          venueName: { $ifNull: [{ $arrayElemAt: ["$venueDoc.name", 0] }, "" ] }
+        }
+      },
+      { $project: { venueDoc: 0, _id: 0 } }
+    ]);
+
+    return res.json({ items });
+  } catch (error) {
+    console.error("getRandomEvents error:", error);
+    return res.status(500).json({ error: "Failed to load random events" });
+  }
+};

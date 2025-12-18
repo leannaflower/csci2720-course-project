@@ -14,6 +14,7 @@ import Profile from "./pages/Profile";
 import AdminRoute from "./pages/AdminRoute";
 import AdminUsers from "./pages/AdminUsers";
 import AdminEvents from "./pages/AdminEvents";
+import RandomEvents from "./pages/RandomEvents";
 
 import "./App.css";
 
@@ -64,6 +65,15 @@ export default function App() {
           element={
             <ProtectedRoute>
               <EventList />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route 
+          path="/random"
+          element={
+            <ProtectedRoute>
+              <RandomEvents />
             </ProtectedRoute>
           }
         />

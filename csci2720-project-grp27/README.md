@@ -8,7 +8,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### Backend
 `cd server`\
 `npm install`\
-`npm start`
+`npm start`\
 Runs the server on http://localhost:5001
 
 ### Academic Honesty Declaration:

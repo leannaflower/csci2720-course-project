@@ -8,6 +8,8 @@ import { fileURLToPath } from "url";
 import connectDB from "./config/db.js";
 import { requestLogger } from "./middleware/loggerMiddleware.js";
 import { errorHandler } from "./middleware/errorMiddleware.js";
+import { seedDatasetIfNeeded } from "./utils/seedDataset.js";
+import { seedUsersIfNeeded } from "./utils/seedUsers.js";
 
 // Routes (all with .js extensions)
 import userRoutes from "./routes/userRoutes.js";
@@ -56,6 +58,20 @@ app.get("/api/health", (_req, res) =>
 );
 
 app.use(errorHandler);
+
+// Seed database
+try {
+  if (process.env.AUTO_SEED !== "false") {
+    const didDataset = await seedDatasetIfNeeded(); // imports venues+events if no venues
+    const didUsers = await seedUsersIfNeeded();     // creates admin+user if no admin
+
+    console.log(`[seed] Startup seeding complete. dataset=${didDataset}, users=${didUsers}`);
+  } else {
+    console.log("[seed] AUTO_SEED=false. Skipping startup seeds.");
+  }
+} catch (e) {
+  console.error("[seed] Startup seeding failed:", e);
+}
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {

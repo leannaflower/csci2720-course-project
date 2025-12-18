@@ -9,7 +9,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### `npm start`
 Runs the server on http://localhost:5001
 
-###Academic Honesty Declaration:
+### Academic Honesty Declaration:
 
 I am submitting the assignment for:
 a group project on behalf of all members of the group. It is hereby confirmed that the submission is authorized by all members of the group, and all members of the group are required to sign this declaration.
